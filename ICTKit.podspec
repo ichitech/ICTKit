@@ -13,7 +13,10 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '6.0'
 
   s.source       = { :git => "https://github.com/ngocbinh02/ICTKit.git", :tag => s.version.to_s }
-  s.source_files  = 'ICTKit', 'Core/*.framework'
   s.requires_arc = true
-
+  s.weak_frameworks = "QuartzCore", "CoreGraphics", "UIKit", "Foundation"
+  s.header_dir = "ICTKit"
+  sp.public_header_files = "ICTKit/Core/ICTKit.framework/Version/A/Headers/*.h"
+  sp.source_files   = "ICTKit/Core/**/*.*"
+  sp.exclude_files = "ICTKit/Resources/*.bundle"
 end
