@@ -1,22 +1,19 @@
 Pod::Spec.new do |s|
 
-  s.name         = "MZTimerLabel"
-  s.version      = "0.5.2"
-  s.summary      = "A handy class to use UILabel as a countdown timer or stopwatch just like in Apple Clock App."
-  s.description  = "MZTimerLabel is a UILabel subclass, which is a handy way to use UILabel as a countdown timer or stopwatch just like that in Apple Clock App with just 2 lines of code. MZTimerLabel also provides delegate method for you to define the action when the timer finished."
+  s.name         = "ICTKit"
+  s.version      = "0.6.1"
+  s.summary      = "UIKit & UIFoundation"
+  s.description  = "UIKit & UIFoundation"
                  
-  s.homepage     = "https://github.com/mineschan/MZTimerLabel"
-  s.screenshots  = "https://raw.githubusercontent.com/mineschan/MZTimerLabel/master/MZTimerLabel_Demo.png"
+  s.homepage     = "https://github.com/ngocbinh02/ICTKit"
+  s.screenshots  = "https://raw.githubusercontent.com/ngocbinh02/ICTKit/master/download.jpeg"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
-  s.author       = { "MineS Chan" => "mineschan@gmail.com" }
+  s.author       = { "Harry Tran" => "ngocbinh02@gmail.com" }
 
   s.platform     = :ios, '6.0'
 
-  s.source       = { :git => "https://github.com/mineschan/MZTimerLabel.git", :tag => s.version.to_s }
-
-  s.source_files  = 'Classes', 'MZTimerLabel/*.{h,m}'
-  s.exclude_files = 'Classes/Exclude'
-
+  s.source       = { :git => "https://github.com/ngocbinh02/ICTKit.git", :tag => s.version.to_s }
+  s.source_files  = 'ICTKit/*'
   s.requires_arc = true
 
 end
