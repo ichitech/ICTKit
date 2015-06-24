@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '6.0'
 
-  s.source       = { :git => "https://github.com/ngocbinh02/ICTKit.git", :tag => s.version.to_s }
+  s.source       = { :git => "git@github.com:ngocbinh02/ICTKit.git", :tag => s.version.to_s }
   s.requires_arc = true
   s.weak_frameworks = "QuartzCore", "CoreGraphics", "UIKit", "Foundation"
   s.header_dir = "ICTKit"
