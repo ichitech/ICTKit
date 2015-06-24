@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ICTKit"
-  s.version      = "0.6.1"
+  s.version      = "0.1.0"
   s.summary      = "UIKit & UIFoundation"
   s.description  = "UIKit & UIFoundation"
                  
