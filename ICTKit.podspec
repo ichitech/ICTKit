@@ -16,7 +16,10 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.weak_frameworks = "QuartzCore", "CoreGraphics", "UIKit", "Foundation"
   s.header_dir = "ICTKit"
-  sp.public_header_files = "ICTKit/Core/ICTKit.framework/Version/A/Headers/*.h"
-  sp.source_files   = "ICTKit/Core/**/*.*"
-  sp.exclude_files = "ICTKit/Resources/*.bundle"
+  
+  s.public_header_files = "ICTKit/Core/ICTKit.framework/Version/A/Headers/*.h"
+  s.source_files   = "ICTKit/Core/**/*.*"
+  s.exclude_files = "ICTKit/Resources/*.bundle"
+  s.requires_arc = true
+  
 end
