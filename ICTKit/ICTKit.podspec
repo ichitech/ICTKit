@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = "ICTKit"
   s.version      = "0.3.0"
-  s.summary      = "UIKit & UIFoundation"
+  s.summary      = "UIKit & UIFoundation Category"
   s.description  = "UIKit & UIFoundation"
   s.homepage     = "https://github.com/ngocbinh02/ICTKit"
   s.screenshots  = "https://raw.githubusercontent.com/ngocbinh02/ICTKit/master/demo.jpeg"
