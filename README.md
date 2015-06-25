@@ -6,6 +6,10 @@ ICTKit
 [![Cocoapod Latest Version](http://img.shields.io/cocoapods/v/ICTKit.svg?style=flat)](https://cocoapods.org/?q=ICTKit)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
+<p align="center" >
+  <img src="https://raw.github.com/ngocbinh02/ICTKit/demo.jpeg" alt="ICTKit" title="ICTKit">
+</p>
+
 ###Purpose
 
 The Foundation framework defines a base layer of Objective-C classes. In addition to providing a set of useful primitive object classes, it introduces several paradigms that define functionality not covered by the Objective-C language. The Foundation framework is designed with these goals in mind:
