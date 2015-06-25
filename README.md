@@ -7,7 +7,7 @@ ICTKit
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 <p align="center" >
-  <img src="https://raw.github.com/ngocbinh02/ICTKit/demo.jpeg" alt="ICTKit" title="ICTKit">
+  <img src="https://github.com/ngocbinh02/ICTKit/blob/master/demo.jpeg?raw=true" alt="ICTKit" title="ICTKit">
 </p>
 
 ###Purpose
