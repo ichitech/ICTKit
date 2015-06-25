@@ -12,7 +12,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/ngocbinh02/ICTKit.git", :tag => s.version.to_s }
   s.weak_frameworks = "QuartzCore", "CoreGraphics", "UIKit", "Foundation"
   s.vendored_frameworks = 'ICTKit.framework'
-  s.resource     = 'ICTBundle.bundle'
   s.requires_arc = true
   
 end
