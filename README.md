@@ -6,7 +6,7 @@ ICTKit
 [![Cocoapod Latest Version](http://img.shields.io/cocoapods/v/ICTKit.svg?style=flat)](https://cocoapods.org/?q=ICTKit)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-<p align="center" >
+<p align="left" >
   <img src="https://github.com/ngocbinh02/ICTKit/blob/master/demo.jpeg?raw=true" alt="ICTKit" title="ICTKit">
 </p>
 
