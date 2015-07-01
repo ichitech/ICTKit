@@ -244,5 +244,5 @@ NS_CLASS_DEPRECATED_IOS(2_0, 7_1, "UISideBarViewController has been replaced by 
 
 @interface UIViewController(SlidingViewExtension)
 /** Convience method for getting access to the UISideBarViewController instance */
-- (UISideBarViewController *)slidingViewController;
+- (UISideBarViewController *)slidingBarViewController NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 @end
