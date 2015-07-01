@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>ICTBundle</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.ichitech.ICTBundle</string>
+	<string>com.ichitech.bundle</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

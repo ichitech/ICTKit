@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-//NS_CLASS_DEPRECATED_IOS(2_0, 5_0, "UIValidate has been replaced by NSString(Validate)")
+NS_CLASS_DEPRECATED_IOS(2_0, 7_1, "UIValidate has been replaced by NSString(Validate)")
 @interface UIValidate : NSObject
 
 /*!

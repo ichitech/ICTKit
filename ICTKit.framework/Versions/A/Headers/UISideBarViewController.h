@@ -83,6 +83,7 @@ typedef enum {
 /*!
  * @abstract UISideBarViewController is a view controller container that presents its child view controllers in two layers. The top layer can be panned to reveal the layers below it.
  */
+NS_CLASS_DEPRECATED_IOS(2_0, 7_1, "UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController")
 @interface UISideBarViewController : UIViewController{
   CGPoint startTouchPosition;
   BOOL topViewHasFocus;
@@ -92,19 +93,19 @@ typedef enum {
  
  This view controller is typically a menu or top-level view that switches out the top view controller.
  */
-@property (nonatomic, strong) UIViewController *underLeftViewController;
+@property (nonatomic, strong) UIViewController *underLeftViewController NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Returns the view controller that will be visible when the top view is slide to the left.
  
  This view controller is typically a supplemental view to the top view.
  */
-@property (nonatomic, strong) UIViewController *underRightViewController;
+@property (nonatomic, strong) UIViewController *underRightViewController NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Returns the top view controller.
  
  This is the main view controller that is presented above the other view controllers.
  */
-@property (nonatomic, strong) UIViewController *topViewController;
+@property (nonatomic, strong) UIViewController *topViewController NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Returns the number of points the top view is visible when the top view is anchored to the left side.
  
@@ -112,7 +113,7 @@ typedef enum {
  
  @see anchorLeftRevealAmount
  */
-@property (nonatomic, assign) CGFloat anchorLeftPeekAmount;
+@property (nonatomic, assign) CGFloat anchorLeftPeekAmount NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Returns the number of points the top view is visible when the top view is anchored to the right side.
  
@@ -120,7 +121,7 @@ typedef enum {
  
  @see anchorRightRevealAmount
  */
-@property (nonatomic, assign) CGFloat anchorRightPeekAmount;
+@property (nonatomic, assign) CGFloat anchorRightPeekAmount NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Returns the number of points the under right view is visible when the top view is anchored to the left side.
  
@@ -128,7 +129,7 @@ typedef enum {
  
  @see anchorLeftPeekAmount
  */
-@property (nonatomic, assign) CGFloat anchorLeftRevealAmount;
+@property (nonatomic, assign) CGFloat anchorLeftRevealAmount NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Returns the number of points the under left view is visible when the top view is anchored to the right side.
  
@@ -136,7 +137,7 @@ typedef enum {
  
  @see anchorRightPeekAmount
  */
-@property (nonatomic, assign) CGFloat anchorRightRevealAmount;
+@property (nonatomic, assign) CGFloat anchorRightRevealAmount NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Specifies whether or not the top view can be panned past the anchor point.
  
@@ -144,13 +145,13 @@ typedef enum {
  
  By defaut, this is set to YES
  */
-@property (nonatomic, assign) BOOL shouldAllowPanningPastAnchor;
+@property (nonatomic, assign) BOOL shouldAllowPanningPastAnchor NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Specifies if the user should be able to interact with the top view when it is anchored.
  
  By default, this is set to NO
  */
-@property (nonatomic, assign) BOOL shouldAllowUserInteractionsWhenAnchored;
+@property (nonatomic, assign) BOOL shouldAllowUserInteractionsWhenAnchored NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Specifies if the top view snapshot requires a pan gesture recognizer.
  
@@ -158,19 +159,19 @@ typedef enum {
  
  By default, this is set to NO
  */
-@property (nonatomic, assign) BOOL shouldAddPanGestureRecognizerToTopViewSnapshot;
+@property (nonatomic, assign) BOOL shouldAddPanGestureRecognizerToTopViewSnapshot NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Specifies the behavior for the under left width
  
  By default, this is set to SBFullWidth
  */
-@property (nonatomic, assign) SBViewWidthLayout underLeftWidthLayout;
+@property (nonatomic, assign) SBViewWidthLayout underLeftWidthLayout NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Specifies the behavior for the under right width
  
  By default, this is set to SBFullWidth
  */
-@property (nonatomic, assign) SBViewWidthLayout underRightWidthLayout;
+@property (nonatomic, assign) SBViewWidthLayout underRightWidthLayout NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Returns the strategy for resetting the top view when it is anchored.
  
@@ -178,13 +179,13 @@ typedef enum {
  
  If this is set to SBNone, then there must be a custom way to reset the top view otherwise it will stay anchored.
  */
-@property (nonatomic, assign) SBResetStrategy resetStrategy;
+@property (nonatomic, assign) SBResetStrategy resetStrategy NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Returns a horizontal panning gesture for moving the top view.
  
  This is typically added to the top view or a top view's navigation bar.
  */
-- (UIPanGestureRecognizer *)panGesture;
+- (UIPanGestureRecognizer *)panGesture NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Slides the top view in the direction of the specified side.
  
@@ -192,7 +193,7 @@ typedef enum {
  
  @param side The side for the top view to slide towards.
  */
-- (void)anchorTopViewTo:(SBSide)side;
+- (void)anchorTopViewTo:(SBSide)side NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Slides the top view in the direction of the specified side.
  
@@ -202,13 +203,13 @@ typedef enum {
  @param animations Perform changes to properties that will be animated while top view is moved off screen. Can be nil.
  @param onComplete Executed after the animation is completed. Can be nil.
  */
-- (void)anchorTopViewTo:(SBSide)side animations:(void(^)())animations onComplete:(void(^)())complete;
+- (void)anchorTopViewTo:(SBSide)side animations:(void(^)())animations onComplete:(void(^)())complete NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Slides the top view off of the screen in the direction of the specified side.
  
  @param side The side for the top view to slide off the screen towards.
  */
-- (void)anchorTopViewOffScreenTo:(SBSide)side;
+- (void)anchorTopViewOffScreenTo:(SBSide)side NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Slides the top view off of the screen in the direction of the specified side.
  
@@ -216,30 +217,31 @@ typedef enum {
  @param animations Perform changes to properties that will be animated while top view is moved off screen. Can be nil.
  @param onComplete Executed after the animation is completed. Can be nil.
  */
-- (void)anchorTopViewOffScreenTo:(SBSide)side animations:(void(^)())animations onComplete:(void(^)())complete;
+- (void)anchorTopViewOffScreenTo:(SBSide)side animations:(void(^)())animations onComplete:(void(^)())complete NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Slides the top view back to the center. */
-- (void)resetTopView;
+- (void)resetTopView NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Slides the top view back to the center.
 
  @param animations Perform changes to properties that will be animated while top view is moved back to the center of the screen. Can be nil.
  @param onComplete Executed after the animation is completed. Can be nil.
  */
-- (void)resetTopViewWithAnimations:(void(^)())animations onComplete:(void(^)())complete;
+- (void)resetTopViewWithAnimations:(void(^)())animations onComplete:(void(^)())complete NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Returns true if the underLeft view is showing (even partially) */
-- (BOOL)underLeftShowing;
+- (BOOL)underLeftShowing NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Returns true if the underRight view is showing (even partially) */
-- (BOOL)underRightShowing;
+- (BOOL)underRightShowing NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 /** Returns true if the top view is completely off the screen */
-- (BOOL)topViewIsOffScreen;
+- (BOOL)topViewIsOffScreen NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 
 @end
 
 /** UIViewController extension */
+
 @interface UIViewController(SlidingViewExtension)
 /** Convience method for getting access to the UISideBarViewController instance */
 - (UISideBarViewController *)slidingViewController;

@@ -73,7 +73,7 @@
  * @abstract Validate Special Character.
  *
  */
-- (BOOL) isContainSpecialCharacter  NS_DEPRECATED_IOS(2_0, 8_0, "isContainSpecialCharacter: has been replaced by isContainSpecialCharacterWithAllowSysbols:") ;
+- (BOOL) isContainSpecialCharacter  NS_DEPRECATED_IOS(2_0, 8_0, "isContainSpecialCharacter: has been replaced by isContainSpecialCharacterWithAllowSymbols:") ;
 
 /*!
  * @abstract Validate Special Character.
