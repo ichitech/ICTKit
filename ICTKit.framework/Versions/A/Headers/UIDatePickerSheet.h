@@ -17,11 +17,15 @@ typedef void(^UIDatePickerSheetCompletion)(UIDatePickerSheet *picker,BOOL finish
 @property (nonatomic, strong, readonly)   UINavigationBar      *navigationBar;
 @property (nonatomic, strong, readonly)   UIDatePicker         *pickerDate;
 @property (nonatomic, strong, readonly)   UIView               *backgroundView;
-@property (nonatomic, retain, readonly)   UIBarButtonItem      *leftBarButtonItem;
-@property (nonatomic, retain, readonly)   UIBarButtonItem      *rightBarButtonItem;
+@property (nonatomic, strong, readonly)   UIBarButtonItem      *leftBarButtonItem;
+@property (nonatomic, strong, readonly)   UIBarButtonItem      *rightBarButtonItem;
+
 @property (nonatomic, assign)   NSTimeInterval                 timeAnimation;
 @property (nonatomic, strong)   UIDatePickerSheetCompletion    finishBlock;
 
-- (void)showCompletion:(UIDatePickerSheetCompletion)completion;
+- (void) showCompletion:(UIDatePickerSheetCompletion)completion;
+//use if custom bar button item
+- (void)cancelWithCompletion:(UIDatePickerSheetCompletion)completion;
+- (void)doneWithCompletion:(UIDatePickerSheetCompletion)completion;
 
 @end

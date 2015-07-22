@@ -23,5 +23,8 @@ typedef void(^UIPickerSheetCompletion)(UIPickerSheet *picker,BOOL finish);
 @property (nonatomic, assign) NSTimeInterval                timeAnimation;
 
 - (void)showCompletion:(UIPickerSheetCompletion)completion;
+//use if custom bar button item
+- (void)cancelWithCompletion:(UIPickerSheetCompletion)completion;
+- (void)doneWithCompletion:(UIPickerSheetCompletion)completion;
 
 @end
