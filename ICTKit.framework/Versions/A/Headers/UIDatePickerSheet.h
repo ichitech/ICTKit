@@ -25,7 +25,7 @@ typedef void(^UIDatePickerSheetCompletion)(UIDatePickerSheet *picker,BOOL finish
 
 - (void) showCompletion:(UIDatePickerSheetCompletion)completion;
 //use if custom bar button item
-- (void)cancelWithCompletion:(UIDatePickerSheetCompletion)completion;
-- (void)doneWithCompletion:(UIDatePickerSheetCompletion)completion;
+- (void)cancel;
+- (void)done;
 
 @end

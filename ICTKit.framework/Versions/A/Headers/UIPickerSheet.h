@@ -24,7 +24,7 @@ typedef void(^UIPickerSheetCompletion)(UIPickerSheet *picker,BOOL finish);
 
 - (void)showCompletion:(UIPickerSheetCompletion)completion;
 //use if custom bar button item
-- (void)cancelWithCompletion:(UIPickerSheetCompletion)completion;
-- (void)doneWithCompletion:(UIPickerSheetCompletion)completion;
+- (void)cancel;
+- (void)done;
 
 @end
