@@ -11,7 +11,7 @@
 // UINavigationItem+Additions.h
 @interface UINavigationItem (Additions)
 
-- (void)addLeftBarButtonItem:(UIBarButtonItem *)leftBarButtonItem;
-- (void)addRightBarButtonItem:(UIBarButtonItem *)rightBarButtonItem;
+- (void)addLeftBarButtonItem:(UIBarButtonItem *)leftBarButtonItem  NS_AVAILABLE_IOS(7_0);
+- (void)addRightBarButtonItem:(UIBarButtonItem *)rightBarButtonItem  NS_AVAILABLE_IOS(7_0);
 
 @end

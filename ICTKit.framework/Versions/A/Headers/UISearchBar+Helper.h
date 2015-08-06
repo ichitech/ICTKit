@@ -12,21 +12,21 @@
 /*!
  * @abstract Custom Cancel button.
  */
-- (void) setCancelButton:(UIButton *)cancelButton NS_AVAILABLE_IOS(5_0);
+- (void) setCancelButton:(UIButton *)cancelButton NS_DEPRECATED_IOS(2_0, 6_0);
 
 /*!
  * @abstract Custom SegmentedControl.
  */
-- (void) setSegmentedControl:(UISegmentedControl *)segmented NS_AVAILABLE_IOS(5_0);
+- (void) setSegmentedControl:(UISegmentedControl *)segmented NS_DEPRECATED_IOS(2_0, 6_0);
 
 /*!
  * @abstract Custom background image.
  */
-- (void) setBackgroundImage:(UIImage *)backgroundImage NS_AVAILABLE_IOS(5_0);
+- (void) setBackgroundImage:(UIImage *)backgroundImage;
 
 /*!
  * @abstract Custom TextField.
  */
-- (void) setSearchField:(UITextField *)textField NS_AVAILABLE_IOS(5_0);
+- (void) setSearchField:(UITextField *)textField NS_DEPRECATED_IOS(2_0, 6_0);
 
 @end

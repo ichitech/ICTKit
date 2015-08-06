@@ -14,6 +14,6 @@
  *
  * @param <image> It's a kind of UIImage. This image will be use to set background for navigation.
  */
-+ (void) setBackgroundImage:(UIImage *)image NS_AVAILABLE_IOS(5_0);
++ (void) setBackgroundImage:(UIImage *)image NS_DEPRECATED_IOS(2_0, 6_0);
 
 @end

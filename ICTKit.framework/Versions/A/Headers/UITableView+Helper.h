@@ -9,6 +9,6 @@
 
 @interface UITableView (Helper)
 
-- (NSIndexPath *) indexPathForRowWithEvent:(UIEvent *)event;
+- (NSIndexPath *) indexPathForRowWithEvent:(UIEvent *)event NS_AVAILABLE_IOS(5_0);
 
 @end
