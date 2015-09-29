@@ -22,12 +22,12 @@
 /*!
  * @abstract SET place holder color of UITextFiled.
  */
-@property (nonatomic)  UIColor *placeholderColor NS_AVAILABLE_IOS(5_0);
+@property (nonatomic, nonnull)  UIColor *placeholderColor NS_AVAILABLE_IOS(5_0);
 
 /*!
  * @abstract GET place holder color of UITextFiled.
  */
-- (UIColor *) placeholderColor NS_AVAILABLE_IOS(5_0);
+- ( UIColor * _Nullable) placeholderColor NS_AVAILABLE_IOS(5_0);
 
 
 @end

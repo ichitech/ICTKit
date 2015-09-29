@@ -2,7 +2,7 @@
  @header    NSDate+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   6.0
+ @version   7.0
  */
 
 

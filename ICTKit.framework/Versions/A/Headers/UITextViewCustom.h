@@ -10,8 +10,8 @@
 
 @interface UITextViewCustom : UITextView 
 
-@property (nonatomic, strong) NSString *placeholder;
+@property (nonatomic, strong, nullable) NSString *placeholder;
 
-@property (nonatomic, strong) UIColor  *placeholderColor;
+@property (nonatomic, strong, nullable) UIColor  *placeholderColor;
 
 @end

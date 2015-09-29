@@ -20,6 +20,6 @@
 
 + (nullable NSBundle *) myPreferredLanguageResourcesBundle NS_AVAILABLE_IOS(2_0);
 
-+ (nullable NSBundle *) myResourcesBundleWithPreferredLanguage:(nonnull NSString *)preferredLanguage NS_AVAILABLE_IOS(7_0);
++ (nullable NSBundle *) myResourcesBundleWithPreferredLanguage:(nullable NSString *)preferredLanguage NS_AVAILABLE_IOS(7_0);
 
 @end

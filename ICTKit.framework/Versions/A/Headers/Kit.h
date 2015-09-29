@@ -23,6 +23,7 @@
 #import <ICTKit/UINavigationItem+Additions.h>
 #import <ICTKit/UITableView+Helper.h>
 #import <ICTKit/UIDevice+Helper.h>
+#import <ICTKit/UIViewController+Helper.h>
 
 //Foundation
 #import <ICTKit/NSData+Helper.h>
@@ -33,6 +34,7 @@
 #import <ICTKit/NSDate+Helper.h>
 #import <ICTKit/NSObject+Validate.h>
 #import <ICTKit/NSBundle+Helper.h>
+#import <ICTKit/NSTimer+Blocks.h>
 
 //IBInspectableClass
 #import <ICTKit/ICTIBInspectableClass.h>
