@@ -29,7 +29,7 @@ UIWindow *Window() NS_AVAILABLE_IOS(7_0);
 
 @interface UIApplication (ApplicationSize)
 
-- (NSString * _Nonnull)applicationSize;
+- (NSString * _Nonnull) applicationSize;
 
 @end
 
