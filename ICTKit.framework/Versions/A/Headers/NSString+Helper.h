@@ -75,14 +75,23 @@ NS_ASSUME_NONNULL_BEGIN
  * @abstract Validate Special Character.
  *
  */
-- (BOOL) isContainSpecialCharacter  NS_DEPRECATED_IOS(2_0, 8_0, "isContainSpecialCharacter: has been replaced by isContainSpecialCharacterWithAllowSymbols:") ;
+- (BOOL) isContainSpecialCharacter  NS_DEPRECATED_IOS(2_0, 8_0, "isContainSpecialCharacter: has been replaced by hasSpecialCharacterWithExceptionOfArray:") ;
 
 /*!
  * @abstract Validate Special Character.
  *
  * @param All your symbols you want to allow
  */
-- (BOOL) isContainSpecialCharacterWithAllowSymbols:(nullable NSArray *)symAllows NS_AVAILABLE_IOS(7_0);
+- (BOOL) isContainSpecialCharacterWithAllowSymbols:(nullable NSArray<NSString *> *)symAllows NS_DEPRECATED_IOS(2_0, 8_4, "isContainSpecialCharacterWithAllowSymbols: has been replaced by hasSpecialCharacterWithExceptionOfArray:");
+
+- (BOOL) hasSpecialCharacterWithExceptionOfArray:(nullable NSArray<NSString *> *)exceptions NS_AVAILABLE_IOS(7_1);
+
+/*!
+ * @abstract Validate string.
+ *
+ * @param All your characters you want to check
+ */
+- (BOOL) hasCharacterInArray:(nullable NSArray<NSString *> *)characters NS_AVAILABLE_IOS(7_1);
 
 @end
 
