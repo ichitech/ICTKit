@@ -15,7 +15,7 @@ typedef NS_OPTIONS(NSInteger, NSFileManagerFileType) {
 
 NS_ASSUME_NONNULL_BEGIN
 
-NSURL *NSFileManagerSaveWithObject(id __nonnull object, NSString *__nonnull fileName, NSString *__nonnull folderName, NSFileManagerFileType fileType, dispatch_block_t __nullable completion)  NS_AVAILABLE_IOS(7_1);
+NSURL *NSFileManagerSaveWithObject(id __nonnull object, NSString *__nonnull fileName, NSString *__nullable folderName, NSFileManagerFileType fileType, dispatch_block_t __nullable completion)  NS_AVAILABLE_IOS(7_1);
 
 @interface NSFileManager (BasicManager)
 
