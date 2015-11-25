@@ -31,14 +31,17 @@ typedef void(^CountryPickerViewControllerCompletion)(BOOL success, UICountryPick
     
 }
 
-- (instancetype) init;
+- (instancetype) new NS_UNAVAILABLE;
+- (instancetype) init NS_UNAVAILABLE;
 - (instancetype) initWithRootViewController:(UIViewController *)rootViewController NS_UNAVAILABLE ;
 - (instancetype) initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
 - (instancetype) initWithNibName:(nullable NSString *)nibNameOrNil bundle:(nullable NSBundle *)nibBundleOrNil NS_UNAVAILABLE;
 
-@property (nonatomic, weak, nullable) id<UICountryPickerViewControllerDelegate,UINavigationControllerDelegate> delegate;
 @property (nonatomic, strong, readonly)         NSArray *countries;
 @property (nonatomic, getter=isPhoneCodeHidden) BOOL phoneCodeHidden; // Defaults to NO, i.e. no hidden.
+@property (nonatomic, strong, readonly)         UIBarButtonItem *leftBarButtonItem;
+
+- (void) setBarTitle:(nullable NSString *)title;
 
 + (void) showCountryPickerFromViewController:(id)viewController
                                     composer:(nullable CountryPickerViewControllerComposer)composer
