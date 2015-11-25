@@ -78,7 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSString *) formattedAsTimeAgo NS_DEPRECATED_IOS(2_0, 7_1, "formattedAsTimeAgo has been replaced by timeAgoFromDate:");
 
-- (NSString *) timeAgoFromDate:(NSDate *)date NS_AVAILABLE_IOS(7_0);
+- (NSString *) timeAgoFromDate:(NSDate * _Nullable)date NS_AVAILABLE_IOS(7_0);
 
 @end
 
