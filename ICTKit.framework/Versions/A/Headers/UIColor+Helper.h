@@ -38,9 +38,48 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  * @abstract Converting from UIColor to hex values
  *
- * @param <color> It's a Color object. If color is nil, retutn NIL.
+ * @param <color> It's a Color object. If color is nil, return NIL.
  */
 + (NSString *) hexValuesFromUIColor:(UIColor *)color NS_AVAILABLE_IOS(2_0);
+
+@end
+
+#pragma mark - FlatColors
+@interface UIColor (FlatColors)
+
++ (UIColor *) flatRedColor;
++ (UIColor *) flatDarkRedColor;
+
++ (UIColor *) flatGreenColor;
++ (UIColor *) flatDarkGreenColor;
+
++ (UIColor *) flatBlueColor;
++ (UIColor *) flatDarkBlueColor;
+
++ (UIColor *) flatTealColor;
++ (UIColor *) flatDarkTealColor;
+
++ (UIColor *) flatPurpleColor;
++ (UIColor *) flatDarkPurpleColor;
+
++ (UIColor *) flatBlackColor;
++ (UIColor *) flatDarkBlackColor;
+
++ (UIColor *) flatYellowColor;
++ (UIColor *) flatDarkYellowColor;
+
++ (UIColor *) flatOrangeColor;
++ (UIColor *) flatDarkOrangeColor;
+
++ (UIColor *) flatWhiteColor;
++ (UIColor *) flatDarkWhiteColor;
+
++ (UIColor *) flatGrayColor;
++ (UIColor *) flatDarkGrayColor;
+
++ (UIColor *) randomFlatColor;
++ (UIColor *) randomFlatLightColor;
++ (UIColor *) randomFlatDarkColor;
 
 @end
 

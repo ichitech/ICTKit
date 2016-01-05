@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (SenderData)
 
-@property (nonatomic, strong, nullable) id senderObject;
+@property (nonatomic, strong, nullable) id senderObject NS_AVAILABLE_IOS(6_0);
 
 @end
 

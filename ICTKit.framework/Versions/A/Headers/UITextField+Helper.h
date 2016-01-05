@@ -29,5 +29,4 @@
  */
 - ( UIColor * _Nullable) placeholderColor NS_AVAILABLE_IOS(5_0);
 
-
 @end

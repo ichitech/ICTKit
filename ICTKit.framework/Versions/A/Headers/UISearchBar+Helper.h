@@ -7,6 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UISearchBar (Helper)
 
 /*!
@@ -29,4 +31,12 @@
  */
 - (void) setSearchField:(UITextField *)textField NS_DEPRECATED_IOS(2_0, 6_0);
 
+/*!
+ * @abstract Get text current textField
+ */
+@property (nonatomic, strong, readonly, nonnull) UITextField *currentTextField  NS_AVAILABLE_IOS(7_1);
+
+
 @end
+
+NS_ASSUME_NONNULL_END

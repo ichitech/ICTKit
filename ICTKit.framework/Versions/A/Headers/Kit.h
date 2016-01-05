@@ -24,6 +24,7 @@
 #import <ICTKit/UITableView+Helper.h>
 #import <ICTKit/UIDevice+Helper.h>
 #import <ICTKit/UIViewController+Helper.h>
+#import <ICTKit/UIWindow+Helper.h>
 
 //Foundation
 #import <ICTKit/NSData+Helper.h>

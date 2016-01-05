@@ -18,6 +18,6 @@
  */
 + (NSArray * _Nonnull) arrayRandomFromArray:(NSArray * _Nonnull)array limit:(NSInteger)count  NS_DEPRECATED_IOS(2_0, 6_1, "arrayRandomFromArray:limit: has been replaced by arrayByRandomCount:");
 
-- ( NSArray * _Nonnull) arrayByRandomCount:(NSInteger)count NS_AVAILABLE_IOS(7_0);
+- (NSArray * _Nonnull) arrayByRandomCount:(NSInteger)count NS_AVAILABLE_IOS(7_0);
 
 @end
