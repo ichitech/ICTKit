@@ -22,19 +22,24 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) setSegmentedControl:(UISegmentedControl *)segmented NS_DEPRECATED_IOS(2_0, 6_0);
 
 /*!
- * @abstract Custom background image.
- */
-- (void) setBackgroundImage:(UIImage *)backgroundImage;
-
-/*!
  * @abstract Custom TextField.
  */
 - (void) setSearchField:(UITextField *)textField NS_DEPRECATED_IOS(2_0, 6_0);
 
 /*!
- * @abstract Get text current textField
+ * @abstract Custom background image.
+ */
+- (void) setBackgroundImage:(UIImage *)backgroundImage;
+
+/*!
+ * @abstract Get the current textField
  */
 @property (nonatomic, strong, readonly, nonnull) UITextField *currentTextField  NS_AVAILABLE_IOS(7_1);
+
+/*!
+ * @abstract Get the current cancel button item
+ */
+@property (nonatomic, strong, readonly, nonnull) UIBarButtonItem *currentCancelBarButtonItem NS_AVAILABLE_IOS(7_1);
 
 
 @end

@@ -21,8 +21,7 @@ typedef void(^UIDatePickerSheetCompletion)(UIDatePickerSheet *picker,BOOL finish
 @property (nonatomic, strong, readonly)   UIView               *backgroundView;
 @property (nonatomic, strong, readonly)   UIBarButtonItem      *leftBarButtonItem;
 @property (nonatomic, strong, readonly)   UIBarButtonItem      *rightBarButtonItem;
-
-@property (nonatomic, assign)   NSTimeInterval                 timeAnimation;
+@property (nonatomic, assign)             NSTimeInterval       timeAnimation;
 @property (nonatomic, strong, nullable)   UIDatePickerSheetCompletion    finishBlock;
 
 - (void) showCompletion:(UIDatePickerSheetCompletion)completion;
