@@ -19,9 +19,9 @@ typedef void(^UIPickerSheetCompletion)(UIPickerSheet *picker,BOOL finish);
 @property (nonatomic, strong, readonly) UINavigationBar     *navigationBar;
 @property (nonatomic, strong, readonly) UIPickerView        *pickerView;
 @property (nonatomic, strong, readonly) UIView              *backgroundView;
-@property (nonatomic, strong)           UIBarButtonItem     *leftBarButtonItem;
-@property (nonatomic, strong)           UIBarButtonItem     *rightBarButtonItem;
-@property (nonatomic, copy)   UIPickerSheetCompletion       finishBlock;
+@property (nonatomic, strong, readonly) UIBarButtonItem     *leftBarButtonItem;
+@property (nonatomic, strong, readonly) UIBarButtonItem     *rightBarButtonItem;
+@property (nonatomic, copy)     UIPickerSheetCompletion     finishBlock;
 @property (nonatomic, assign) NSTimeInterval                timeAnimation;
 
 - (void)showCompletion:(UIPickerSheetCompletion)completion;
