@@ -21,7 +21,7 @@ typedef void (^UIViewControllerSegueBlock) (UIStoryboardSegue *segue, id _Nullab
 
 @interface UIViewController (Visible)
 
-- (BOOL)isVisible NS_AVAILABLE_IOS(6_0);
+- (BOOL) isVisible NS_AVAILABLE_IOS(6_0);
 
 @end
 

@@ -41,6 +41,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)base64DataFromData:(NSData *)data NS_DEPRECATED_IOS(2_0, 7_1);
 
+/*!
+ * @abstract Get the last character of string.
+ */
+- (NSString *) lastCharacter NS_DEPRECATED_IOS(2_0, 7_1);
+
+/*!
+ * @abstract Get the first character of string.
+ */
+- (NSString *) firstCharacter NS_DEPRECATED_IOS(2_0, 7_1);
+
 @end
 
 @interface NSString(Validate)

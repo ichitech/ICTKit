@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-FOUNDATION_EXPORT NSIndexPath *__nullable NSIndexPathFromString(NSString *__nonnull hexCode) NS_AVAILABLE_IOS(7_0);
+FOUNDATION_EXPORT NSIndexPath *__nullable NSIndexPathFromString(NSString *__nonnull string) NS_AVAILABLE_IOS(7_0);
 FOUNDATION_EXPORT NSString    *__nullable NSStringFromNSIndexPath(NSIndexPath *__nonnull indexPath) NS_AVAILABLE_IOS(7_0);
 
 @interface UITableView (Helper)
