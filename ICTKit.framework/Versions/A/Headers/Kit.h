@@ -36,6 +36,7 @@
 #import <ICTKit/NSObject+Validate.h>
 #import <ICTKit/NSBundle+Helper.h>
 #import <ICTKit/NSTimer+Blocks.h>
+#import <ICTKit/NSNumber+Helper.h>
 
 //IBInspectableClass
 #import <ICTKit/ICTIBInspectableClass.h>

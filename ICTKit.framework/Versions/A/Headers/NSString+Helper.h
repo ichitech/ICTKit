@@ -9,6 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+FOUNDATION_EXPORT NSString  *__nonnull NSStringFromObject(id __nonnull object) NS_AVAILABLE_IOS(7_0);
+
 @interface NSString (Helper)
 
 /*! 
@@ -169,6 +171,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 // DEPRECIATED - Please use NSString stringByConvertingHTMLToPlainText
 - (NSString *)stringByStrippingTags NS_DEPRECATED_IOS(2_0, 7_0, "stringByStrippingTags has been replaced by stringByConvertingHTMLToPlainText");
+
+@end
+
+@interface NSString (ForcedUTF8)
+
+- (nullable NSString *) forcedUTF8String NS_AVAILABLE_IOS(7_0);
 
 @end
 

@@ -65,4 +65,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface NSDictionary (ForcedUTF8)
+
+- (nullable NSString *) forcedUTF8String NS_AVAILABLE_IOS(7_0);
+
+@end
+
 NS_ASSUME_NONNULL_END
