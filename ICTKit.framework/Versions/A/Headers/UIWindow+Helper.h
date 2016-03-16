@@ -7,6 +7,12 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
+#define WINDOW      WIN_DOW()
+UIWindow *WIN_DOW() NS_DEPRECATED_IOS(4_0, 8_0, "WIN_DOW() has been replaced by Window()");
+UIWindow *Window()  NS_AVAILABLE_IOS(7_0);
+
 @interface UIWindow (Helper)
 
 
@@ -17,3 +23,5 @@
 - (nullable UIViewController *) visibleViewController;
 
 @end
+
+NS_ASSUME_NONNULL_END
