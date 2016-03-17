@@ -7,37 +7,35 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+enum UISafariViewComposeResult {
+    UISafariViewComposeResultCancelled,
+    UISafariViewComposeResultSuccessfullyLoaded,
+    UISafariViewComposeResultFailureLoaded,
+    UISafariViewComposeResultSuccessfullyOpened,
+    UISafariViewComposeResultInProcessOpening
+};
+typedef enum UISafariViewComposeResult UISafariViewComposeResult;
 
+
+NS_ASSUME_NONNULL_BEGIN
 
 @class UISafariViewController;
 
-//UISafariViewControllerShowComposer
-typedef void(^UISafariViewControllerShowComposer)(UISafariViewController *navigationController);
-
-//UISafariViewControllerShowCompletion
-typedef void(^UISafariViewControllerShowCompletion)(UISafariViewController *navigationController, BOOL success);
-
-//UISafariViewControllerDidLoadingFinish
-typedef void(^UISafariViewControllerDidLoadingFinish)(UIWebView *webView);
-
-//UISafariViewControllerDidLoadingFail
-typedef void(^UISafariViewControllerDidLoadingFail)(UIWebView *webView, NSError *error);
-
-//UISafariViewControllerDidCancel
-typedef void(^UISafariViewControllerDidCancel)(UISafariViewController *navigationController);
+typedef void(^UISafariViewControllerCompletion)(UISafariViewController *safariViewController,
+                                                UISafariViewComposeResult result,
+                                                NSError  * _Nullable error) NS_AVAILABLE_IOS(7_0);
 
 @interface UISafariViewController : UINavigationController
 {
     
 }
-@property (nonatomic, strong, readonly, nonnull) UIViewController       *viewController;
-@property (nonatomic, strong, readonly, nonnull) UIBarButtonItem        *leftBarButtonItem;
-@property (nonatomic, strong, readonly, nonnull) UIWebView              *webView;
-@property (nonatomic, strong, readonly, nonnull) UIBarButtonItem        *actionButton;
-@property (nonatomic, strong, readonly, nonnull) UIBarButtonItem        *refreshButton;
-@property (nonatomic, strong, readonly, nonnull) UIActivityIndicatorView*activityIndicator;
-@property (nonatomic, strong, readonly, nonnull) UINavigationBar        *currentNavigationBar;
+@property (nonatomic, strong, readonly, nonnull) UIViewController       *viewController  NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, strong, readonly, nonnull) UIBarButtonItem        *leftBarButtonItem  NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, strong, readonly, nonnull) UIWebView              *webView  NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, strong, readonly, nonnull) UIBarButtonItem        *actionButton  NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, strong, readonly, nonnull) UIBarButtonItem        *refreshButton  NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, strong, readonly, nonnull) UIActivityIndicatorView*activityIndicator  NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, strong, readonly, nonnull) UINavigationBar        *currentNavigationBar  NS_AVAILABLE_IOS(7_0);
 
 - (instancetype) init NS_UNAVAILABLE;
 - (instancetype) new NS_UNAVAILABLE;
@@ -45,14 +43,9 @@ typedef void(^UISafariViewControllerDidCancel)(UISafariViewController *navigatio
 - (instancetype) initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
 - (instancetype) initWithNibName:(nullable NSString *)nibNameOrNil bundle:(nullable NSBundle *)nibBundleOrNil NS_UNAVAILABLE;
 
-+ (void) showSafariViewControllerWithURL:(NSURL *)URL
-                                composer:(nullable UISafariViewControllerShowComposer)composer_t
-                       completionHandler:(nullable UISafariViewControllerShowCompletion)completion_t
-                           didFinishLoad:(nullable UISafariViewControllerDidLoadingFinish)finishLoad_t
-                             didFailLoad:(nullable UISafariViewControllerDidLoadingFail)failLoad_t
-                               didCancel:(nullable UISafariViewControllerDidCancel)cancel_t;
-
++ (void) openWithURL:(NSURL *)URL completion:(UISafariViewControllerCompletion)completion_t;
 
 @end
 
 NS_ASSUME_NONNULL_END
+
