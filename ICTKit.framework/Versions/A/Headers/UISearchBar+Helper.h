@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  * @abstract Custom Cancel button.
  */
-- (void) setCancelButton:(UIButton *)cancelButton NS_DEPRECATED_IOS(2_0, 6_0);
+- (void) setCancelButton:(UIButton *)cancelButton NS_DEPRECATED_IOS(2_0, 6_0, "setCancelButton: has been replaced by currentCancelBarButtonItem");
 
 /*!
  * @abstract Custom SegmentedControl.
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  * @abstract Custom background image.
  */
-- (void) setBackgroundImage:(UIImage *)backgroundImage;
+- (void) setBackgroundImage:(UIImage *)backgroundImage NS_AVAILABLE_IOS(7_1);
 
 /*!
  * @abstract Get the current textField
@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  * @abstract Get the current cancel button item
  */
-@property (nonatomic, strong, readonly, nonnull) UIBarButtonItem *currentCancelBarButtonItem NS_AVAILABLE_IOS(7_1);
+@property (nonatomic, strong, readonly, nonnull) UIBarButtonItem *currentCancelBarButtonItem NS_DEPRECATED_IOS(7_0, 9_0);
 
 
 @end

@@ -26,14 +26,6 @@ IB_DESIGNABLE
 
 @end
 
-@interface UIView (IBInspectableClass)
-
-@property (nonatomic, assign) IBInspectable CGFloat cornerRadius ;
-@property (nonatomic, assign) IBInspectable CGFloat borderWidth ;
-@property (nonatomic, assign) IBInspectable UIColor *borderColor;
-
-@end
-
 @interface UILabel (IBInspectableClass)
 
 @property (nonatomic, strong) IBInspectable NSString *localizableString ;
@@ -43,5 +35,15 @@ IB_DESIGNABLE
 @interface UIBarButtonItem (IBInspectableClass)
 
 @property (nonatomic, strong) IBInspectable NSString *localizableString ;
+
+@end
+
+@interface UIView (IBInspectableClass)
+
+@property (nonatomic, assign) IBInspectable CGFloat cornerRadius ;
+
+@property (nonatomic, assign) IBInspectable CGFloat borderWidth ;
+
+@property (nonatomic, assign) IBInspectable UIColor *borderColor;
 
 @end

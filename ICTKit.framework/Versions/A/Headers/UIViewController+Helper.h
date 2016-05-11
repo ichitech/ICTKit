@@ -15,19 +15,24 @@ typedef void (^UIViewControllerSegueBlock) (UIStoryboardSegue *segue, id _Nullab
 @interface UIViewController (BlockSegue)
 
 - (void)configureSegue:(NSString *)identifier withBlock:(UIViewControllerSegueBlock _Nullable)block NS_AVAILABLE_IOS(6_0);
-- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id _Nullable)sender withBlock:(UIViewControllerSegueBlock _Nullable)block NS_AVAILABLE_IOS(6_0);
+
+- (void)performSegueWithIdentifier:(NSString *)identifier
+                            sender:(id _Nullable)sender
+                         withBlock:(UIViewControllerSegueBlock _Nullable)block NS_AVAILABLE_IOS(6_0);
 
 @end
 
 @interface UIViewController (Visible)
-
+ 
 - (BOOL) isVisible NS_AVAILABLE_IOS(6_0);
 
 @end
 
 @interface UIViewController (Modal)
 
-- (BOOL) isModal NS_AVAILABLE_IOS(4_0);
+- (BOOL) isModal NS_DEPRECATED_IOS(2_0, 8_4, "isModal has been replaced by isModalViewController");
+
+- (BOOL) isModalViewController NS_AVAILABLE_IOS(8_0);
 
 @end
 

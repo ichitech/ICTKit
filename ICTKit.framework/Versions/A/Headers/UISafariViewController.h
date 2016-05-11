@@ -7,15 +7,13 @@
 
 #import <UIKit/UIKit.h>
 
-enum UISafariViewComposeResult {
-    UISafariViewComposeResultCancelled,
-    UISafariViewComposeResultSuccessfullyLoaded,
-    UISafariViewComposeResultFailureLoaded,
-    UISafariViewComposeResultSuccessfullyOpened,
-    UISafariViewComposeResultInProcessOpening
+typedef NS_OPTIONS(NSInteger, UISafariViewComposeResult) {
+    UISafariViewComposeResultCancelled = 0,
+    UISafariViewComposeResultSuccessfullyLoaded = 1,
+    UISafariViewComposeResultFailureLoaded = 2,
+    UISafariViewComposeResultSuccessfullyOpened = 3,
+    UISafariViewComposeResultInProcessOpening = 4
 };
-typedef enum UISafariViewComposeResult UISafariViewComposeResult;
-
 
 NS_ASSUME_NONNULL_BEGIN
 

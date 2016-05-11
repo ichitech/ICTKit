@@ -12,6 +12,7 @@
 #define iOS_6 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0)
 #define iOS_7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
 #define iOS_8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+#define iOS_9 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
 #define iPHONE_DEVICE ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
 #define iPAD_DEVICE ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 

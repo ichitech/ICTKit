@@ -40,46 +40,47 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @param <color> It's a Color object. If color is nil, return NIL.
  */
-+ (NSString *) hexValuesFromUIColor:(UIColor *)color NS_AVAILABLE_IOS(2_0);
++ (NSString *) hexValuesFromUIColor:(UIColor *)color NS_AVAILABLE_IOS(4_0);
+- (nullable NSString *) hexValue NS_AVAILABLE_IOS(4_0);
 
 @end
 
 #pragma mark - FlatColors
 @interface UIColor (FlatColors)
 
-+ (UIColor *) flatRedColor;
-+ (UIColor *) flatDarkRedColor;
++ (UIColor *) flatRedColor NS_AVAILABLE_IOS(2_0);
++ (UIColor *) flatDarkRedColor NS_AVAILABLE_IOS(2_0);
 
-+ (UIColor *) flatGreenColor;
-+ (UIColor *) flatDarkGreenColor;
++ (UIColor *) flatGreenColor NS_AVAILABLE_IOS(2_0);
++ (UIColor *) flatDarkGreenColor NS_AVAILABLE_IOS(2_0);
 
-+ (UIColor *) flatBlueColor;
-+ (UIColor *) flatDarkBlueColor;
++ (UIColor *) flatBlueColor NS_AVAILABLE_IOS(2_0);
++ (UIColor *) flatDarkBlueColor NS_AVAILABLE_IOS(2_0);
 
-+ (UIColor *) flatTealColor;
-+ (UIColor *) flatDarkTealColor;
++ (UIColor *) flatTealColor NS_AVAILABLE_IOS(2_0);
++ (UIColor *) flatDarkTealColor NS_AVAILABLE_IOS(2_0);
 
-+ (UIColor *) flatPurpleColor;
-+ (UIColor *) flatDarkPurpleColor;
++ (UIColor *) flatPurpleColor NS_AVAILABLE_IOS(2_0);
++ (UIColor *) flatDarkPurpleColor NS_AVAILABLE_IOS(2_0);
 
-+ (UIColor *) flatBlackColor;
-+ (UIColor *) flatDarkBlackColor;
++ (UIColor *) flatBlackColor NS_AVAILABLE_IOS(2_0);
++ (UIColor *) flatDarkBlackColor NS_AVAILABLE_IOS(2_0);
 
-+ (UIColor *) flatYellowColor;
-+ (UIColor *) flatDarkYellowColor;
++ (UIColor *) flatYellowColor NS_AVAILABLE_IOS(2_0);
++ (UIColor *) flatDarkYellowColor NS_AVAILABLE_IOS(2_0);
 
-+ (UIColor *) flatOrangeColor;
-+ (UIColor *) flatDarkOrangeColor;
++ (UIColor *) flatOrangeColor NS_AVAILABLE_IOS(2_0);
++ (UIColor *) flatDarkOrangeColor NS_AVAILABLE_IOS(2_0);
 
-+ (UIColor *) flatWhiteColor;
-+ (UIColor *) flatDarkWhiteColor;
++ (UIColor *) flatWhiteColor NS_AVAILABLE_IOS(2_0);
++ (UIColor *) flatDarkWhiteColor NS_AVAILABLE_IOS(2_0);
 
-+ (UIColor *) flatGrayColor;
-+ (UIColor *) flatDarkGrayColor;
++ (UIColor *) flatGrayColor NS_AVAILABLE_IOS(2_0);
++ (UIColor *) flatDarkGrayColor NS_AVAILABLE_IOS(2_0);
 
-+ (UIColor *) randomFlatColor;
-+ (UIColor *) randomFlatLightColor;
-+ (UIColor *) randomFlatDarkColor;
++ (UIColor *) randomFlatColor NS_AVAILABLE_IOS(2_0);
++ (UIColor *) randomFlatLightColor NS_AVAILABLE_IOS(2_0);
++ (UIColor *) randomFlatDarkColor NS_AVAILABLE_IOS(2_0);
 
 @end
 
