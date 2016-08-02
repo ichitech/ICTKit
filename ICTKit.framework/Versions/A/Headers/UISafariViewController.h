@@ -34,6 +34,7 @@ typedef void(^UISafariViewControllerCompletion)(UISafariViewController *safariVi
 @property (nonatomic, strong, readonly, nonnull) UIBarButtonItem        *refreshButton  NS_AVAILABLE_IOS(7_0);
 @property (nonatomic, strong, readonly, nonnull) UIActivityIndicatorView*activityIndicator  NS_AVAILABLE_IOS(7_0);
 @property (nonatomic, strong, readonly, nonnull) UINavigationBar        *currentNavigationBar  NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, assign, readwrite)         BOOL                   hidesToolBar NS_AVAILABLE_IOS(7_0);
 
 - (instancetype) init NS_UNAVAILABLE;
 - (instancetype) new NS_UNAVAILABLE;

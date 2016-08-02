@@ -28,6 +28,18 @@ typedef void(^UIAlertHandler)(UIAlertController *controller);
                           cancelCompletion:(nullable UIAlertHandler)cancelHandler
                            otherCompletion:(nullable UIAlertHandler)otherHandler NS_AVAILABLE_IOS(8_0);
 
++ (void) alertControllerWithTitle:(NSString *)title
+                          message:(NSString *)message
+            onlyCancelButtonTitle:(NSString *)cancelTitle
+                 cancelCompletion:(nullable UIAlertHandler)handler NS_AVAILABLE_IOS(8_0);
+
++ (void) alertControllerWithTitle:(NSString *)title
+                          message:(NSString *)message
+                cancelButtonTitle:(NSString *)cancelTitle
+                 otherButtonTitle:(NSString *)otherTitle
+                 cancelCompletion:(nullable UIAlertHandler)cancelHandler
+                  otherCompletion:(nullable UIAlertHandler)otherHandler NS_AVAILABLE_IOS(8_0);
+
 @end
 
 NS_ASSUME_NONNULL_END
