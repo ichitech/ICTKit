@@ -19,6 +19,13 @@ id UIMainAppDelegate() NS_AVAILABLE_IOS(7_0);
 + (NSString * _Nonnull) build NS_AVAILABLE_IOS(2_0);
 + (NSString * _Nonnull) versionBuild NS_AVAILABLE_IOS(2_0);
 
+/**
+ *  Get the view of status bar.
+ *
+ *  @return UIView.
+ */
++ (UIView * _Nullable)   statusBar NS_AVAILABLE_IOS(7_0);
+
 @end
 
 @interface UIApplication (ApplicationSize)
