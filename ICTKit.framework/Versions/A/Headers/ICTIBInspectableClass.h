@@ -8,8 +8,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-IB_DESIGNABLE
-
 @interface UIImageView (IBInspectableClass)
 
 @property (nonatomic, strong) IBInspectable UIColor *imageTintColor ;

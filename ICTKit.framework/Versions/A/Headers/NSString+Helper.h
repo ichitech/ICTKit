@@ -109,13 +109,22 @@ FOUNDATION_EXPORT NSString  *__nonnull NSStringFromObject(id __nonnull object) N
 
 @interface NSString (URLEnDeCode)
 
-- (NSString *) stringByURLDecoding NS_AVAILABLE_IOS(6_0) ;
+- (NSString *) stringURLByDecoding NS_AVAILABLE_IOS(8_0) ;
 
-- (NSString *) stringByURLEncoding NS_AVAILABLE_IOS(6_0) ;
+- (NSString *) stringURLByEncoding NS_AVAILABLE_IOS(8_0) ;
 
-- (NSString *) stringURLAddQueryWithDictionary:(NSDictionary *)dictionary NS_AVAILABLE_IOS(6_0) ;
+- (NSString *) stringURLByAddingQueryFromDictionary:(NSDictionary *)dictionary NS_AVAILABLE_IOS(8_0) ;
 
-- (NSDictionary *) dictionaryQuery NS_AVAILABLE_IOS(6_0) ;
+- (NSDictionary *) dictionaryQueries NS_AVAILABLE_IOS(8_0) ;
+
+//Predicate Methods
+- (NSString *) stringByURLDecoding NS_DEPRECATED_IOS(2_0, 9_0, "stringByURLDecoding has been replaced by stringURLByDecoding") ;
+
+- (NSString *) stringByURLEncoding NS_DEPRECATED_IOS(2_0, 9_0, "stringByURLEncoding has been replaced by stringURLByEncoding") ;
+
+- (NSString *) stringURLAddQueryWithDictionary:(NSDictionary *)dictionary NS_DEPRECATED_IOS(2_0, 9_0, "stringURLAddQueryWithDictionary: has been replaced by stringURLByAddingQueryFromDictionary:") ;
+
+- (NSDictionary *) dictionaryQuery NS_DEPRECATED_IOS(2_0, 9_0, "dictionaryQuery: has been replaced by dictionaryQueries:") ;
 
 @end
 

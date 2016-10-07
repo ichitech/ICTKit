@@ -10,16 +10,39 @@
 
 #define kKeyPreferredLanguage @"kKeyPreferredLanguage"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSBundle (Helper)
 
-+ (void) setPreferredLanguage:(nonnull NSString *)preferredLanguage NS_AVAILABLE_IOS(7_0);
+/**
+ Get the ICTKit bundle.
 
-+ (void) clearPreferredLanguage NS_AVAILABLE_IOS(7_0);
+ @return NSBundle of ICTKit
+ */
++ (NSBundle *)defaultICTKitBundle NS_AVAILABLE_IOS(8_0);
 
-+ (nullable NSBundle *) myResourcesBundle NS_AVAILABLE_IOS(2_0);
++ (NSBundle *)currentPreferredLanguageBundle NS_AVAILABLE_IOS(8_0);
 
-+ (nullable NSBundle *) myPreferredLanguageResourcesBundle NS_AVAILABLE_IOS(2_0);
++ (NSBundle *)getBundleWithPreferredLanguage:(nullable NSString *)preferredLanguage;
 
-+ (nullable NSBundle *) myResourcesBundleWithPreferredLanguage:(nullable NSString *)preferredLanguage NS_AVAILABLE_IOS(7_0);
+- (void) setPreferredLanguage:(nonnull NSString *)preferredLanguage NS_AVAILABLE_IOS(8_0);
+
+- (void) clearPreferredLanguage NS_AVAILABLE_IOS(8_0);
 
 @end
+
+@interface NSBundle (Predicate)
+
++ (nullable NSBundle *) myResourcesBundle NS_DEPRECATED_IOS(2_0, 10_0, "+myResourcesBundle has been replaced by +defaultICTKitBundle");
+
++ (nullable NSBundle *) myPreferredLanguageResourcesBundle NS_DEPRECATED_IOS(2_0, 10_0, "+myPreferredLanguageResourcesBundle has been replaced by +currentPreferredLanguageBundle");
+
++ (nullable NSBundle *) myResourcesBundleWithPreferredLanguage:(nullable NSString *)preferredLanguage NS_DEPRECATED_IOS(2_0, 10_0, "+myResourcesBundleWithPreferredLanguage: has been replaced by +getBundleWithPreferredLanguage:");
+
++ (void) setPreferredLanguage:(nonnull NSString *)preferredLanguage NS_DEPRECATED_IOS(2_0, 10_0, "+setPreferredLanguage has been replaced by -setPreferredLanguage");
+
++ (void) clearPreferredLanguage NS_DEPRECATED_IOS(2_0, 10_0, "+clearPreferredLanguage has been replaced by -clearPreferredLanguage");
+
+@end
+
+NS_ASSUME_NONNULL_END

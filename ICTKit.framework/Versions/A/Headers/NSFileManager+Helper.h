@@ -22,7 +22,7 @@ NSURL * _Nullable NSFileManagerSaveWithObject(id object,
                                               NSString *__nullable folderName,
                                               NSFileManagerFileType fileType,
                                               dispatch_block_t __nullable completion
-                                              ) NS_DEPRECATED_IOS(2_0, 9_0,"NSFileManagerSaveWithObject() has been replaced by NSFileManagerSaveData()");
+                                              ) NS_DEPRECATED_IOS(2_0, 9_0,"Use NSFileManagerSaveData() instead.");
 
 void NSFileManagerSaveData(id object,
                             NSString *filePath,
@@ -94,9 +94,9 @@ NSString *NSFileManagerDocumentsPath();
  * @param <fileName> It's a kind of NSString. ie: "a.json", "b.txt",...
  * @param <filePath> It's a kind of NSString. ie: "a/b/a.json", "b/b/b.txt",...
  */
-- (nullable NSData *) fileWithName:(NSString *)file inFolderPath:(NSString *)folder;
+- (nullable NSData *) fileWithName:(NSString *)file inFolderPath:(NSString *)folder NS_AVAILABLE_IOS(7_1);
 
-- (nullable NSData *) fileAtPath:(NSString *)filePath;
+- (nullable NSData *) fileAtPath:(NSString *)filePath NS_AVAILABLE_IOS(7_1);
 
 - (unsigned long long int) sizeOfFolder:(NSString *)folderPath NS_AVAILABLE_IOS(7_1);
 
