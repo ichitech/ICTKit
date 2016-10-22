@@ -46,12 +46,12 @@ FOUNDATION_EXPORT NSString  *__nonnull NSStringFromObject(id __nonnull object) N
 /*!
  * @abstract Get the last character of string.
  */
-- (NSString *) lastCharacter NS_DEPRECATED_IOS(2_0, 7_1);
+- (NSString *)lastCharacter NS_DEPRECATED_IOS(2_0, 7_1);
 
 /*!
  * @abstract Get the first character of string.
  */
-- (NSString *) firstCharacter NS_DEPRECATED_IOS(2_0, 7_1);
+- (NSString *)firstCharacter NS_DEPRECATED_IOS(2_0, 7_1);
 
 @end
 
@@ -62,89 +62,89 @@ FOUNDATION_EXPORT NSString  *__nonnull NSStringFromObject(id __nonnull object) N
  *
  * @example expamle@mail.com
  */
-- (BOOL) isEmail  NS_AVAILABLE_IOS(7_0);
+- (BOOL)isEmail  NS_AVAILABLE_IOS(7_0);
 
 /*!
  * @abstract Return YES if string contain at least 1 character (MUST BE NOT SPACE CHARACTER).
  *
  */
-- (BOOL) isset NS_AVAILABLE_IOS(7_0);
+- (BOOL)isset NS_AVAILABLE_IOS(7_0);
 
 /*!
  * @abstract Validate URL.
  *
  * @example http://example.com or https://expamle.com .
  */
-- (BOOL) isURL NS_AVAILABLE_IOS(7_0);
+- (BOOL)isURL NS_AVAILABLE_IOS(7_0);
 
 /*!
  * @abstract Validate Numric.
  *
  */
-- (BOOL) isNumric NS_AVAILABLE_IOS(7_0);
+- (BOOL)isNumric NS_AVAILABLE_IOS(7_0);
 
 /*!
  * @abstract Validate Special Character.
  *
  */
-- (BOOL) isContainSpecialCharacter  NS_DEPRECATED_IOS(2_0, 8_0, "isContainSpecialCharacter: has been replaced by hasSpecialCharacterWithExceptionOfArray:") ;
+- (BOOL)isContainSpecialCharacter  NS_DEPRECATED_IOS(2_0, 8_0, "isContainSpecialCharacter: has been replaced by hasSpecialCharacterWithExceptionOfArray:") ;
 
 /*!
  * @abstract Validate Special Character.
  *
  * @param All your symbols you want to allow
  */
-- (BOOL) isContainSpecialCharacterWithAllowSymbols:(nullable NSArray<NSString *> *)symAllows NS_DEPRECATED_IOS(2_0, 8_4, "isContainSpecialCharacterWithAllowSymbols: has been replaced by hasSpecialCharacterWithExceptionOfArray:");
+- (BOOL)isContainSpecialCharacterWithAllowSymbols:(nullable NSArray<NSString *> *)symAllows NS_DEPRECATED_IOS(2_0, 8_4, "isContainSpecialCharacterWithAllowSymbols: has been replaced by hasSpecialCharacterWithExceptionOfArray:");
 
-- (BOOL) hasSpecialCharacterWithExceptionOfArray:(nullable NSArray<NSString *> *)exceptions NS_AVAILABLE_IOS(7_1);
+- (BOOL)hasSpecialCharacterWithExceptionOfArray:(nullable NSArray<NSString *> *)exceptions NS_AVAILABLE_IOS(7_1);
 
 /*!
  * @abstract Validate string.
  *
  * @param All your characters you want to check
  */
-- (BOOL) hasCharacterInArray:(nullable NSArray<NSString *> *)characters NS_AVAILABLE_IOS(7_1);
+- (BOOL)hasCharacterInArray:(nullable NSArray<NSString *> *)characters NS_AVAILABLE_IOS(7_1);
 
 @end
 
 @interface NSString (URLEnDeCode)
 
-- (NSString *) stringURLByDecoding NS_AVAILABLE_IOS(8_0) ;
+- (NSString *)stringURLByDecoding NS_AVAILABLE_IOS(8_0) ;
 
-- (NSString *) stringURLByEncoding NS_AVAILABLE_IOS(8_0) ;
+- (NSString *)stringURLByEncoding NS_AVAILABLE_IOS(8_0) ;
 
-- (NSString *) stringURLByAddingQueryFromDictionary:(NSDictionary *)dictionary NS_AVAILABLE_IOS(8_0) ;
+- (NSString *)stringURLByAddingQueryFromDictionary:(NSDictionary *)dictionary NS_AVAILABLE_IOS(8_0) ;
 
-- (NSDictionary *) dictionaryQueries NS_AVAILABLE_IOS(8_0) ;
+- (NSDictionary *)dictionaryQueries NS_AVAILABLE_IOS(8_0) ;
 
 //Predicate Methods
-- (NSString *) stringByURLDecoding NS_DEPRECATED_IOS(2_0, 9_0, "stringByURLDecoding has been replaced by stringURLByDecoding") ;
+- (NSString *)stringByURLDecoding NS_DEPRECATED_IOS(2_0, 9_0, "stringByURLDecoding has been replaced by stringURLByDecoding") ;
 
-- (NSString *) stringByURLEncoding NS_DEPRECATED_IOS(2_0, 9_0, "stringByURLEncoding has been replaced by stringURLByEncoding") ;
+- (NSString *)stringByURLEncoding NS_DEPRECATED_IOS(2_0, 9_0, "stringByURLEncoding has been replaced by stringURLByEncoding") ;
 
-- (NSString *) stringURLAddQueryWithDictionary:(NSDictionary *)dictionary NS_DEPRECATED_IOS(2_0, 9_0, "stringURLAddQueryWithDictionary: has been replaced by stringURLByAddingQueryFromDictionary:") ;
+- (NSString *)stringURLAddQueryWithDictionary:(NSDictionary *)dictionary NS_DEPRECATED_IOS(2_0, 9_0, "stringURLAddQueryWithDictionary: has been replaced by stringURLByAddingQueryFromDictionary:") ;
 
-- (NSDictionary *) dictionaryQuery NS_DEPRECATED_IOS(2_0, 9_0, "dictionaryQuery: has been replaced by dictionaryQueries:") ;
+- (NSDictionary *)dictionaryQuery NS_DEPRECATED_IOS(2_0, 9_0, "dictionaryQuery: has been replaced by dictionaryQueries:") ;
 
 @end
 
 @interface NSString (ASCIIHelper)
 
-- (NSDictionary *) convertToASCII;
+- (NSDictionary *)convertToASCII;
 
-- (NSInteger ) asciiCode;
+- (NSInteger )asciiCode;
 
-+ (NSString *) stringByASCIICode:(unichar)asciiCode;
++ (NSString *)stringByASCIICode:(unichar)asciiCode;
 
 @end
 
 @interface NSString (SubStringHelper)
 
 //Extract text substring from NSString at given index 
-- (NSString *) extractTextToIndex:(NSInteger)index NS_AVAILABLE_IOS(7_0);
+- (NSString *)extractTextToIndex:(NSInteger)index NS_AVAILABLE_IOS(7_0);
 
 //Specify exactly only word characters from NSString at given index
-- (NSString *) extractWordAtIndex:(NSInteger) index NS_AVAILABLE_IOS(7_0);
+- (NSString *)extractWordAtIndex:(NSInteger) index NS_AVAILABLE_IOS(7_0);
 
 @end
 

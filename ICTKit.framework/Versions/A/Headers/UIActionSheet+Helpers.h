@@ -10,10 +10,10 @@
 
 @interface UIActionSheet (Helper) <UIActionSheetDelegate>
 
--(instancetype) initWithTitle:(NSString *)inTitle
-  cancelButtonItem:(UIActionButtonItem *)inCancelButtonItem
-destructiveButtonItem:(UIActionButtonItem *)inDestructiveItem
-  otherButtonItems:(UIActionButtonItem *)inOtherButtonItems, ... NS_REQUIRES_NIL_TERMINATION NS_AVAILABLE_IOS(2_0);
+- (instancetype)initWithTitle:(NSString *)inTitle
+             cancelButtonItem:(UIActionButtonItem *)inCancelButtonItem
+        destructiveButtonItem:(UIActionButtonItem *)inDestructiveItem
+             otherButtonItems:(UIActionButtonItem *)inOtherButtonItems, ... NS_REQUIRES_NIL_TERMINATION NS_AVAILABLE_IOS(2_0);
 
 - (NSInteger)addButtonItem:(UIActionButtonItem *)item NS_AVAILABLE_IOS(2_0);
 

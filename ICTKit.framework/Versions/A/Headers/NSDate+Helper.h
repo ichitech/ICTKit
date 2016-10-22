@@ -12,41 +12,42 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSDate (DateCompare)
 
-+ (NSDate *)normalizedDateWithDate:(NSDate *) date NS_AVAILABLE_IOS(4_0);
++(NSDate *)normalizedDateWithDate:(NSDate *) date NS_AVAILABLE_IOS(4_0);
 
 ///Compare with TODAY
-+ (BOOL) isEqualToDateIgnoringTime:(NSDate *) date NS_AVAILABLE_IOS(4_0);
++(BOOL)isEqualToDateIgnoringTime:(NSDate *) date NS_AVAILABLE_IOS(4_0);
 
-+ (BOOL) isEarlierThanDate:(NSDate *) date NS_AVAILABLE_IOS(4_0);
++(BOOL)isEarlierThanDate:(NSDate *) date NS_AVAILABLE_IOS(4_0);
 
-+ (BOOL) isLaterThanDate:(NSDate *) date NS_AVAILABLE_IOS(4_0);
++(BOOL)isLaterThanDate:(NSDate *) date NS_AVAILABLE_IOS(4_0);
 
-+ (NSString *)getDayOfTheWeek:(NSDate *)date  NS_AVAILABLE_IOS(4_0);
++(NSString *)getDayOfTheWeek:(NSDate *)date  NS_AVAILABLE_IOS(4_0);
 
 ///Compare with other DAY and Ignoring time
-+ (BOOL) isEqualToDateIgnoringTime:(NSDate *) dateFist andDateSecond:(NSDate *)dateSecond NS_AVAILABLE_IOS(4_0);
++(BOOL)isEqualToDateIgnoringTime:(NSDate *) dateFist andDateSecond:(NSDate *)dateSecond NS_AVAILABLE_IOS(4_0);
 
 @end
 
 @interface NSDate (Helper)
 
-+ (NSDate *) dateWithString:(NSString *)StringDate
-                  formatter:(NSString *)formatDate NS_AVAILABLE_IOS(5_0);
-+ (NSDate *) dateWithString:(NSString *)StringDate
-                  formatter:(NSString *)formatDate
-                 withLocale:(nullable NSLocale *)locale NS_AVAILABLE_IOS(5_0);
++(NSDate *)dateWithString:(NSString *)StringDate
+                formatter:(NSString *)formatDate NS_AVAILABLE_IOS(5_0);
 
--(NSString *) stringWithFormatter:(NSString *)format NS_AVAILABLE_IOS(7_0);
--(NSString *) stringWithFormatter:(NSString *)format
-                       withLocale:(nullable NSLocale *)locale NS_AVAILABLE_IOS(7_0);
++ (NSDate *)dateWithString:(NSString *)StringDate
+                 formatter:(NSString *)formatDate
+                withLocale:(nullable NSLocale *)locale NS_AVAILABLE_IOS(5_0);
 
-+(NSString *) changeTime24hFrom12hWithDateString:(NSString *)string NS_AVAILABLE_IOS(4_0);
+-(NSString *)stringWithFormatter:(NSString *)format NS_AVAILABLE_IOS(7_0);
 
-+(NSString *) changeTime12hFrom24hWithDateString:(NSString *)string NS_AVAILABLE_IOS(4_0);
+-(NSString *)stringWithFormatter:(NSString *)format withLocale:(nullable NSLocale *)locale NS_AVAILABLE_IOS(7_0);
 
-+(NSString *) stringTimeOfDayFromSecond:(float)second NS_AVAILABLE_IOS(4_0);
++(NSString *)changeTime24hFrom12hWithDateString:(NSString *)string NS_AVAILABLE_IOS(4_0);
 
-+(NSString *) stringSecondFromTimeOfDay:(NSString *)stringTime NS_AVAILABLE_IOS(4_0);
++(NSString *)changeTime12hFrom24hWithDateString:(NSString *)string NS_AVAILABLE_IOS(4_0);
+
++(NSString *)stringTimeOfDayFromSecond:(float)second NS_AVAILABLE_IOS(4_0);
+
++(NSString *)stringSecondFromTimeOfDay:(NSString *)stringTime NS_AVAILABLE_IOS(4_0);
 
 @end
 
@@ -82,7 +83,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-
 /** Various utilities for NSDate. Some of these are fairly specific to some needs I had.  Many could be improved.  Your mileage may vary.  Offer void where prohibited by law.
  */
 @interface NSDate (Utils)
@@ -109,7 +109,6 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 -(NSString *)niceDescription NS_AVAILABLE_IOS(4_0);
-
 /// Returns the same thing as -niceDescription but includes the time.
 -(NSString *)niceDescriptionWithTime NS_AVAILABLE_IOS(4_0);
 
@@ -119,47 +118,44 @@ NS_ASSUME_NONNULL_BEGIN
 -(NSString *)toYYYYMMDDhhmmss NS_AVAILABLE_IOS(4_0);
 /// Converts the receiver to a string in compliance with ISO8601
 -(NSString *)toISO8601 NS_AVAILABLE_IOS(4_0);
-
 /// Returns an NSDate which is inDays (+/-) days different from sender.
 -(NSDate *)dateByAddingDays:(NSInteger)inDays NS_AVAILABLE_IOS(4_0);
-
 /// Returns YES if inDate is the same date as the receiver.
 -(BOOL)sameDayAsDate:(NSDate *)inDate NS_AVAILABLE_IOS(4_0);
 /// Returns YES if otherDate is later in time than the receiver.
 -(BOOL)isLaterThanDate:(NSDate *)otherDate NS_AVAILABLE_IOS(4_0);
 /// Returns YES if otherDate is earlier in time than the receiver.
 -(BOOL)isEarlierThanDate:(NSDate *)otherDate NS_AVAILABLE_IOS(4_0);
+
 @end
 
 @interface NSDate(HDEPRECATED)
 
-+ (NSString *) determineDate:(NSDate *)date NS_DEPRECATED_IOS(2_0, 7_1, "determineDate: has been replaced by niceDescription");
++ (NSString *)determineDate:(NSDate *)date NS_DEPRECATED_IOS(2_0, 7_1, "determineDate: has been replaced by niceDescription");
 
-+ (NSString *) formatDate:(NSDate *)date formatType:(NSString *)type NS_DEPRECATED_IOS(2_0, 7_1, "formatDate:formatType: has been replaced by stringTimeWithFormatter:");
++ (NSString *)formatDate:(NSDate *)date formatType:(NSString *)type NS_DEPRECATED_IOS(2_0, 7_1, "formatDate:formatType: has been replaced by stringTimeWithFormatter:");
 
-+ (NSDate *) dateWithTimeInterval:(float)Second NS_DEPRECATED_IOS(2_0, 7_1, "dateWithTimeInterval: has been replaced by dateWithTimeIntervalSince1970");
-+ (NSDate *) dateWithDate:(NSDate *)date
-                formatter:(NSString *)fomatDate NS_DEPRECATED_IOS(2_0, 7_1);
++ (NSDate *)dateWithTimeInterval:(float)Second NS_DEPRECATED_IOS(2_0, 7_1, "dateWithTimeInterval: has been replaced by dateWithTimeIntervalSince1970");
 
-+ (NSString *) stringWithDate:(NSDate *)Date
-                   formatter:(NSString *)formatDate NS_DEPRECATED_IOS(2_0, 8_0, "stringWithDate:formatter: has been replaced by stringTimeWithFormatter:");
++ (NSDate *)dateWithDate:(NSDate *)date formatter:(NSString *)fomatDate NS_DEPRECATED_IOS(2_0, 7_1);
 
-- (NSString *) stringTimeWithFormatter:(NSString *)format NS_DEPRECATED_IOS(2_0, 7_1, "stringTimeWithFormatter: has been replaced by stringWithFormatter:");
++ (NSString *)stringWithDate:(NSDate *)Date formatter:(NSString *)formatDate NS_DEPRECATED_IOS(2_0, 8_0, "stringWithDate:formatter: has been replaced by stringTimeWithFormatter:");
 
-+ (NSString *) stringWithDateString:(NSString *)StringDate
+- (NSString *)stringTimeWithFormatter:(NSString *)format NS_DEPRECATED_IOS(2_0, 7_1, "stringTimeWithFormatter: has been replaced by stringWithFormatter:");
+
++ (NSString *)stringWithDateString:(NSString *)StringDate
                    beforeFormatter:(NSString *)formatDateFirst
                     afterFormatter:(NSString *)fomatDateConveter NS_DEPRECATED_IOS(2_0, 7_1);
 
-+ (CGFloat) timeIntervalSince1970WithDateString:(NSString *)StringDate NS_DEPRECATED_IOS(2_0, 7_1);
++ (CGFloat)timeIntervalSince1970WithDateString:(NSString *)StringDate NS_DEPRECATED_IOS(2_0, 7_1);
 
-+ (CGFloat) timeIntervalSince1970WithDateString:(NSString *)StringDate
-                                     formatter:(NSString *)formatdate NS_DEPRECATED_IOS(2_0, 7_1);
++ (CGFloat)timeIntervalSince1970WithDateString:(NSString *)StringDate formatter:(NSString *)formatdate NS_DEPRECATED_IOS(2_0, 7_1);
 
-+ (NSString *) timeIntervelFromGMTWithDate:(NSDate *)date NS_DEPRECATED_IOS(2_0, 7_1);
++ (NSString *)timeIntervelFromGMTWithDate:(NSDate *)date NS_DEPRECATED_IOS(2_0, 7_1);
 
-+ (NSDate *) dateLocalReturnFromSystem:(NSDate *)date NS_DEPRECATED_IOS(2_0, 6_1);
++ (NSDate *)dateLocalReturnFromSystem:(NSDate *)date NS_DEPRECATED_IOS(2_0, 6_1);
 
-+ (NSDate *) dateNowSystem NS_DEPRECATED_IOS(2_0, 6_1);
++ (NSDate *)dateNowSystem NS_DEPRECATED_IOS(2_0, 6_1);
 
 @end
 

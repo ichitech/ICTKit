@@ -26,15 +26,15 @@ typedef void(^UISafariViewControllerCompletion)(UISafariViewController *safariVi
 
 @interface UISafariViewController : UINavigationController
 
-@property (nonatomic, strong, readonly, nonnull) UIViewController       *viewController  NS_AVAILABLE_IOS(7_0);
-@property (nonatomic, strong, readonly, nonnull) UIBarButtonItem        *leftBarButtonItem  NS_AVAILABLE_IOS(7_0);
-@property (nonatomic, strong, readonly, nullable) UIWebView              *webView  NS_DEPRECATED_IOS(6_0, 8_1, "@property -webView has been replaced by @property -wkWebView");
-@property (nonatomic, strong, readonly, nonnull) UIBarButtonItem        *actionButton  NS_AVAILABLE_IOS(7_0);
-@property (nonatomic, strong, readonly, nonnull) UIBarButtonItem        *refreshButton  NS_AVAILABLE_IOS(7_0);
-@property (nonatomic, strong, readonly, nonnull) UIActivityIndicatorView*activityIndicator  NS_AVAILABLE_IOS(7_0);
-@property (nonatomic, strong, readonly, nonnull) UINavigationBar        *currentNavigationBar  NS_AVAILABLE_IOS(7_0);
-@property (nonatomic, assign, readwrite)         BOOL                   hidesToolBar NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, assign, readwrite)          BOOL                   hidesToolBar NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, strong, readonly, nonnull)  UIViewController       *viewController  NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, strong, readonly, nonnull)  UIBarButtonItem        *leftBarButtonItem  NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, strong, readonly, nonnull)  UIBarButtonItem        *actionButton  NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, strong, readonly, nonnull)  UIBarButtonItem        *refreshButton  NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, strong, readonly, nonnull)  UIActivityIndicatorView*activityIndicator  NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, strong, readonly, nonnull)  UINavigationBar        *currentNavigationBar  NS_AVAILABLE_IOS(7_0);
 @property (nonatomic, strong, readonly, nullable) WKWebView              *wkWebView  NS_AVAILABLE_IOS(8_0);
+@property (nonatomic, strong, readonly, nullable) UIWebView              *webView  NS_DEPRECATED_IOS(6_0, 8_1, "Use @property -wkWebView instead.");
 
 
 - (instancetype) new NS_UNAVAILABLE;
@@ -56,7 +56,7 @@ typedef void(^UISafariViewControllerCompletion)(UISafariViewController *safariVi
  *  @param completion_t Completion block.
  */
 - (void) showWithURL:(NSURL *)URL completion:(UISafariViewControllerCompletion)completion_t NS_AVAILABLE_IOS(8_0);
-+ (void) openWithURL:(NSURL *)URL completion:(UISafariViewControllerCompletion)completion_t  NS_DEPRECATED_IOS(6_0, 9_0, "openWithURL:completion: has been replaced by showWithURL:completion:");
++ (void) openWithURL:(NSURL *)URL completion:(UISafariViewControllerCompletion)completion_t  NS_DEPRECATED_IOS(6_0, 9_0, "Use -showWithURL:completion: instead.");
 
 @end
 

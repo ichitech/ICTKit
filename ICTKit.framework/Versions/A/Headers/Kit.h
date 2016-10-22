@@ -52,5 +52,6 @@
 #import <ICTKit/UIValidate.h>
 #import <ICTKit/UICountryPickerViewController.h>
 #import <ICTKit/UISafariViewController.h>
+#import <ICTKit/ICTGoogleTracking.h>
 
 

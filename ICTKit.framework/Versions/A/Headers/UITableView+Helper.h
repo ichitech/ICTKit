@@ -12,8 +12,8 @@ FOUNDATION_EXPORT NSString    *__nullable NSStringFromNSIndexPath(NSIndexPath *_
 
 @interface UITableView (Helper)
 
-- (nullable NSIndexPath *) indexPathForRowWithEvent:(UIEvent *__nonnull)event NS_AVAILABLE_IOS(5_0);
+- (nullable NSIndexPath *)indexPathForRowWithEvent:(UIEvent *__nonnull)event NS_AVAILABLE_IOS(5_0);
 
-- (BOOL) isLastIndexPath:(NSIndexPath *__nonnull) currentIndexPath  NS_AVAILABLE_IOS(7_0);
+- (BOOL)isLastIndexPath:(NSIndexPath *__nonnull) currentIndexPath  NS_AVAILABLE_IOS(7_0);
 
 @end

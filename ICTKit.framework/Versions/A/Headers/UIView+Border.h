@@ -9,19 +9,14 @@
 
 @interface UIView (Border)
 
-- (void) addBorderWithColor:(UIColor *)color
-                   andWidth:(CGFloat)borderWidth NS_AVAILABLE_IOS(6_0);
+- (void) addBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth NS_AVAILABLE_IOS(6_0);
 
-- (void) addBottomBorderWithColor:(UIColor *)color
-                         andWidth:(CGFloat)borderWidth NS_AVAILABLE_IOS(6_0);
+- (void) addBottomBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth NS_AVAILABLE_IOS(6_0);
 
-- (void) addLeftBorderWithColor:(UIColor *)color
-                       andWidth:(CGFloat)borderWidth NS_AVAILABLE_IOS(6_0);
+- (void) addLeftBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth NS_AVAILABLE_IOS(6_0);
 
-- (void) addRightBorderWithColor:(UIColor *)color
-                        andWidth:(CGFloat)borderWidth NS_AVAILABLE_IOS(6_0);
+- (void) addRightBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth NS_AVAILABLE_IOS(6_0);
 
-- (void) addTopBorderWithColor:(UIColor *)color
-                      andWidth:(CGFloat)borderWidth NS_AVAILABLE_IOS(6_0);
+- (void) addTopBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth NS_AVAILABLE_IOS(6_0);
 
 @end
