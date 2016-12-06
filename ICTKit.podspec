@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.dependency 'ECSlidingViewController'
   s.dependency 'PureLayout'
-  s.public_header_files = 'ICTKit.framework/Versions/A/Headers'
+  s.public_header_files = 'ICTKit.framework/Versions/A/Headers/*.h'
 
 end
