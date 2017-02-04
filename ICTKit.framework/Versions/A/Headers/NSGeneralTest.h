@@ -27,8 +27,8 @@
  *
  * @return NSDefinition Object.
  *
- * @param <aKey>  It's a kind of NSString. It's key of object.
- * @param <length>  It's a kind of NSLength. It contain min length and max length of value.
+ * @param aKey  It's a kind of NSString. It's key of object.
+ * @param length  It's a kind of NSLength. It contain min length and max length of value.
  *
  * @example 
         NSLength length = NSMakeLength(10,30);
@@ -44,8 +44,8 @@
  *
  * @return NSDefinition Object.
  *
- * @param <aKey>  It's a kind of NSString. It's key of object.
- * @param <aValue>  It's a kind of NSString. It's value of object.
+ * @param aKey  It's a kind of NSString. It's key of object.
+ * @param aValue  It's a kind of NSString. It's value of object.
  *
  * @example
         NSString *key   = @"name";
@@ -75,7 +75,7 @@
 /*!
  * @abstract This method will return a random string with NSLength.
  *
- * @param <length> It's a kind of NSLength. It contain min length and max length of general string.
+ * @param length It's a kind of NSLength. It contain min length and max length of general string.
  * @example
         NSLength length = NSMakeLength(10,30);
  
@@ -86,8 +86,8 @@
 /*!
  * @abstract This method will return a random array which contain string object.
  *
- * @param <aLength> It's a kind of NSLength. It contain min length and max length of general array.
- * @param <sLength> It's a kind of NSLength. It contain min length and max length of general string that is object of array.
+ * @param aLength It's a kind of NSLength. It contain min length and max length of general array.
+ * @param sLength It's a kind of NSLength. It contain min length and max length of general string that is object of array.
  * @example
         NSLength alength = NSMakeLength(10,30);
  
@@ -100,8 +100,8 @@
 /*!
  * @abstract This method will return a random array which contain string object.
  *
- * @param <aLength> It's a kind of NSLength. It contain min length and max length of general array.
- * @param <sLength> It's a kind of NSLength. It contain min length and max length of general string that is object of array.
+ * @param aLength It's a kind of NSLength. It contain min length and max length of general array.
+ * @param sLength It's a kind of NSLength. It contain min length and max length of general string that is object of array.
  * @example
         NSLength alength = NSMakeLength(10,30);
  

@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
+NS_CLASS_DEPRECATED_IOS(2_0, 8_3, "UIActionSheet is deprecated. Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead")
 @interface UIActionButtonItem : NSObject
 {
     NSString *label;

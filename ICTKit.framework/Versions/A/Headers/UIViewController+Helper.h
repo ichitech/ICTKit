@@ -16,9 +16,16 @@ typedef void (^UIViewControllerSegueBlock) (UIStoryboardSegue *segue, id _Nullab
 
 - (void)configureSegue:(NSString *)identifier withBlock:(UIViewControllerSegueBlock _Nullable)block NS_AVAILABLE_IOS(6_0);
 
-- (void)performSegueWithIdentifier:(NSString *)identifier
-                            sender:(id _Nullable)sender
-                         withBlock:(UIViewControllerSegueBlock _Nullable)block NS_AVAILABLE_IOS(6_0);
+/**
+ Method which allows to use a block to prepare segue instead of ugly -prepareForSegue method.
+
+ @param identifier The identify is defined in the storyboard.
+ @param sender The sender object
+ @param completion_t The completion block should be called.
+ @note  if you override -prepareForSegue:sender: method, BlockSegue won't be performed in these UIViewController.
+ */
+- (void)performSegueWithIdentifier:(NSString *)identifier sender:(nullable id)sender completion:(nullable UIViewControllerSegueBlock)completion_t NS_AVAILABLE_IOS(8_0);
+- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id _Nullable)sender withBlock:(UIViewControllerSegueBlock _Nullable)block NS_DEPRECATED_IOS(6_0, 10_0, "Use -performSegueWithIdentifier:sender:completion: instead.");
 
 @end
 
@@ -30,7 +37,7 @@ typedef void (^UIViewControllerSegueBlock) (UIStoryboardSegue *segue, id _Nullab
 
 @interface UIViewController (Modal)
 
-- (BOOL) isModal NS_DEPRECATED_IOS(2_0, 8_4, "isModal has been replaced by isModalViewController");
+- (BOOL) isModal NS_DEPRECATED_IOS(2_0, 8_4, "Use -isModalViewController instead.");
 
 - (BOOL) isModalViewController NS_AVAILABLE_IOS(8_0);
 

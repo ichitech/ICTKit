@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+void UIAlertControllerQuick(NSString *title, NSString *message, UIAlertAction *cancelAlertAction, UIAlertAction *doneAlertAction) NS_AVAILABLE_IOS(8_0);
+
 typedef void(^UIAlertHandler)(UIAlertController *controller);
 
 @interface UIAlertController (Helper)

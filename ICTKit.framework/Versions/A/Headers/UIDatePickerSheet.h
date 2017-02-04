@@ -30,7 +30,7 @@ typedef void(^UIDatePickerSheetCompose)(UIDatePickerSheet *picker);
 /**
  Get the current navigation bar.
  */
-@property (nonatomic, strong, readonly)  UINavigationBar      *navigationBar NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, strong, readonly, nullable)  UINavigationBar *navigationBar NS_AVAILABLE_IOS(7_0);
 
 /**
  Get the current pickerDate.
@@ -40,7 +40,7 @@ typedef void(^UIDatePickerSheetCompose)(UIDatePickerSheet *picker);
 /**
  Get the current backgroundView.
  */
-@property (nonatomic, strong, readonly)  UIView               *backgroundView NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, strong, readonly, nullable)  UIView    *backgroundView NS_AVAILABLE_IOS(7_0);
 
 /**
  Get the current left bar button item.

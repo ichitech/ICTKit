@@ -15,19 +15,28 @@ FOUNDATION_EXPORT UIImage *UIImageExportFromView(UIView * view, CGFloat scale) N
 @interface UIImage (ImageWithUIView)
 
 /*!
- * @abstract Take screenshot of device.
- * @param <view> It's kind of UIView. View will be taken photo.
- *
+ * @abstract Take screenshot of view.
+ * @param view View will be taken screenshot.
+ * @param scale The scale of new image.
  */
-+ (UIImage *) imageWithUIView:(UIView *)view NS_DEPRECATED_IOS(2_0, 7_1, "imageWithUIView: has been replaced by imageFromUIView:scale:");
-+ (UIImage *) imageFromUIView:(UIView *)view scale:(CGFloat)scale NS_AVAILABLE_IOS(7_1);//default is 1
++ (UIImage *)imageFromUIView:(UIView *)view scale:(CGFloat)scale NS_AVAILABLE_IOS(7_1);//default is 1
++ (UIImage *)imageWithUIView:(UIView *)view NS_DEPRECATED_IOS(2_0, 7_1, "imageWithUIView: has been replaced by imageFromUIView:scale:");
 
 /*!
  * @abstract Change size of image.
- * @param <image> It's a kind of UIImage. It will be use to change size.
- * @param <newSize> It's a kind of CGSize. Size of new image.
+ * @param image The image will be use to change size.
+ * @param newSize The size of new image.
  */
-+ (UIImage *) imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize NS_DEPRECATED_IOS(2_0, 7_1, "imageWithImage:scaledToSize: has been replaced by resizedImageToSize:");
++ (UIImage *)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize NS_DEPRECATED_IOS(2_0, 7_1, "imageWithImage:scaledToSize: has been replaced by resizedImageToSize:");
+
+
+/**
+ Create an image from UIColor
+
+ @param color The background color of new image.
+ @param size The size of new image
+ */
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size NS_AVAILABLE_IOS(7_0);
 
 @end
 
@@ -35,7 +44,7 @@ FOUNDATION_EXPORT UIImage *UIImageExportFromView(UIView * view, CGFloat scale) N
 
 /*!
  * @abstract Change overlay of image.
- * @param <color> It's a kind of UIClor. New color of image.
+ * @param color New color of image.
  */
 - (UIImage *)imageWithColor:(nonnull UIColor *)color;
 
@@ -43,11 +52,11 @@ FOUNDATION_EXPORT UIImage *UIImageExportFromView(UIView * view, CGFloat scale) N
 
 @interface UIImage(ResizeCategory)
 
--(UIImage*) resizedImageFixSize:(CGSize)dstSize;
+-(UIImage*)resizedImageFixSize:(CGSize)dstSize;
 
--(UIImage*) resizedImageToFitInSize:(CGSize)boundingSize scaleIfSmaller:(BOOL)scale;
+-(UIImage*)resizedImageToFitInSize:(CGSize)boundingSize scaleIfSmaller:(BOOL)scale;
 
--(UIImage*) resizedImageToSize:(CGSize)newSize;
+-(UIImage*)resizedImageToSize:(CGSize)newSize;
 
 @end
 

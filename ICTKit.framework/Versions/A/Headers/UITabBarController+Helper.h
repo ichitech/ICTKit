@@ -22,33 +22,31 @@ typedef NS_OPTIONS(NSUInteger, UITabbarImageOptions) {
 
 @interface UITabBarController (TabbarCustom)
 
-/*!
- * @abstract Hide or show the tabbar at the bottom of the screen.
- *
- * @param <hidden> It's kind of BOOL. Hide or show the tabbar.
- * @param <animated> It's kind of BOOL. If animated, it will transition vertically using 
- * UIViewAnimation.
+/**
+ @abstract Hide or show the tabbar at the bottom of the screen.
+ @param hidden Set hide or show the tabbar.
+ @param animated If animated, it will transition vertically using UIViewAnimation.
  */
 - (void) setTabbarHidden:(BOOL)hidden animated:(BOOL)animated NS_AVAILABLE_IOS(5_0);
 
 /*!
  * @abstract Set background color for UITabbar.
  *
- * @param <color> It's kind of UIColor.
+ * @param color The color of tabbar view.
  */
 - (void) setBackgroundColor:(UIColor *)color NS_AVAILABLE_IOS(5_0);
 
 /*!
  * @abstract Set background image for UITabbar.
  *
- * @param <color> It's kind of UIImage with size 320x49.
+ * @param image The image with size 320x49.
  */
 - (void) setBackgroundImage:(UIImage *)image NS_AVAILABLE_IOS(5_0);
 
 /*!
  * @abstract Set background image for indicator of UITabbar.
  *
- * @param <image> It's kind of UIImage.
+ * @param image The indicator image.
  */
 - (void) setSelectionIndicatorImage:(UIImage *)image NS_AVAILABLE_IOS(5_0);
 

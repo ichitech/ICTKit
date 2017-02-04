@@ -13,13 +13,13 @@
 - (instancetype)initWithTitle:(NSString *)inTitle
              cancelButtonItem:(UIActionButtonItem *)inCancelButtonItem
         destructiveButtonItem:(UIActionButtonItem *)inDestructiveItem
-             otherButtonItems:(UIActionButtonItem *)inOtherButtonItems, ... NS_REQUIRES_NIL_TERMINATION NS_AVAILABLE_IOS(2_0);
+             otherButtonItems:(UIActionButtonItem *)inOtherButtonItems, ... NS_REQUIRES_NIL_TERMINATION NS_DEPRECATED_IOS(2_0, 8_3, "Use UIAlertController with a preferredStyle of UIAlertControllerStyleActionSheet instead.") ;
 
-- (NSInteger)addButtonItem:(UIActionButtonItem *)item NS_AVAILABLE_IOS(2_0);
+- (NSInteger)addButtonItem:(UIActionButtonItem *)item NS_DEPRECATED_IOS(2_0, 8_3, "Use UIAlertController with a preferredStyle of UIAlertControllerStyleActionSheet instead.") ;
 
 /*!
  *@abstract  This block is called when the action sheet is dismssed for any reason.
  */
-@property (copy, nonatomic) void(^dismissalAction)() NS_AVAILABLE_IOS(2_0);
+@property (copy, nonatomic) void(^dismissalAction)() NS_DEPRECATED_IOS(2_0, 8_3, "Use UIAlertController with a preferredStyle of UIAlertControllerStyleActionSheet instead.") ;
 
 @end

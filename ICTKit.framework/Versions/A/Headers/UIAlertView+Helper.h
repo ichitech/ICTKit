@@ -11,7 +11,7 @@
 void UIAlertViewQuick(NSString* title,
                       NSString* message,
                       id<UIAlertViewDelegate> delegate,
-                      NSString* dismissButtonTitle) NS_AVAILABLE_IOS(2_0);
+                      NSString* dismissButtonTitle) NS_DEPRECATED_IOS(2_0, 8_3, "Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead") ;
 
 @interface UIAlertView (Helper)
 
@@ -27,7 +27,7 @@ void UIAlertViewQuick(NSString* title,
                    delegate:(id <UIAlertViewDelegate>)delegate
                         tag:(NSInteger)tag
           cancelButtonTitle:(NSString *)cancelButtonTitle
-          otherButtonTitles:(NSString *)otherButtonTitles NS_AVAILABLE_IOS(2_0);
+          otherButtonTitles:(NSString *)otherButtonTitles NS_DEPRECATED_IOS(2_0, 8_3, "Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead") ;
 
 /*!
  * @abstract Show alertView quickly.
@@ -38,7 +38,7 @@ void UIAlertViewQuick(NSString* title,
                     message:(NSString *)message
                    delegate:(id <UIAlertViewDelegate>)delegate
                         tag:(NSInteger)tag
-      onlyCancelButtonTitle:(NSString *)cancel  NS_AVAILABLE_IOS(2_0) ;
+      onlyCancelButtonTitle:(NSString *)cancel  NS_DEPRECATED_IOS(2_0, 8_3, "Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead");
 
 /*!
  * @abstract Show alertView quickly.
@@ -51,20 +51,20 @@ void UIAlertViewQuick(NSString* title,
                         tag:(NSInteger)tag
           cancelButtonTitle:(NSString *)cancelButtonTitle
           otherButtonTitles:(NSString *)otherButtonTitles
-                     sender:(id)sender NS_AVAILABLE_IOS(7_0) ;
+                     sender:(id)sender NS_DEPRECATED_IOS(2_0, 8_3, "Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead") ;
 
 @end
 
-void UIAlertViewBlockQuick(NSString* title, NSString* message, UIActionButtonItem* cancelButton) NS_AVAILABLE_IOS(2_0);
+void UIAlertViewBlockQuick(NSString* title, NSString* message, UIActionButtonItem* cancelButton) NS_DEPRECATED_IOS(2_0, 8_3, "Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead") ;
 
 @interface UIAlertView (Blocks)
 
 -(id)initWithTitle:(NSString *)inTitle
            message:(NSString *)inMessage
   cancelButtonItem:(UIActionButtonItem *)inCancelButtonItem
-  otherButtonItems:(UIActionButtonItem *)inOtherButtonItems, ... NS_REQUIRES_NIL_TERMINATION NS_AVAILABLE_IOS(2_0);
+  otherButtonItems:(UIActionButtonItem *)inOtherButtonItems, ... NS_REQUIRES_NIL_TERMINATION NS_DEPRECATED_IOS(2_0, 8_3, "Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead") ;
 
-- (NSInteger)addButtonItem:(UIActionButtonItem *)item NS_AVAILABLE_IOS(2_0);
+- (NSInteger)addButtonItem:(UIActionButtonItem *)item NS_DEPRECATED_IOS(2_0, 8_3, "Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead") ;
 
 @end
 

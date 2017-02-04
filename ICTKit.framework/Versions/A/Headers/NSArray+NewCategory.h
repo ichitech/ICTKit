@@ -12,13 +12,25 @@
 /*!
  * @abstract Return new array with random objects.
  *
- * @param <array> It's kind of NSArray. It will be use to create new array.
- * @param <count> It's knid of NSInteger. Count of new array will be return. It must be less 
+ * @param array It's kind of NSArray. It will be use to create new array.
+ * @param count It's knid of NSInteger. Count of new array will be return. It must be less
  * than count of older array.
  */
-+ (NSArray * _Nonnull) arrayRandomFromArray:(NSArray * _Nonnull)array limit:(NSInteger)count  NS_DEPRECATED_IOS(2_0, 6_1, "arrayRandomFromArray:limit: has been replaced by arrayByRandomCount:");
++ (nonnull NSArray *) arrayRandomFromArray:(NSArray * _Nonnull)array limit:(NSInteger)count  NS_DEPRECATED_IOS(2_0, 6_1, "arrayRandomFromArray:limit: has been replaced by arrayByRandomCount:");
 
-- (NSArray * _Nonnull) arrayByRandomCount:(NSInteger)count NS_AVAILABLE_IOS(7_0);
+
+/**
+ * @abstract Return new array with random objects.
+ *
+ * @param count The count of new array.
+ */
+- (nonnull NSArray *) arrayByRandomCount:(NSInteger)count NS_AVAILABLE_IOS(7_0);
+
+/**
+ * @abstract Get a random object from array.
+ * @return Random Object.
+ */
+- (nullable id) randomObject NS_AVAILABLE_IOS(7_0);
 
 @end
 

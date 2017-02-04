@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Convert a base64 encoded string to an NSData object.
 + (NSData *) dataWithBase64EncodedString:(NSString *)string NS_AVAILABLE_IOS(6_1)  ;  //  Padding '=' characters are optional. Whitespace is ignored.
 /// Convert self to a base64 encoded string.
-- (NSString *) base64Encodings NS_AVAILABLE_IOS(7_1);
+- (nullable NSString *) base64Encodings NS_AVAILABLE_IOS(7_1);
 
 @end
 

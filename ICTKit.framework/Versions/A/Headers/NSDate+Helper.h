@@ -87,15 +87,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface NSDate (Utils)
 /// Returns a date set to midnight today.
-+(id)todayAtMidnight NS_AVAILABLE_IOS(4_0);
++(instancetype)todayAtMidnight NS_AVAILABLE_IOS(4_0);
 /// returns a date set to midnight tomorrow.
-+(id)tomorrowAtMidnight NS_AVAILABLE_IOS(4_0);
++(instancetype)tomorrowAtMidnight NS_AVAILABLE_IOS(4_0);
 /// Converts a string of the form YYYYMMDD to an NSDate
-+(id)dateWithYYYYMMDD:(NSString *)inDateString NS_AVAILABLE_IOS(4_0);
++(instancetype)dateWithYYYYMMDD:(NSString *)inDateString NS_AVAILABLE_IOS(4_0);
 /// Converts a string of the form YYYYMMDDhhmmss to an NSDate.
-+(id)dateWithYYYYMMDDhhmmss:(NSString *)inDateString NS_AVAILABLE_IOS(4_0);
++(instancetype)dateWithYYYYMMDDhhmmss:(NSString *)inDateString NS_AVAILABLE_IOS(4_0);
 /// Converts a string formatted using in compliance with ISO8601 to an NSDate
-+(id)dateWithISO8601Date:(NSString *)inDateString NS_AVAILABLE_IOS(4_0);
++(nullable instancetype)dateWithISO8601Date:(NSString *)inDateString NS_AVAILABLE_IOS(4_0);
 
 /// Returns a new NSDate object with the same date as the receiver, but with the time set to midnight.
 -(NSDate *)dateAtMidnight NS_AVAILABLE_IOS(4_0);
