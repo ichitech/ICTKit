@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ICTKit"
-  s.version      = "3.0.3"
+  s.version      = "3.0.4"
   s.summary      = "UIKit & UIFoundation"
   s.description  = "UIKit & UIFoundation Category"
   s.homepage     = "https://github.com/ngocbinh02/ICTKit"
@@ -15,7 +15,9 @@ Pod::Spec.new do |s|
   s.resource     = 'ICTKit.framework/Versions/A/Resources/ICTBundle.bundle'
   s.requires_arc = true
   s.dependency 'ECSlidingViewController'
+  s.dependency 'UIView+TouchHighlighting'
   s.dependency 'PureLayout'
+  s.dependency 'KLCPopup'
   s.source_files = "ICTKit.framework/Versions/A/Headers/*.h"
   s.public_header_files = 'ICTKit.framework/Versions/A/Headers/*.h'
 
