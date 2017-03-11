@@ -27,6 +27,6 @@
 /*!
  * @abstract GET place holder color of UITextFiled.
  */
-- ( UIColor * _Nullable) placeholderColor NS_AVAILABLE_IOS(5_0);
+- (UIColor * _Nullable) placeholderColor NS_AVAILABLE_IOS(5_0);
 
 @end

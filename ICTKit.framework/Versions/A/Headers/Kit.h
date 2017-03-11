@@ -18,8 +18,7 @@
 #import <ICTKit/UIImage+ImageWithUIView.h>
 #import <ICTKit/UITextField+Helper.h>
 #import <ICTKit/UITextViewCustom.h>
-#import <ICTKit/UIView+Positioning.h>
-#import <ICTKit/UIView+Border.h>
+#import <ICTKit/UIView+Helpers.h>
 #import <ICTKit/UINavigationItem+Additions.h>
 #import <ICTKit/UITableView+Helper.h>
 #import <ICTKit/UIDevice+Helper.h>
@@ -53,5 +52,13 @@
 #import <ICTKit/UICountryPickerViewController.h>
 #import <ICTKit/UISafariViewController.h>
 #import <ICTKit/ICTGoogleTracking.h>
+
+#if __has_include(<UIView+TouchHighlighting/MTCompoundButton.h>)
+#import <UIView+TouchHighlighting/MTCompoundButton.h>
+#endif
+
+#if __has_include(<KLCPopup/KLCPopup.h>)
+#import <KLCPopup/KLCPopup.h>
+#endif
 
 

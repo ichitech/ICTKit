@@ -17,17 +17,17 @@ FOUNDATION_EXPORT UIImage *UIImageExportFromView(UIView * view, CGFloat scale) N
 /*!
  * @abstract Take screenshot of view.
  * @param view View will be taken screenshot.
- * @param scale The scale of new image.
+ * @param scale The scale of new image. Default is 1.
  */
-+ (UIImage *)imageFromUIView:(UIView *)view scale:(CGFloat)scale NS_AVAILABLE_IOS(7_1);//default is 1
-+ (UIImage *)imageWithUIView:(UIView *)view NS_DEPRECATED_IOS(2_0, 7_1, "imageWithUIView: has been replaced by imageFromUIView:scale:");
++ (UIImage *)imageFromUIView:(UIView *)view scale:(CGFloat)scale NS_AVAILABLE_IOS(7_1);
++ (UIImage *)imageWithUIView:(UIView *)view NS_DEPRECATED_IOS(2_0, 7_1, "Use +imageFromUIView:scale: instead.");
 
 /*!
  * @abstract Change size of image.
  * @param image The image will be use to change size.
  * @param newSize The size of new image.
  */
-+ (UIImage *)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize NS_DEPRECATED_IOS(2_0, 7_1, "imageWithImage:scaledToSize: has been replaced by resizedImageToSize:");
++ (UIImage *)imageWithImage:(UIImage*)image scaledToSize:(CGSize)size NS_DEPRECATED_IOS(2_0, 7_1, "Use +resizedImageToSize: instead.");
 
 
 /**
@@ -36,7 +36,8 @@ FOUNDATION_EXPORT UIImage *UIImageExportFromView(UIView * view, CGFloat scale) N
  @param color The background color of new image.
  @param size The size of new image
  */
-+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size NS_AVAILABLE_IOS(7_0);
++ (UIImage *)imageFromColor:(UIColor *)color size:(CGSize)size NS_AVAILABLE_IOS(7_0);
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size NS_DEPRECATED_IOS(2_0, 10_1, "Use +imageFromColor:size: instead.");
 
 @end
 
@@ -46,7 +47,8 @@ FOUNDATION_EXPORT UIImage *UIImageExportFromView(UIView * view, CGFloat scale) N
  * @abstract Change overlay of image.
  * @param color New color of image.
  */
-- (UIImage *)imageWithColor:(nonnull UIColor *)color;
+- (UIImage *)imageWithColor:(nonnull UIColor *)color NS_AVAILABLE_IOS(7_0);
+- (UIImage *)changeImageTintColor:(nonnull UIColor *)color NS_DEPRECATED_IOS(2_0, 10_1, "Use -changeImageTintColor: instead.");
 
 @end
 

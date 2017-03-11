@@ -8,8 +8,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-/// These category methods are probably pretty dangerous.  Their purpose is to allow you to quickly and easily position your view within another view.
+#pragma mark - UIView (Positioning)
 
+/// These category methods are probably pretty dangerous.  Their purpose is to allow you to quickly and easily position your view within another view.
 @interface UIView (Positioning)
 
 // WARNING: Remember these are all acting on the FRAME, which is the coordinates within the parent view!
@@ -70,5 +71,29 @@
 
 /// Returns the frame of the receiver within the coordinate system of the given view.
 -(CGRect)frameInRelationToView:(UIView *)inView NS_AVAILABLE_IOS(6_0);
+
+@end
+
+#pragma mark - UIView (Border)
+
+@interface UIView (Border)
+
+- (void) addBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth NS_AVAILABLE_IOS(6_0);
+
+- (void) addBottomBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth NS_AVAILABLE_IOS(6_0);
+
+- (void) addLeftBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth NS_AVAILABLE_IOS(6_0);
+
+- (void) addRightBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth NS_AVAILABLE_IOS(6_0);
+
+- (void) addTopBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth NS_AVAILABLE_IOS(6_0);
+
+@end
+
+#pragma mark - UIView (Subview)
+
+@interface UIView (Subview)
+
+- (NSArray <__kindof UIView *>*)allSubViews;
 
 @end
