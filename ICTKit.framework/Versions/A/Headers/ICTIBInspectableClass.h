@@ -13,8 +13,8 @@
 /**
  * Set the tintColor of current image.
  */
-
-@property (nonatomic, strong) IBInspectable UIColor *imageTintColor ;
+@property (nonatomic, strong) IBInspectable UIColor *imageTintColor NS_DEPRECATED_IOS(6_0, 10_0, "Use -iTintColor instead.");
+@property (nonatomic, strong) IBInspectable UIColor *iTintColor NS_AVAILABLE_IOS(8_0);
 
 @end
 
@@ -33,9 +33,13 @@
 /**
  * Set localizable string of button title for state UIControlStateNormal.
  */
-@property (nonatomic, strong) IBInspectable NSString *localizableString;
-
-- (void)reloadlocalizableString;
+@property (nonatomic, strong) IBInspectable NSString *localizableString NS_DEPRECATED_IOS(6_0, 10_0, "Use -localizable instead.");
+    
+@property (nonatomic, strong) IBInspectable NSString *localizable NS_AVAILABLE_IOS(8_0);
+    
+- (void)reloadlocalizableString NS_DEPRECATED_IOS(6_0, 10_0, "Use -reloadLocalizable instead.");
+    
+- (void)reloadLocalizable NS_AVAILABLE_IOS(8_0);
 
 @end
 
@@ -44,9 +48,13 @@
 /**
  * Set localizable string of text title.
  */
-@property (nonatomic, strong) IBInspectable NSString *localizableString ;
+@property (nonatomic, strong) IBInspectable NSString *localizableString NS_DEPRECATED_IOS(6_0, 10_0, "Use -localizable instead.");
+    
+@property (nonatomic, strong) IBInspectable NSString *localizable NS_AVAILABLE_IOS(8_0);
+    
+- (void)reloadlocalizableString NS_DEPRECATED_IOS(6_0, 10_0, "Use -reloadLocalizable instead.");
 
-- (void)reloadlocalizableString;
+- (void)reloadLocalizable NS_AVAILABLE_IOS(8_0);
 
 @end
 
@@ -55,9 +63,13 @@
 /**
  * Set localizable string of bar button title.
  */
-@property (nonatomic, strong) IBInspectable NSString *localizableString ;
-
-- (void)reloadlocalizableString;
+@property (nonatomic, strong) IBInspectable NSString *localizableString NS_DEPRECATED_IOS(6_0, 10_0, "Use -localizable instead.");
+    
+@property (nonatomic, strong) IBInspectable NSString *localizable NS_AVAILABLE_IOS(8_0);
+    
+- (void)reloadlocalizableString NS_DEPRECATED_IOS(6_0, 10_0, "Use -reloadLocalizable instead.");
+    
+- (void)reloadLocalizable NS_AVAILABLE_IOS(8_0);
 
 @end
 
@@ -69,4 +81,13 @@
 
 @property (nonatomic, assign) IBInspectable UIColor *borderColor;
 
+@end
+
+
+@interface UITextField (IBInspectableClass)
+    
+@property (nonatomic, strong) IBInspectable NSString *localizablePlaceholder NS_AVAILABLE_IOS(8_0) ;
+    
+- (void)reloadLocalizablePlaceholder NS_AVAILABLE_IOS(8_0);
+    
 @end
