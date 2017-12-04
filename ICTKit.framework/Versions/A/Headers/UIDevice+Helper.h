@@ -129,14 +129,14 @@ typedef NS_ENUM(NSInteger, UIDeviceSize){
  */
 - (NSString *) platform NS_AVAILABLE_IOS(4_0);
 
-
 /**
  Get the device model of device.
 
  @return NSString
  @example iPhone4 iPhone5S iPhone6
  */
-- (NSString *) platformModel NS_AVAILABLE_IOS(4_0);
+- (NSString *) platformModelName NS_AVAILABLE_IOS(8_0);
+- (NSString *) platformModel NS_DEPRECATED_IOS(4_0, 11_0, "Use platformModelName() instead.");
 
 /**
  Get the version of device.
@@ -158,6 +158,14 @@ typedef NS_ENUM(NSInteger, UIDeviceSize){
  @return UIDeviceSize
  */
 - (UIDeviceSize)deviceSize NS_AVAILABLE_IOS(8_0);
+
+/**
+ Get the device model of device.
+ 
+ @return NSString
+ @example iPhone4 iPhone5S iPhone6
+ */
++ (NSString *) modelNameForPlatform:(NSString *)platform NS_AVAILABLE_IOS(7_0);
 
 @end
 
