@@ -17,6 +17,9 @@ typedef void(^NSFileManagerCompletion)(BOOL success);
 
 NS_ASSUME_NONNULL_BEGIN
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wstrict-prototypes"
+
 NSURL * _Nullable NSFileManagerSaveWithObject(id object,
                                               NSString *fileName,
                                               NSString *__nullable folderName,
@@ -31,6 +34,8 @@ void NSFileManagerSaveData(id object,
                             ) NS_AVAILABLE_IOS(7_1);
 
 NSString *NSFileManagerDocumentsPath();
+
+#pragma clang diagnostic pop
 
 #pragma mark - NSFileManager (Helper)
 

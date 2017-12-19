@@ -24,7 +24,7 @@ typedef void(^UIDatePickerSheetCompose)(UIDatePickerSheet *picker);
  */
 + (instancetype)shareInstance NS_AVAILABLE_IOS(8_0);
 
-+ (instancetype) new NS_DEPRECATED_IOS(2_0, 9_0, "Use +shareInstance instead.");
++ (instancetype) new NS_UNAVAILABLE;
 - (instancetype) init NS_DEPRECATED_IOS(2_0, 9_0, "Use +shareInstance instead.");
 
 /**

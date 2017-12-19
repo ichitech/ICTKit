@@ -19,7 +19,7 @@ id exportNull (id input,Class inputClass);
 BOOL objcIsKindOfClass(id object, Class inputClass);
 
 #pragma mark - Network Manager
-typedef NS_OPTIONS(NSUInteger, CFNetworManagerReachabilityType)
+typedef NS_ENUM(NSUInteger, CFNetworManagerReachabilityType)
 {
     CFNetworManagerReachabilityWifiConnection = 0,//wifi only
     CFNetworManagerReachabilityCellularConnection = 1,//may be 2G, 3G, 4G...

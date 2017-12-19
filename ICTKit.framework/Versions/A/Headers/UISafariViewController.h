@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
-typedef NS_OPTIONS(NSInteger, UISafariViewComposeResult) {
+typedef NS_ENUM(NSInteger, UISafariViewComposeResult) {
     UISafariViewComposeResultCancelled = 0,
     UISafariViewComposeResultSuccessfullyLoaded = 1,
     UISafariViewComposeResultFailureLoaded = 2,

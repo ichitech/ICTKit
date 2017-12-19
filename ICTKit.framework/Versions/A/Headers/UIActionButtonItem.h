@@ -7,6 +7,9 @@
 
 #import <Foundation/Foundation.h>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wstrict-prototypes"
+
 NS_CLASS_DEPRECATED_IOS(2_0, 8_3, "UIActionSheet is deprecated. Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead")
 @interface UIActionButtonItem : NSObject
 {
@@ -25,3 +28,4 @@ NS_CLASS_DEPRECATED_IOS(2_0, 8_3, "UIActionSheet is deprecated. Use UIAlertContr
 
 @end
 
+#pragma clang diagnostic pop

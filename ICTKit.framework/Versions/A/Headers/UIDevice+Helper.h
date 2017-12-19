@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wstrict-prototypes"
+
 #define iOS_6 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0)
 #define iOS_7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
 #define iOS_8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
@@ -21,6 +25,10 @@
 //Deprecated
 BOOL HTSystemVersionGreaterOrEqualThan(CGFloat version) NS_DEPRECATED_IOS(4_0, 7_1, "Use UIDeviceSystemVersionIsGreaterThanOrEqualTo() instead.");
 BOOL iPHONE_OS_5() NS_DEPRECATED_IOS(4_0, 7_0, "Use UIDeviceModelIsIphone5() instead.");
+CGSize UIDeviceDifferenceSizeBetweenIphone4AndIphone5() NS_DEPRECATED_IOS(4_0, 11_0, "Stop supporting on iOS 11.0 or upper.");
+CGSize UIDeviceDifferenceSizeBetweenIphone4AndIphone6() NS_DEPRECATED_IOS(4_0, 11_0, "Stop supporting on iOS 11.0 or upper.");
+CGSize UIDeviceDifferenceSizeBetweenIphone4AndIphone6Plus() NS_DEPRECATED_IOS(4_0, 11_0, "Stop supporting on iOS 11.0 or upper.");
+CGSize UIDeviceDifferenceSizeBetweenCurrentDeviceAndIphone4() NS_DEPRECATED_IOS(4_0, 11_0, "Stop supporting on iOS 11.0 or upper.");
 
 //compare ios version
 BOOL UIDeviceSystemVersionIsEqualTo(CGFloat version) NS_AVAILABLE_IOS(6_0);
@@ -41,7 +49,6 @@ BOOL UIDeviceModelIsIphone6S() NS_AVAILABLE_IOS(7_0);
 BOOL UIDeviceModelIsIphone6SPlus() NS_AVAILABLE_IOS(7_0);
 BOOL UIDeviceModelIsIphone7() NS_AVAILABLE_IOS(8_0);
 BOOL UIDeviceModelIsIphone7Plus() NS_AVAILABLE_IOS(8_0);
-
 BOOL UIDeviceModelIsIphone8() NS_AVAILABLE_IOS(8_0);
 BOOL UIDeviceModelIsIphone8Plus() NS_AVAILABLE_IOS(8_0);
 BOOL UIDeviceModelIsIphoneX() NS_AVAILABLE_IOS(8_0);
@@ -50,11 +57,7 @@ BOOL UIDeviceModelIsIphoneX() NS_AVAILABLE_IOS(8_0);
 BOOL UIDeviceInterfaceIdiomIphone() NS_AVAILABLE_IOS(4_0);
 BOOL UIDeviceInterfaceIdiomIpad() NS_AVAILABLE_IOS(4_0);
 
-//diffrence size
-CGSize UIDeviceDifferenceSizeBetweenIphone4AndIphone5() NS_AVAILABLE_IOS(7_0);
-CGSize UIDeviceDifferenceSizeBetweenIphone4AndIphone6() NS_AVAILABLE_IOS(7_0);
-CGSize UIDeviceDifferenceSizeBetweenIphone4AndIphone6Plus() NS_AVAILABLE_IOS(7_0);
-CGSize UIDeviceDifferenceSizeBetweenCurrentDeviceAndIphone4() NS_AVAILABLE_IOS(7_0);
+#pragma clang diagnostic pop
 
 typedef NS_ENUM(NSInteger, UIDeviceVersion){
     UIDeviceVersionIPhone4           = 3,

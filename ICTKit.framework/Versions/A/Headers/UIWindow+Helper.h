@@ -9,9 +9,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wstrict-prototypes"
 #define WINDOW      Window()
 UIWindow *WIN_DOW() NS_DEPRECATED_IOS(4_0, 8_0, "Use Window() instead.");
 UIWindow *Window()  NS_AVAILABLE_IOS(7_0);
+#pragma clang diagnostic pop
 
 @interface UIWindow (Helper)
 

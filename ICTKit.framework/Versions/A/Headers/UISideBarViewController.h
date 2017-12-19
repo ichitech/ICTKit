@@ -6,6 +6,9 @@
 
 #import <UIKit/UIKit.h>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wstrict-prototypes"
+
 /*!
  * @const Notification that gets posted when the underRight view will appear.
  */
@@ -246,3 +249,5 @@ NS_CLASS_DEPRECATED_IOS(2_0, 7_1, "UISideBarViewController has been replaced by 
 /** Convience method for getting access to the UISideBarViewController instance */
 - (UISideBarViewController *)slidingBarViewController NS_DEPRECATED_IOS(2_0, 7_1,"UISideBarViewController has been replaced by ECSlidingViewController. Please check out it ~> https://github.com/ECSlidingViewController/ECSlidingViewController");
 @end
+
+#pragma clang diagnostic pop

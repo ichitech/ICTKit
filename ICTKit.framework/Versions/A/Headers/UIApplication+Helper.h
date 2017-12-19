@@ -9,9 +9,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wstrict-prototypes"
 #define APP_DELEGATE    APPDELEGATE()
 id APPDELEGATE() NS_DEPRECATED_IOS(4_0, 8_0, "Use UIMainAppDelegate() instead.");
 id UIMainAppDelegate() NS_AVAILABLE_IOS(7_0);
+#pragma clang diagnostic pop
 
 @interface UIApplication (Helper)
 

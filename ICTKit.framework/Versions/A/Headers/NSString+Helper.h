@@ -46,12 +46,12 @@ FOUNDATION_EXPORT NSString  *__nonnull NSStringFromObject(id __nonnull object) N
 /*!
  * @abstract Get the last character of string.
  */
-- (NSString *)lastCharacter NS_DEPRECATED_IOS(2_0, 7_1);
+- (NSString *)lastCharacter NS_AVAILABLE_IOS(8_0);
 
 /*!
  * @abstract Get the first character of string.
  */
-- (NSString *)firstCharacter NS_DEPRECATED_IOS(2_0, 7_1);
+- (NSString *)firstCharacter NS_AVAILABLE_IOS(8_0);
 
 @end
 

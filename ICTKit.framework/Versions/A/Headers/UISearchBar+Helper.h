@@ -27,11 +27,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) setSearchField:(UITextField *)textField NS_DEPRECATED_IOS(2_0, 6_0);
 
 /*!
- * @abstract Custom background image.
- */
-- (void) setBackgroundImage:(UIImage *)backgroundImage NS_AVAILABLE_IOS(7_1);
-
-/*!
  * @abstract Get the current textField
  */
 @property (nonatomic, strong, readonly, nonnull) UITextField *currentTextField  NS_AVAILABLE_IOS(7_1);
