@@ -2,7 +2,7 @@
  @header    UIValidate.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version  7.0
+ @version   8.0
  */
 
 #import <Foundation/Foundation.h>
@@ -49,7 +49,7 @@ NS_CLASS_DEPRECATED_IOS(2_0, 7_1, "UIValidate has been replaced by NSString(Vali
 /*!
  * @abstract Validate Numric.
  *
- * @param string It's a kind of NSString. Input string that will be checked.
+ * @param input It's a kind of NSString. Input string that will be checked.
  *
  */
 + (BOOL) validateNumric:(NSString*)input NS_DEPRECATED_IOS(2_0, 7_1, "validateNumric: has been replaced by (NSString) isNumric");

@@ -2,7 +2,7 @@
  @header    UIDevice+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   7.0
+ @version   8.0
  */
 
 
@@ -139,7 +139,7 @@ typedef NS_ENUM(NSInteger, UIDeviceSize){
  @example iPhone4 iPhone5S iPhone6
  */
 - (NSString *) platformModelName NS_AVAILABLE_IOS(8_0);
-- (NSString *) platformModel NS_DEPRECATED_IOS(4_0, 11_0, "Use platformModelName() instead.");
+- (NSString *) platformModel NS_DEPRECATED_IOS(4_0, 11_0, "Use -platformModelName() instead.");
 
 /**
  Get the version of device.

@@ -16,7 +16,7 @@ NSString *trim (NSString *input);
 id exportNull (id input,Class inputClass);
 
 //compare Class
-BOOL objcIsKindOfClass(id object, Class inputClass);
+BOOL ObjectClassIsKindOfClass(id object, Class inputClass);
 
 #pragma mark - Network Manager
 typedef NS_ENUM(NSUInteger, CFNetworManagerReachabilityType)

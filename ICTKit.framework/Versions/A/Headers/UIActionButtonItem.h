@@ -2,7 +2,7 @@
  @header    UIAlertViewButtonItem.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version  7.0
+ @version   8.0
  */
 
 #import <Foundation/Foundation.h>
@@ -10,7 +10,7 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wstrict-prototypes"
 
-NS_CLASS_DEPRECATED_IOS(2_0, 8_3, "UIActionSheet is deprecated. Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead")
+NS_CLASS_DEPRECATED_IOS(2_0, 8_3, "UIActionButtonItem is deprecated. Use UIAlertAction instead")
 @interface UIActionButtonItem : NSObject
 {
     NSString *label;

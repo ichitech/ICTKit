@@ -2,7 +2,7 @@
  @header    UINavigationController+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version  7.0
+ @version   8.0
  */
 
 #import <Foundation/Foundation.h>
@@ -45,33 +45,48 @@ NSString *NSFileManagerDocumentsPath();
  * @abstract Create a new folder & file.
  *
  * @param folderPath It's a kind of NSString. ie: "a/b/c/c","/a/b/c","/a/b/c/d","a","/a","a/"
- * @param fileName It's a kind of NSString. ie: "a.json", "b.txt",...
+ * @param completion_t The completion block will be returned
+ */
+- (void) createFolderAtPath:(NSString *)folderPath completion:(nullable NSFileManagerCompletion)completion_t NS_AVAILABLE_IOS(7_1);
+
+/*!
+ * @abstract Create a new folder & file.
+ *
+ * @param folderPath It's a kind of NSString. ie: "a/b/c/c","/a/b/c","/a/b/c/d","a","/a","a/"
  * @param data It's a kind of NSData. The data will be saved.
  * @param fileName It's a kind of NSString. ie: "a.json", "b.txt",...
  * @param completion_t The completion block will be returned
  */
-- (void) createFolderAtPath:(NSString *)folderPath completion:(nullable NSFileManagerCompletion)completion_t NS_AVAILABLE_IOS(7_1);
 - (void) createFile:(NSString *)fileName inFolderPath:(nullable NSString *)folderPath contents:(NSData *)data completion:(nullable NSFileManagerCompletion)completion_t NS_AVAILABLE_IOS(7_1);
+
+/*!
+ * @abstract Create a new folder & file.
+ *
+ * @param filePath It's a kind of NSString. ie: "a/b/c/c/b.txt","/a/b/c/b.txt","/a/b/c/d/b.txt","a","/a/b.txt","a/b.txt"
+ * @param data It's a kind of NSData. The data will be saved.
+ * @param completion_t The completion block will be returned
+ */
 - (void) createFileAtPath:(NSString *)filePath contents:(NSData *)data completion:(nullable NSFileManagerCompletion)completion_t NS_AVAILABLE_IOS(7_1);
 
 /*!
  * @abstract Delete folder & file.
  *
- * @param folderPath It's a kind of NSString. ie: "a/b/c/c","/a/b/c","/a/b/c/d","a","/a","a/"
- * @param fileName It's a kind of NSString. ie: "a.json", "b.txt",...
- * @param filePath It's a kind of NSString. ie: "a/b/a.json", "b/b/b.txt",...
+ * @param filePath It's a kind of NSString. ie: "a/b/c/c/b.txt","/a/b/c/b.txt","/a/b/c/d/b.txt","a","/a/b.txt","a/b.txt"
  * @param completion_t The completion block will be returned
  */
 - (void) deleteFileAtPath:(NSString *)filePath completion:(nullable NSFileManagerCompletion)completion_t NS_AVAILABLE_IOS(7_1);
+
+/*!
+ * @abstract Delete folder & file.
+ *
+ * @param path It's a kind of NSString. ie: "a/b/c/c","/a/b/c","/a/b/c/d","a","/a","a/"
+ * @param completion_t The completion block will be returned
+ */
 - (void) deleteFolderAtPath:(NSString *)path completion:(nullable NSFileManagerCompletion)completion_t NS_AVAILABLE_IOS(7_1);
 - (void) deleteFile:(NSString *)fileName inFolderPath:(nullable NSString *)folderPath completion:(nullable NSFileManagerCompletion)completion_t NS_AVAILABLE_IOS(7_1);
 
 /*!
  * @abstract URL full path of file & folder
- *
- * @param folderPath It's a kind of NSString. ie: "a/b/c/c","/a/b/c","/a/b/c/d","a","/a","a/"
- * @param fileName It's a kind of NSString. ie: "a.json", "b.txt",...
- * @param filePath It's a kind of NSString. ie: "a/b/a.json", "b/b/b.txt",...
  */
 - (NSURL *) URLForFolder:(NSString *)folderPath NS_AVAILABLE_IOS(7_1);
 
@@ -81,10 +96,6 @@ NSString *NSFileManagerDocumentsPath();
 
 /*!
  * @abstract Check the existence of folder & file
- *
- * @param folderPath It's a kind of NSString. ie: "a/b/c/c","/a/b/c","/a/b/c/d","a","/a","a/"
- * @param fileName It's a kind of NSString. ie: "a.json", "b.txt",...
- * @param filePath It's a kind of NSString. ie: "a/b/a.json", "b/b/b.txt",...
  */
 - (BOOL) isExistFileWithName:(NSString *)fileName inFolderPath:(NSString *)folderPath NS_AVAILABLE_IOS(7_1);
 
@@ -94,10 +105,6 @@ NSString *NSFileManagerDocumentsPath();
 
 /*!
  * @abstract Data of file
- *
- * @param folderPath It's a kind of NSString. ie: "a/b/c/c","/a/b/c","/a/b/c/d","a","/a","a/"
- * @param fileName It's a kind of NSString. ie: "a.json", "b.txt",...
- * @param filePath It's a kind of NSString. ie: "a/b/a.json", "b/b/b.txt",...
  */
 - (nullable NSData *) fileWithName:(NSString *)file inFolderPath:(NSString *)folder NS_AVAILABLE_IOS(7_1);
 

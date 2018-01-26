@@ -65,7 +65,6 @@ typedef void(^UIPickerSheetCompose)(UIPickerSheet *picker);
  @param completion UIDatePickerSheetCompletion block will be called after dismissing.
  */
 - (void) showCompletion:(UIPickerSheetCompletion)completion NS_DEPRECATED_IOS(2_0, 9_0, "Use -showInView:compose:completion: instead.");
-- (void) cancel NS_DEPRECATED_IOS(2_0, 9_0, "Use -dismiss instead.");
 - (void) done;
 
 /**
@@ -76,7 +75,7 @@ typedef void(^UIPickerSheetCompose)(UIPickerSheet *picker);
  @param completion The completion block will be called after dismissing.
  @note  NOT USE the method -(void)showCompletion: after calling this method.
  */
-- (void) showInView:(nullable UIView *)view
+- (void) showInView:(nullable __kindof UIView *)view
             compose:(nullable UIPickerSheetCompose)compose
          completion:(nonnull UIPickerSheetCompletion)completion NS_AVAILABLE_IOS(8_0);
 
@@ -85,6 +84,7 @@ typedef void(^UIPickerSheetCompose)(UIPickerSheet *picker);
  Dismiss the picker date.
  */
 - (void) dismiss NS_AVAILABLE_IOS(8_0);
+- (void) cancel NS_DEPRECATED_IOS(2_0, 9_0, "Use -dismiss instead.");
 
 @end
 

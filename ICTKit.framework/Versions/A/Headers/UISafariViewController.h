@@ -1,20 +1,25 @@
 /*!
- @header    UISafariViewController
+ @header    UISafariViewController.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   7.0
+ @version   8.0
  */
 
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
 typedef NS_ENUM(NSInteger, UISafariViewComposeResult) {
-    UISafariViewComposeResultCancelled = 0,
-    UISafariViewComposeResultSuccessfullyLoaded = 1,
-    UISafariViewComposeResultFailureLoaded = 2,
-    UISafariViewComposeResultSuccessfullyOpened = 3,
-    UISafariViewComposeResultInProcessOpening = 4
-};
+    UISafariViewComposeResultCancelled,
+    UISafariViewComposeResultPreparing NS_ENUM_AVAILABLE_IOS(8_0),
+    UISafariViewComposeResultOpened NS_ENUM_AVAILABLE_IOS(8_0),
+    UISafariViewComposeResultLoaded NS_ENUM_AVAILABLE_IOS(8_0),
+    UISafariViewComposeResultFailed NS_ENUM_AVAILABLE_IOS(8_0),
+    
+    UISafariViewComposeResultFailureLoaded NS_ENUM_DEPRECATED_IOS(2_0, 8_0, "Use UISafariViewComposeResultFailed instead.") = UISafariViewComposeResultFailed,
+    UISafariViewComposeResultSuccessfullyOpened NS_ENUM_DEPRECATED_IOS(2_0, 8_0, "Use UISafariViewComposeResultOpened instead.") = UISafariViewComposeResultOpened ,
+    UISafariViewComposeResultInProcessOpening NS_ENUM_DEPRECATED_IOS(2_0, 8_0, "Use UISafariViewComposeResultPreparing instead.")  = UISafariViewComposeResultPreparing,
+    UISafariViewComposeResultSuccessfullyLoaded NS_ENUM_DEPRECATED_IOS(2_0, 8_0, "Use UISafariViewComposeResultLoaded instead.") = UISafariViewComposeResultLoaded
+} API_AVAILABLE(ios(7.0));
 
 NS_ASSUME_NONNULL_BEGIN
 

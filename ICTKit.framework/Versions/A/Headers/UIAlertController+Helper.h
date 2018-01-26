@@ -1,10 +1,9 @@
-//
-//  UIAlertController+Helper.h
-//  HarryFramework
-//
-//  Created by Harry Tran on 5/11/16.
-//  Copyright © 2016 Harry Tran. All rights reserved.
-//
+/*!
+ @header    UIAlertController+Helper.h
+ @abstract  ICTKit iOS SDK Source
+ @copyright Copyright 2013 IchiTech. All rights reserved.
+ @version   8.0
+ */
 
 #import <UIKit/UIKit.h>
 

@@ -2,7 +2,7 @@
  @header    Kit.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version  7.0
+ @version   8.0
  */
 
 // UKit
@@ -27,6 +27,8 @@
 #import <ICTKit/UIAlertController+Helper.h>
 
 //Foundation
+#import <ICTKit/NSJSONSerialization+XMLConverter.h>
+#import <ICTKit/NSXMLSerialization.h>
 #import <ICTKit/NSData+Helper.h>
 #import <ICTKit/NSArray+NewCategory.h>
 #import <ICTKit/NSFileManager+Helper.h>
@@ -36,6 +38,8 @@
 #import <ICTKit/NSObject+Validate.h>
 #import <ICTKit/NSBundle+Helper.h>
 #import <ICTKit/NSTimer+Blocks.h>
+#import <ICTKit/NSNumber+Helper.h>
+#import <ICTKit/NSNumber+Helper.h>
 #import <ICTKit/NSNumber+Helper.h>
 
 //IBInspectableClass
@@ -51,7 +55,6 @@
 #import <ICTKit/UIValidate.h>
 #import <ICTKit/UICountryPickerViewController.h>
 #import <ICTKit/UISafariViewController.h>
-#import <ICTKit/ICTGoogleTracking.h>
 
 #if __has_include(<UIView+TouchHighlighting/MTCompoundButton.h>)
 #import <UIView+TouchHighlighting/MTCompoundButton.h>

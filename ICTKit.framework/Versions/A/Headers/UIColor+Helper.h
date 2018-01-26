@@ -2,7 +2,7 @@
  @header    UIColor+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version  7.0
+ @version   8.0
  */
 
 #import <UIKit/UIKit.h>
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  * @abstract Creating random color.
  */
-+ (UIColor *) colorWithRandomColor NS_DEPRECATED_IOS(2_0, 5_1, "colorWithRandomColor has been replaced by randomColor");
++ (UIColor *) colorWithRandomColor NS_DEPRECATED_IOS(2_0, 5_1, "Use +randomColor instead.");
 + (UIColor *) randomColor NS_AVAILABLE_IOS(6_0);
 
 /**

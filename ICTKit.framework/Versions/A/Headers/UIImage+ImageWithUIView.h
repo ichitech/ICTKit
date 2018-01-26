@@ -2,7 +2,7 @@
  @header    UIImage+ImageWithUIView.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version  7.0
+ @version   8.0
  */
 
 #import <UIKit/UIKit.h>
@@ -25,7 +25,7 @@ FOUNDATION_EXPORT UIImage *UIImageExportFromView(UIView * view, CGFloat scale) N
 /*!
  * @abstract Change size of image.
  * @param image The image will be use to change size.
- * @param newSize The size of new image.
+ * @param size The size of new image.
  */
 + (UIImage *)imageWithImage:(UIImage*)image scaledToSize:(CGSize)size NS_DEPRECATED_IOS(2_0, 7_1, "Use +resizedImageToSize: instead.");
 
@@ -54,11 +54,11 @@ FOUNDATION_EXPORT UIImage *UIImageExportFromView(UIView * view, CGFloat scale) N
 
 @interface UIImage(ResizeCategory)
 
--(UIImage*)resizedImageFixSize:(CGSize)dstSize;
+-(UIImage *)resizedImageFixSize:(CGSize)dstSize;
 
--(UIImage*)resizedImageToFitInSize:(CGSize)boundingSize scaleIfSmaller:(BOOL)scale;
+-(UIImage *)resizedImageToFitInSize:(CGSize)boundingSize scaleIfSmaller:(BOOL)scale;
 
--(UIImage*)resizedImageToSize:(CGSize)newSize;
+-(UIImage *)resizedImageToSize:(CGSize)newSize;
 
 @end
 

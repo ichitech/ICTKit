@@ -1,10 +1,9 @@
-//
-//  NSNumber+Helper.h
-//  HarryFramework
-//
-//  Created by HarryTran on 1/9/15.
-//  Copyright (c) 2015 Harry Tran. All rights reserved.
-//
+/*!
+ @header    NSNumber+Helper.h
+ @abstract  ICTKit iOS SDK Source
+ @copyright Copyright 2013 IchiTech. All rights reserved.
+ @version   8.0
+ */
 
 #import <Foundation/Foundation.h>
 

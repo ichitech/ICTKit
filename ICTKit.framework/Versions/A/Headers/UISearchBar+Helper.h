@@ -2,7 +2,7 @@
  @header    UISearchBar+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version  7.0
+ @version   8.0
  */
 
 #import <UIKit/UIKit.h>
@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  * @abstract Custom Cancel button.
  */
-- (void) setCancelButton:(UIButton *)cancelButton NS_DEPRECATED_IOS(2_0, 6_0, "setCancelButton: has been replaced by currentCancelBarButtonItem");
+- (void) setCancelButton:(UIButton *)cancelButton NS_DEPRECATED_IOS(2_0, 6_0, "Use @property -currentCancelBarButtonItem instead.");
 
 /*!
  * @abstract Custom SegmentedControl.
@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  * @abstract Custom TextField.
  */
-- (void) setSearchField:(UITextField *)textField NS_DEPRECATED_IOS(2_0, 6_0);
+- (void) setSearchField:(UITextField *)textField NS_DEPRECATED_IOS(2_0, 6_0, "Use @property -currentTextField instead.");
 
 /*!
  * @abstract Get the current textField

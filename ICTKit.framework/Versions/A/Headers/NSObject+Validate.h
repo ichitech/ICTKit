@@ -1,10 +1,9 @@
-//
-//  NSObject+Validate.h
-//  HarryFramework
-//
-//  Created by HarryTran on 4/14/14.
-//  Copyright (c) 2014 Harry Tran. All rights reserved.
-//
+/*!
+ @header    NSObject+Validate.h
+ @abstract  ICTKit iOS SDK Source
+ @copyright Copyright 2013 IchiTech. All rights reserved.
+ @version  8.0
+ */
 
 #import <Foundation/Foundation.h>
 

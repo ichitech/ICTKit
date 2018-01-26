@@ -2,7 +2,7 @@
  @header    NSGeneralTest.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version  7.0
+ @version   8.0
  */
 
 #import <Foundation/Foundation.h>
@@ -101,7 +101,6 @@
  * @abstract This method will return a random array which contain string object.
  *
  * @param aLength It's a kind of NSLength. It contain min length and max length of general array.
- * @param sLength It's a kind of NSLength. It contain min length and max length of general string that is object of array.
  * @example
         NSLength alength = NSMakeLength(10,30);
  

@@ -2,7 +2,7 @@
  @header    NSString+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version  7.0
+ @version   8.0
  */
 
 #import <Foundation/Foundation.h>
@@ -87,23 +87,25 @@ FOUNDATION_EXPORT NSString  *__nonnull NSStringFromObject(id __nonnull object) N
  * @abstract Validate Special Character.
  *
  */
-- (BOOL)isContainSpecialCharacter  NS_DEPRECATED_IOS(2_0, 8_0, "isContainSpecialCharacter: has been replaced by hasSpecialCharacterWithExceptionOfArray:") ;
+- (BOOL)isContainSpecialCharacter  NS_DEPRECATED_IOS(2_0, 8_0, "Use containAnySpecialCharacterWithExceptions: instead.") ;
 
 /*!
  * @abstract Validate Special Character.
  *
- * @param All your symbols you want to allow
+ * @param symAllows your symbols you want to allow
  */
-- (BOOL)isContainSpecialCharacterWithAllowSymbols:(nullable NSArray<NSString *> *)symAllows NS_DEPRECATED_IOS(2_0, 8_4, "isContainSpecialCharacterWithAllowSymbols: has been replaced by hasSpecialCharacterWithExceptionOfArray:");
+- (BOOL)isContainSpecialCharacterWithAllowSymbols:(nullable NSArray<NSString *> *)symAllows NS_DEPRECATED_IOS(2_0, 8_4, "Use containSpecialCharacterWithExceptions: instead.");
 
-- (BOOL)hasSpecialCharacterWithExceptionOfArray:(nullable NSArray<NSString *> *)exceptions NS_AVAILABLE_IOS(7_1);
+- (BOOL)hasSpecialCharacterWithExceptionOfArray:(nullable NSArray<NSString *> *)exceptions NS_DEPRECATED_IOS(2_0, 8_4, "Use containSpecialCharacterWithExceptions: instead.");
+- (BOOL)containAnySpecialCharacterWithExceptions:(nullable NSArray<NSString *> *)exceptions API_AVAILABLE(ios(8.4));
 
 /*!
  * @abstract Validate string.
  *
- * @param All your characters you want to check
+ * @param characters your characters you want to check
  */
-- (BOOL)hasCharacterInArray:(nullable NSArray<NSString *> *)characters NS_AVAILABLE_IOS(7_1);
+- (BOOL)hasCharacterInArray:(nullable NSArray<NSString *> *)characters NS_DEPRECATED_IOS(2_0, 8_4, "Use containAnyCharactersInArray: instead.");
+- (BOOL)containAnyCharactersInArray:(nullable NSArray<NSString *> *)characters API_AVAILABLE(ios(8.0));
 
 @end
 
@@ -118,13 +120,13 @@ FOUNDATION_EXPORT NSString  *__nonnull NSStringFromObject(id __nonnull object) N
 - (NSDictionary *)dictionaryQueries NS_AVAILABLE_IOS(8_0) ;
 
 //Predicate Methods
-- (NSString *)stringByURLDecoding NS_DEPRECATED_IOS(2_0, 9_0, "stringByURLDecoding has been replaced by stringURLByDecoding") ;
+- (NSString *)stringByURLDecoding NS_DEPRECATED_IOS(2_0, 9_0, "Use stringURLByDecoding instead.") ;
 
-- (NSString *)stringByURLEncoding NS_DEPRECATED_IOS(2_0, 9_0, "stringByURLEncoding has been replaced by stringURLByEncoding") ;
+- (NSString *)stringByURLEncoding NS_DEPRECATED_IOS(2_0, 9_0, "Use stringURLByEncoding instead.") ;
 
-- (NSString *)stringURLAddQueryWithDictionary:(NSDictionary *)dictionary NS_DEPRECATED_IOS(2_0, 9_0, "stringURLAddQueryWithDictionary: has been replaced by stringURLByAddingQueryFromDictionary:") ;
+- (NSString *)stringURLAddQueryWithDictionary:(NSDictionary *)dictionary NS_DEPRECATED_IOS(2_0, 9_0, "Use stringURLByAddingQueryFromDictionary: instead.") ;
 
-- (NSDictionary *)dictionaryQuery NS_DEPRECATED_IOS(2_0, 9_0, "dictionaryQuery: has been replaced by dictionaryQueries:") ;
+- (NSDictionary *)dictionaryQuery NS_DEPRECATED_IOS(2_0, 9_0, "Use dictionaryQueries instead.") ;
 
 @end
 
