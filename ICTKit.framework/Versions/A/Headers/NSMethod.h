@@ -1,10 +1,9 @@
-//
-//  NSMethod.h
-//  HarryFramework
-//
-//  Created by BinhTran on 9/23/14.
-//  Copyright (c) 2014 Harry Tran. All rights reserved.
-//
+/*!
+ @header    NSMethod.h
+ @abstract  ICTKit iOS SDK Source
+ @copyright Copyright 2013 IchiTech. All rights reserved.
+ @version   8.2
+ */
 
 #import <Foundation/Foundation.h>
 

@@ -2,7 +2,7 @@
  @header    UIImage+ImageWithUIView.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   8.1
+ @version   8.2
  */
 
 #import <UIKit/UIKit.h>
@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 FOUNDATION_EXPORT UIImage *UIImageExportFromView(UIView * view, CGFloat scale) API_AVAILABLE(ios(7.0));
+FOUNDATION_EXPORT UIImage *UIImageWithColor(UIColor * color, CGSize size) API_AVAILABLE(ios(7.0));
+FOUNDATION_EXPORT UIImage *UIImageWithNamed(NSString * name, UIColor * _Nullable color) API_AVAILABLE(ios(7.0));
 
 @interface UIImage (ImageWithUIView)
 

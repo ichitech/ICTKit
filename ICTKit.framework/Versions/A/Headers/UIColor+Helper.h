@@ -2,7 +2,7 @@
  @header    UIColor+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   8.1
+ @version   8.2
  */
 
 #import <UIKit/UIKit.h>

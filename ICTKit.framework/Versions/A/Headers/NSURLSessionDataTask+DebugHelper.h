@@ -1,5 +1,5 @@
 /*!
- @header    NSNumber+Helper.h
+ @header    NSURLSessionDataTask+DebugHelper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
  @version   8.2
@@ -9,9 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-FOUNDATION_EXPORT NSNumber  *__nonnull NSNumberFromObject(id __nonnull object) NS_AVAILABLE_IOS(7_0);
+@interface NSURLSessionDataTask (DebugHelper)
 
-@interface NSNumber (Helper)
+- (NSDictionary *)currentSession;
+
+- (NSDictionary *)currentSessionWithAdditionalSender:(nullable id)sender;
 
 @end
 
