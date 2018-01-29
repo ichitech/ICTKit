@@ -2,7 +2,7 @@
  @header    NSJSONSerialization+XMLConverter.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   8.0
+ @version   8.1
  */
 
 #import <Foundation/Foundation.h>
@@ -29,8 +29,8 @@ typedef void (^NSJSONSerializationCompletion)(BOOL success,  NSDictionary * _Nul
 
 /**
  *Convert XML data containing in input file.
- *@param[in] filePath Contains an NSString object with absolute path to file with XML-data.
- *@param[in] completion A block of code will be executed when the processing of XML-data is completed.
+ *@param filePath Contains an NSString object with absolute path to file with XML-data.
+ *@param completion A block of code will be executed when the processing of XML-data is completed.
  *This parameter must not be NULL.
  */
 + (void)convertXMLFile:(NSString *)filePath completion:(_Nullable NSJSONSerializationCompletion)completion API_AVAILABLE(ios(8.0));

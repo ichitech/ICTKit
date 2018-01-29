@@ -2,7 +2,7 @@
  @header    Kit.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   8.0
+ @version   8.1
  */
 
 // UKit
@@ -25,6 +25,8 @@
 #import <ICTKit/UIViewController+Helper.h>
 #import <ICTKit/UIWindow+Helper.h>
 #import <ICTKit/UIAlertController+Helper.h>
+#import <ICTKit/UITextView+Helper.h>
+#import <ICTKit/UIImageView+Helper.h>
 
 //Foundation
 #import <ICTKit/NSJSONSerialization+XMLConverter.h>
@@ -39,8 +41,7 @@
 #import <ICTKit/NSBundle+Helper.h>
 #import <ICTKit/NSTimer+Blocks.h>
 #import <ICTKit/NSNumber+Helper.h>
-#import <ICTKit/NSNumber+Helper.h>
-#import <ICTKit/NSNumber+Helper.h>
+#import <ICTKit/NSURLSessionDataTask+DebugHelper.h>
 
 //IBInspectableClass
 #import <ICTKit/ICTIBInspectableClass.h>
@@ -64,4 +65,19 @@
 #import <KLCPopup/KLCPopup.h>
 #endif
 
+#if __has_include(<SDWebImage/UIImageView+WebCache.h>)
+#import <SDWebImage/UIImageView+WebCache.h>
+#endif
 
+#if __has_include(<MBProgressHUD/MBProgressHUD.h>)
+#import <MBProgressHUD/MBProgressHUD.h>
+#endif
+
+#if __has_include(<AFNetworking/AFNetworking.h>)
+#import <AFNetworking/AFNetworking.h>
+#endif
+
+#if __has_include(<Firebase/Firebase.h>)
+#import <ICTKit/ICTFirebaseAnalytics.h>
+#import <Firebase/Firebase.h>
+#endif

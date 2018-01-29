@@ -2,7 +2,7 @@
  @header    UIPickerSheet.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 Global CyberSoft. All rights reserved.
- @version  7.0
+ @version   8.1
  */
 
 #import <Foundation/Foundation.h>

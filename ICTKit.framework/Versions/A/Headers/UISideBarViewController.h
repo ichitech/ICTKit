@@ -1,7 +1,7 @@
 /*!
  @header    UISideBarViewController.h
  @abstract  ICTKit iOS SDK Source
- @version  7.0
+ @version   7.0
  */
 
 #import <UIKit/UIKit.h>

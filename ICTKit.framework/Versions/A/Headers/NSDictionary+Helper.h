@@ -2,7 +2,7 @@
  @header    NSDate+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   8.0
+ @version   8.1
  */
 
 
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Returns the dictionary as a query string.
  *
 **/
-- (nullable NSString *)queryStringValue NS_AVAILABLE_IOS(6_0) ;;
+- (nullable NSString *)queryStringValue NS_AVAILABLE_IOS(6_0);
 
 @end
 
