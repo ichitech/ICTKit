@@ -1,15 +1,15 @@
 /*!
- @header    NSURLSessionDataTask+DebugHelper.h
+ @header    NSURLSessionTask+DebugHelper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   8.2
+ @version   8.3
  */
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSURLSessionDataTask (DebugHelper)
+@interface NSURLSessionTask (DebugHelper)
 
 - (NSDictionary *)currentSession;
 

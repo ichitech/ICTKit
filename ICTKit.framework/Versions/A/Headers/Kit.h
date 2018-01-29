@@ -2,7 +2,7 @@
  @header    Kit.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   8.2
+ @version   8.3
  */
 
 // UKit
@@ -41,7 +41,7 @@
 #import <ICTKit/NSBundle+Helper.h>
 #import <ICTKit/NSTimer+Blocks.h>
 #import <ICTKit/NSNumber+Helper.h>
-#import <ICTKit/NSURLSessionDataTask+DebugHelper.h>
+#import <ICTKit/NSURLSessionTask+DebugHelper.h>
 
 //IBInspectableClass
 #import <ICTKit/ICTIBInspectableClass.h>

@@ -2,7 +2,7 @@
  @header    UIAlertController+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   8.2
+ @version   8.3
  */
 
 #import <UIKit/UIKit.h>
