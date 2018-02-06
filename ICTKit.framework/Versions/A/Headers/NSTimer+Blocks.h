@@ -2,7 +2,7 @@
  @header    NSTimer+Blocks.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   8.4
+ @version   8.5
  */
 
 #import <Foundation/Foundation.h>
