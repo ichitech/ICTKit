@@ -2,7 +2,7 @@
  @header    UIValidate.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   8.5
+ @version   8.6
  @deprecated Stop supporting on iOS 7.1 or upper.
  */
 
