@@ -2,7 +2,7 @@
  @header    NSMethod.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   8.8
+ @version   8.9
  */
 
 #import <Foundation/Foundation.h>
