@@ -2,7 +2,7 @@
  @header    NSJSONSerialization+XMLConverter.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   8.9
+  @version   8.13
  */
 
 #import <Foundation/Foundation.h>
@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param JSONObject Contains convert XML-data when success, otherwise - nil.
  * @param error Contains error of processing XML-data if exist, otherwise - nil.
  */
-typedef void (^NSJSONSerializationCompletion)(BOOL success,  NSDictionary * _Nullable JSONObject, NSError * _Nullable error) API_AVAILABLE(ios(8.0));
+typedef void (^NSJSONSerializationCompletion)(BOOL success,  NSDictionary<NSString *, id> * _Nullable JSONObject, NSError * _Nullable error) API_AVAILABLE(ios(8.0));
 
 @interface NSJSONSerialization (XMLConverter)
 
