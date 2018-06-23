@@ -2,7 +2,7 @@
  @header    NSDate+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
-  @version   8.13
+ @version   8.14
  */
 
 #import <Foundation/Foundation.h>
@@ -12,42 +12,39 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSDate (DateCompare)
 
-+(NSDate *)normalizedDateWithDate:(NSDate *) date NS_AVAILABLE_IOS(4_0);
++ (NSDate *)normalizedDateWithDate:(NSDate *) date NS_AVAILABLE_IOS(4_0);
 
-///Compare with TODAY
-+(BOOL)isEqualToDateIgnoringTime:(NSDate *) date NS_AVAILABLE_IOS(4_0);
+// Compare with TODAY
++ (BOOL)isEqualToDateIgnoringTime:(NSDate *) date NS_AVAILABLE_IOS(4_0);
 
-+(BOOL)isEarlierThanDate:(NSDate *) date NS_AVAILABLE_IOS(4_0);
++ (BOOL)isEarlierThanDate:(NSDate *) date NS_AVAILABLE_IOS(4_0);
 
-+(BOOL)isLaterThanDate:(NSDate *) date NS_AVAILABLE_IOS(4_0);
++ (BOOL)isLaterThanDate:(NSDate *) date NS_AVAILABLE_IOS(4_0);
 
-+(NSString *)getDayOfTheWeek:(NSDate *)date  NS_AVAILABLE_IOS(4_0);
++ (NSString *)getDayOfTheWeek:(NSDate *)date  NS_AVAILABLE_IOS(4_0);
 
-///Compare with other DAY and Ignoring time
-+(BOOL)isEqualToDateIgnoringTime:(NSDate *) dateFist andDateSecond:(NSDate *)dateSecond NS_AVAILABLE_IOS(4_0);
+// Compare with other DAY and Ignoring time
++ (BOOL)isEqualToDateIgnoringTime:(NSDate *) dateFist andDateSecond:(NSDate *)dateSecond NS_AVAILABLE_IOS(4_0);
 
 @end
 
 @interface NSDate (Helper)
 
-+(NSDate *)dateWithString:(NSString *)StringDate
-                formatter:(NSString *)formatDate NS_AVAILABLE_IOS(5_0);
++ (NSDate *)dateWithString:(NSString *)StringDate formatter:(NSString *)formatDate NS_AVAILABLE_IOS(5_0);
 
-+ (NSDate *)dateWithString:(NSString *)StringDate
-                 formatter:(NSString *)formatDate
-                withLocale:(nullable NSLocale *)locale NS_AVAILABLE_IOS(5_0);
++ (NSDate *)dateWithString:(NSString *)StringDate formatter:(NSString *)formatDate withLocale:(nullable NSLocale *)locale NS_AVAILABLE_IOS(5_0);
 
--(NSString *)stringWithFormatter:(NSString *)format NS_AVAILABLE_IOS(7_0);
+- (NSString *)stringWithFormatter:(NSString *)format NS_AVAILABLE_IOS(7_0);
 
--(NSString *)stringWithFormatter:(NSString *)format withLocale:(nullable NSLocale *)locale NS_AVAILABLE_IOS(7_0);
+- (NSString *)stringWithFormatter:(NSString *)format withLocale:(nullable NSLocale *)locale NS_AVAILABLE_IOS(7_0);
 
-+(NSString *)changeTime24hFrom12hWithDateString:(NSString *)string NS_AVAILABLE_IOS(4_0);
++ (NSString *)changeTime24hFrom12hWithDateString:(NSString *)string NS_AVAILABLE_IOS(4_0);
 
-+(NSString *)changeTime12hFrom24hWithDateString:(NSString *)string NS_AVAILABLE_IOS(4_0);
++ (NSString *)changeTime12hFrom24hWithDateString:(NSString *)string NS_AVAILABLE_IOS(4_0);
 
-+(NSString *)stringTimeOfDayFromSecond:(float)second NS_AVAILABLE_IOS(4_0);
++ (NSString *)stringTimeOfDayFromSecond:(float)second NS_AVAILABLE_IOS(4_0);
 
-+(NSString *)stringSecondFromTimeOfDay:(NSString *)stringTime NS_AVAILABLE_IOS(4_0);
++ (NSString *)stringSecondFromTimeOfDay:(NSString *)stringTime NS_AVAILABLE_IOS(4_0);
 
 @end
 
@@ -101,17 +98,15 @@ NS_ASSUME_NONNULL_BEGIN
 -(NSDate *)dateAtMidnight NS_AVAILABLE_IOS(4_0);
 
 /** Returns a string designed to be used for user interaction.
- 
  If the receiver is the same date as today, it will return "Today"
  If the receiver is yesterday, it'll return "Yesterday"
  If the receiver is within 1 week prior to today, it'll return the day of the week (Monday, Tuesday, etc)
  Otherwise, it returns the date printed according to the locale settings.
- 
  */
+
 -(NSString *)niceDescription NS_AVAILABLE_IOS(4_0);
 /// Returns the same thing as -niceDescription but includes the time.
 -(NSString *)niceDescriptionWithTime NS_AVAILABLE_IOS(4_0);
-
 /// Converts the receiver to a string of the form YYYYMMDD
 -(NSString *)toYYYYMMDD NS_AVAILABLE_IOS(4_0);
 /// Converts the receiver to a string of the form YYYYMMDDhhmmss

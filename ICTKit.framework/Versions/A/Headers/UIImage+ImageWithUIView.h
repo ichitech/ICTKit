@@ -2,7 +2,7 @@
  @header    UIImage+ImageWithUIView.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
-  @version   8.13
+ @version   8.14
  */
 
 #import <UIKit/UIKit.h>
@@ -47,8 +47,8 @@ FOUNDATION_EXPORT UIImage *UIImageWithNamed(NSString * name, UIColor * _Nullable
  * @abstract Change overlay of image.
  * @param color New color of image.
  */
-- (UIImage *)createAnImageWithTintColor:(nonnull UIColor *)color API_AVAILABLE(ios(7.0));
-- (UIImage *)imageWithColor:(nonnull UIColor *)color NS_DEPRECATED_IOS(2_0, 10_0, "Use -generateNewImageWithTintColor: instead.");
+- (UIImage *)copyImageWithTintColor:(nonnull UIColor *)color API_AVAILABLE(ios(7.0));
+- (UIImage *)imageWithColor:(nonnull UIColor *)color NS_DEPRECATED_IOS(2_0, 9_0, "Use -copyImageWithTintColor: instead.");
 
 /**
  Load an image from main bundle with custom overlay color.

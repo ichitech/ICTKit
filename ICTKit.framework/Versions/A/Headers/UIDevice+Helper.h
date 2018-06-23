@@ -2,7 +2,7 @@
  @header    UIDevice+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
-  @version   8.13
+ @version   8.14
  */
 
 
@@ -22,7 +22,7 @@
 #define iPHONE_DEVICE ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
 #define iPAD_DEVICE ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 
-//Deprecated
+// Deprecated
 BOOL HTSystemVersionGreaterOrEqualThan(CGFloat version) NS_DEPRECATED_IOS(4_0, 7_1, "Use UIDeviceSystemVersionIsGreaterThanOrEqualTo() instead.");
 BOOL iPHONE_OS_5() NS_DEPRECATED_IOS(4_0, 7_0, "Use UIDeviceModelIsIphone5() instead.");
 CGSize UIDeviceDifferenceSizeBetweenIphone4AndIphone5() NS_DEPRECATED_IOS(4_0, 11_0, "Stop supporting on iOS 11.0 or upper.");
@@ -30,14 +30,14 @@ CGSize UIDeviceDifferenceSizeBetweenIphone4AndIphone6() NS_DEPRECATED_IOS(4_0, 1
 CGSize UIDeviceDifferenceSizeBetweenIphone4AndIphone6Plus() NS_DEPRECATED_IOS(4_0, 11_0, "Stop supporting on iOS 11.0 or upper.");
 CGSize UIDeviceDifferenceSizeBetweenCurrentDeviceAndIphone4() NS_DEPRECATED_IOS(4_0, 11_0, "Stop supporting on iOS 11.0 or upper.");
 
-//compare ios version
+// Compare ios version
 BOOL UIDeviceSystemVersionIsEqualTo(CGFloat version) NS_AVAILABLE_IOS(6_0);
 BOOL UIDeviceSystemVersionIsGreaterThan(CGFloat version) NS_AVAILABLE_IOS(6_0);
 BOOL UIDeviceSystemVersionIsGreaterThanOrEqualTo(CGFloat version) NS_AVAILABLE_IOS(6_0);
 BOOL UIDeviceSystemVersionIsLessThan(CGFloat version) NS_AVAILABLE_IOS(6_0);
 BOOL UIDeviceSystemVersionIsLessThanOrEqualTo(CGFloat version) NS_AVAILABLE_IOS(6_0);
 
-//check iphone system
+// Check iphone system
 BOOL UIDeviceModelIsIphone4() NS_AVAILABLE_IOS(6_0);
 BOOL UIDeviceModelIsIphone4S() NS_AVAILABLE_IOS(6_0);
 BOOL UIDeviceModelIsIphone5() NS_AVAILABLE_IOS(6_0);
@@ -53,7 +53,7 @@ BOOL UIDeviceModelIsIphone8() NS_AVAILABLE_IOS(8_0);
 BOOL UIDeviceModelIsIphone8Plus() NS_AVAILABLE_IOS(8_0);
 BOOL UIDeviceModelIsIphoneX() NS_AVAILABLE_IOS(8_0);
 
-//check InterfaceIdiom
+// Check InterfaceIdiom
 BOOL UIDeviceInterfaceIdiomIphone() NS_AVAILABLE_IOS(4_0);
 BOOL UIDeviceInterfaceIdiomIpad() NS_AVAILABLE_IOS(4_0);
 
@@ -119,14 +119,12 @@ typedef NS_ENUM(NSInteger, UIDeviceSize){
 
 /**
  Get the list of devices.
-
  @return NSDictionary
  */
 - (NSDictionary*)deviceNames NS_AVAILABLE_IOS(8_0);
 
 /**
  Get the platform code for device.
-
  @return NSString
  @example iPhone9,4 iPod1,1 iPad1,1 x86_64
  */
@@ -134,7 +132,6 @@ typedef NS_ENUM(NSInteger, UIDeviceSize){
 
 /**
  Get the device model of device.
-
  @return NSString
  @example iPhone4 iPhone5S iPhone6
  */
@@ -143,28 +140,24 @@ typedef NS_ENUM(NSInteger, UIDeviceSize){
 
 /**
  Get the version of device.
-
  @return UIDeviceVersion
  */
 - (UIDeviceVersion)deviceVersion NS_AVAILABLE_IOS(8_0);
 
 /**
  Get the resolution size.
- 
  @return UIDeviceSize
  */
 - (UIDeviceSize)resolutionSize NS_AVAILABLE_IOS(8_0);
 
 /**
  Get the device size.
- 
  @return UIDeviceSize
  */
 - (UIDeviceSize)deviceSize NS_AVAILABLE_IOS(8_0);
 
 /**
  Get the device model of device.
- 
  @return NSString
  @example iPhone4 iPhone5S iPhone6
  */

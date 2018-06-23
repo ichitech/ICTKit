@@ -1,7 +1,7 @@
 /*!
  @header    UISideBarViewController.h
  @abstract  ICTKit iOS SDK Source
-  @version   8.13
+ @version   8.14
  @deprecated Stop supporting on iOS 7.1 or upper.
  */
 

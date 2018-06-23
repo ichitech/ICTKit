@@ -2,7 +2,7 @@
  @header    UIApplication+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
-  @version   8.13
+ @version   8.14
  */
 
 #import <UIKit/UIKit.h>
@@ -18,16 +18,15 @@ id UIMainAppDelegate() NS_AVAILABLE_IOS(7_0);
 
 @interface UIApplication (Helper)
 
-+ (NSString * _Nonnull)appVersion NS_AVAILABLE_IOS(2_0);
-+ (NSString * _Nonnull)build NS_AVAILABLE_IOS(2_0);
-+ (NSString * _Nonnull)versionBuild NS_AVAILABLE_IOS(2_0);
+@property (nonatomic, strong, readonly, nullable) UIView   *statusBar API_AVAILABLE(ios(2.0));
+@property (nonatomic, strong, readonly, nullable) NSString *appVersion API_AVAILABLE(ios(2.0));
+@property (nonatomic, strong, readonly, nullable) NSString *build API_AVAILABLE(ios(2.0));
+@property (nonatomic, strong, readonly, nullable) NSString *versionBuild API_AVAILABLE(ios(2.0));
 
-/**
- *  Get the view of status bar.
- *
- *  @return UIView.
- */
-+ (UIView * _Nullable)statusBar NS_AVAILABLE_IOS(7_0);
++ (NSString * _Nonnull)appVersion NS_DEPRECATED_IOS(2_0, 9_0, "Use -appVersion instead.");
++ (NSString * _Nonnull)build NS_DEPRECATED_IOS(2_0, 9_0, "Use -build instead.");
++ (NSString * _Nonnull)versionBuild NS_DEPRECATED_IOS(2_0, 9_0, "Use -versionBuild instead.");
++ (UIView * _Nullable)statusBar NS_DEPRECATED_IOS(2_0, 9_0, "Use -statusBar instead.");
 
 @end
 

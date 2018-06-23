@@ -2,7 +2,7 @@
  @header    UIWindow+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
-  @version   8.13
+ @version   8.14
  */
 
 #import <UIKit/UIKit.h>
@@ -11,24 +11,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wstrict-prototypes"
-#define WINDOW      Window()
-UIWindow *WIN_DOW() NS_DEPRECATED_IOS(4_0, 8_0, "Use Window() instead.");
-UIWindow *Window()  NS_AVAILABLE_IOS(7_0);
+#define WINDOW Window()
+UIWindow *WIN_DOW() NS_DEPRECATED_IOS(4_0, 8_0, "Use +currentWindow instead.");
+UIWindow *Window()  NS_DEPRECATED_IOS(4_0, 11_0, "Use +currentWindow instead.");
 #pragma clang diagnostic pop
 
 @interface UIWindow (Helper)
 
++ (instancetype) currentWindow API_AVAILABLE(ios(7.0));
 
 @end
 
 @interface UIWindow (UIWindowVisible)
 
 /**
- *  Get current the visible view controller.
- *
- *  @return UIViewController
+ *  Get current the visible view controller. Default is nil.
  */
-- (nullable UIViewController *) visibleViewController API_AVAILABLE(ios(2.0));;
+@property(nullable, nonatomic, strong, readonly) __kindof UIViewController *visibleViewController API_AVAILABLE(ios(2.0));
 
 @end
 

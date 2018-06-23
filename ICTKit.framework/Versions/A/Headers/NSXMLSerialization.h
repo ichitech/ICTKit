@@ -2,7 +2,7 @@
  @header    NSXMLSerialization.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
-  @version   8.13
+ @version   8.14
  */
 
 #import <Foundation/Foundation.h>
@@ -34,7 +34,7 @@ static NSString *const NSXMLDictionaryTextKey         = @"__text";
 static NSString *const NSXMLDictionaryNodeNameKey     = @"__name";
 static NSString *const NSXMLDictionaryAttributePrefix = @"_";
 
-
+NS_SWIFT_NAME(XMLSerialization)
 @interface NSXMLSerialization : NSObject <NSCopying>
 
 + (NSXMLSerialization *)sharedInstance API_AVAILABLE(ios(8.0));

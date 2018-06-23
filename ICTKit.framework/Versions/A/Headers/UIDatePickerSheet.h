@@ -2,7 +2,7 @@
  @header    UIDatePickerSheet.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 Global CyberSoft. All rights reserved.
-  @version   8.13
+ @version   8.14
  */
 
 #import <Foundation/Foundation.h>
@@ -12,9 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class UIDatePickerSheet;
 
-typedef void(^UIDatePickerSheetCompletion)(UIDatePickerSheet *picker,BOOL finish);
-typedef void(^UIDatePickerSheetCompose)(UIDatePickerSheet *picker);
+typedef void(^UIDatePickerSheetCompletion)(UIDatePickerSheet *picker,BOOL finish) NS_DEPRECATED_IOS(2_0, 10_0, "UIDatePickerSheetCompletion is deprecated.");
+typedef void(^UIDatePickerSheetCompose)(UIDatePickerSheet *picker) NS_DEPRECATED_IOS(2_0, 10_0, "UIDatePickerSheetCompose is deprecated.");
 
+NS_CLASS_DEPRECATED_IOS(2_0, 10_0, "UIDatePickerSheet is deprecated. Use ActionSheetDatePicker instead.")
 @interface UIDatePickerSheet : NSObject
 
 /**

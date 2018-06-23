@@ -2,7 +2,7 @@
  @header    ICTFirebaseAnalytics.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
-  @version   8.13
+ @version   8.14
  */
 
 #import <Foundation/Foundation.h>

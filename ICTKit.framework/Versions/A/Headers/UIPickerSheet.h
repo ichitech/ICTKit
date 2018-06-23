@@ -2,7 +2,7 @@
  @header    UIPickerSheet.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 Global CyberSoft. All rights reserved.
-  @version   8.13
+ @version   8.14
  */
 
 #import <Foundation/Foundation.h>
@@ -12,9 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class UIPickerSheet;
 
-typedef void(^UIPickerSheetCompletion)(UIPickerSheet *picker,BOOL finish);
-typedef void(^UIPickerSheetCompose)(UIPickerSheet *picker);
+typedef void(^UIPickerSheetCompletion)(UIPickerSheet *picker,BOOL finish) NS_DEPRECATED_IOS(2_0, 10_0, "UIPickerSheetCompletion is deprecated.");
+typedef void(^UIPickerSheetCompose)(UIPickerSheet *picker) NS_DEPRECATED_IOS(2_0, 10_0, "UIPickerSheetCompose is deprecated.");
 
+NS_CLASS_DEPRECATED_IOS(2_0, 10_0, "UIPickerSheet is deprecated. Use ActionSheetPicker instead.")
 @interface UIPickerSheet : NSObject
 
 /**

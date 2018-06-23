@@ -2,7 +2,7 @@
  @header    NSTimer+Blocks.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
-  @version   8.13
+ @version   8.14
  */
 
 #import <Foundation/Foundation.h>
@@ -15,12 +15,12 @@
 #pragma clang diagnostic ignored "-Wstrict-prototypes"
 
 /// Creates and schedules an NSTimer specified to fire after the given time interval and which will execute the given block.
-+(instancetype) scheduledTimerWithTimeInterval:(NSTimeInterval)inTimeInterval
++ (instancetype) scheduledTimerWithTimeInterval:(NSTimeInterval)inTimeInterval
                                          block:(dispatch_block_t)inBlock
                                        repeats:(BOOL)inRepeats NS_DEPRECATED_IOS(5_0, 11_0, "Use +scheduledTimerWithTimeInterval:repeats:completion: instead.");
 
 /// Creates an NSTimer specified to fire after the given time interval and which will execute the given block.
-+(instancetype) timerWithTimeInterval:(NSTimeInterval)inTimeInterval
++ (instancetype) timerWithTimeInterval:(NSTimeInterval)inTimeInterval
                                 block:(dispatch_block_t)inBlock
                               repeats:(BOOL)inRepeats NS_DEPRECATED_IOS(5_0, 11_0, "Use +timerWithTimeInterval:repeats:completion: instead.");
 
