@@ -10,5 +10,7 @@
 "ICT_DAY_OTHER"         = "dd MMMM yyyy";
 "ICT_HOUR_SEC"          = "HH:mm";
 "Done"                  = "Xong";
-"Contries List"         = "Danh sách quốc gia";
+"Countries List"        = "Danh sách quốc gia";
 "Cancel"                = "Huỷ";
+"CountryPickerJSONFile" = "CountryPicker";
+

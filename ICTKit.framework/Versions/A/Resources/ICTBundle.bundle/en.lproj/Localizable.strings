@@ -1,14 +1,15 @@
-"Just now" = "Just now";
-"1 minute ago" = "1 minute ago";
-"%d minutes ago" = "%d minutes ago";
-"1 hour ago" = "1 hour ago";
-"%d hours ago" = "%d hours ago";
-"Yesterday at %@" = "Yesterday at %@";
-"ICT_DAY_LAST_7" = "EEEE 'at' HH:mm";
-"ICT_DAY_LAST_30" = "MMMM dd 'at' HH:mm";
-"ICT_DAY_LAST_360" = "MMMM dd";
-"ICT_DAY_OTHER" = "MMMM dd yyyy";
-"ICT_HOUR_SEC" = "HH:mm";
-"Done" = "Done";
-"Contries List" = "Contries List";
-"Cancel" = "Cancel";
+"Just now"              = "Just now";
+"1 minute ago"          = "1 minute ago";
+"%d minutes ago"        = "%d minutes ago";
+"1 hour ago"            = "1 hour ago";
+"%d hours ago"          = "%d hours ago";
+"Yesterday at %@"       = "Yesterday at %@";
+"ICT_DAY_LAST_7"        = "EEEE 'at' HH:mm"; // < Last 7 days = "Friday at 13:48"
+"ICT_DAY_LAST_30"       = "MMMM dd 'at' HH:mm"; // < Last 30 days = "March 30 at 11:14"
+"ICT_DAY_LAST_360"      = "MMMM dd"; // < 1 year = "September 15"
+"ICT_DAY_OTHER"         = "MMMM dd yyyy";
+"ICT_HOUR_SEC"          = "HH:mm";
+"Done"                  = "Done";
+"Countries List"        = "Countries List";
+"Cancel"                = "Cancel";
+"CountryPickerJSONFile" = "CountryPicker";

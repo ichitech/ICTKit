@@ -10,5 +10,6 @@
 "ICT_DAY_OTHER"         = "MM月dd日yyyy";
 "ICT_HOUR_SEC"          = "HH:mm";
 "Done"                  = "完了";
-"Contries List"         = "国一覧";
+"Countries List"        = "国一覧";
 "Cancel"                = "キャンセル";
+"CountryPickerJSONFile" = "CountryPicker_jp";
