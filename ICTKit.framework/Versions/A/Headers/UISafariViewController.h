@@ -2,7 +2,7 @@
  @header    UISafariViewController.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   8.15
+ @version   9.0
  */
 
 #import <UIKit/UIKit.h>
@@ -62,6 +62,8 @@ typedef void(^UISafariViewControllerCompletion)(UISafariViewController *safariVi
  */
 - (void) showWithURL:(NSURL *)URL completion:(UISafariViewControllerCompletion)completion_t NS_AVAILABLE_IOS(8_0);
 + (void) openWithURL:(NSURL *)URL completion:(UISafariViewControllerCompletion)completion_t  NS_DEPRECATED_IOS(6_0, 9_0, "Use -showWithURL:completion: instead.");
+
+- (void) showWithHTML:(NSString *)html completion:(UISafariViewControllerCompletion)completion_t NS_AVAILABLE_IOS(8_0);
 
 @end
 

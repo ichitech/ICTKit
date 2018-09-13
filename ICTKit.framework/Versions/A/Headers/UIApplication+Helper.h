@@ -2,7 +2,7 @@
  @header    UIApplication+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   8.15
+ @version   9.0
  */
 
 #import <UIKit/UIKit.h>
@@ -19,9 +19,9 @@ id UIMainAppDelegate() NS_AVAILABLE_IOS(7_0);
 @interface UIApplication (Helper)
 
 @property (nonatomic, strong, readonly, nullable) UIView   *aplicationStatusBar API_AVAILABLE(ios(9.0));
-@property (nonatomic, strong, readonly, nullable) NSString *appVersion API_AVAILABLE(ios(9.0));
-@property (nonatomic, strong, readonly, nullable) NSString *build API_AVAILABLE(ios(9.0));
-@property (nonatomic, strong, readonly, nullable) NSString *versionBuild API_AVAILABLE(ios(9.0));
+@property (nonatomic, strong, readonly) NSString *appVersion API_AVAILABLE(ios(9.0));
+@property (nonatomic, strong, readonly) NSString *build API_AVAILABLE(ios(9.0));
+@property (nonatomic, strong, readonly) NSString *versionBuild API_AVAILABLE(ios(9.0));
 
 + (NSString * _Nonnull)appVersion NS_DEPRECATED_IOS(2_0, 9_0, "Use -appVersion instead.");
 + (NSString * _Nonnull)build NS_DEPRECATED_IOS(2_0, 9_0, "Use -build instead.");
