@@ -19,6 +19,7 @@
 #define iOS_9 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
 #define iOS_10 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0)
 #define iOS_11 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11.0)
+#define iOS_12 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 12.0)
 #define iPHONE_DEVICE ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
 #define iPAD_DEVICE ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 
@@ -52,6 +53,9 @@ BOOL UIDeviceModelIsIphone7Plus() NS_AVAILABLE_IOS(8_0);
 BOOL UIDeviceModelIsIphone8() NS_AVAILABLE_IOS(8_0);
 BOOL UIDeviceModelIsIphone8Plus() NS_AVAILABLE_IOS(8_0);
 BOOL UIDeviceModelIsIphoneX() NS_AVAILABLE_IOS(8_0);
+BOOL UIDeviceModelIsIphoneXR() NS_AVAILABLE_IOS(8_0);
+BOOL UIDeviceModelIsIphoneXS() NS_AVAILABLE_IOS(8_0);
+BOOL UIDeviceModelIsIphoneXSMax() NS_AVAILABLE_IOS(8_0);
 
 // Check InterfaceIdiom
 BOOL UIDeviceInterfaceIdiomIphone() NS_AVAILABLE_IOS(4_0);
@@ -98,6 +102,12 @@ typedef NS_ENUM(NSInteger, UIDeviceVersion){
     UIDeviceVersionIPhone8           = 40,
     UIDeviceVersionIPhone8Plus       = 41,
     UIDeviceVersionIPhoneX           = 42,
+    
+    UIDeviceVersionIPhoneXR          = 43,
+    UIDeviceVersionIPhoneXS          = 44,
+    UIDeviceVersionIPhoneXSMax       = 45,
+
+    
     UIDeviceVersionIPad5             = 33,
     UIDeviceVersionIPadPro12Dot9InchGen2 = 34,
     UIDeviceVersionIPadPro10Dot5Inch  = 35,
@@ -112,7 +122,9 @@ typedef NS_ENUM(NSInteger, UIDeviceSize){
     UIDeviceSizeScreen4inch     = 2,
     UIDeviceSizeScreen4Dot7inch = 3,
     UIDeviceSizeScreen5Dot5inch = 4,
-    UIDeviceSizeScreen5Dot8inch = 5
+    UIDeviceSizeScreen5Dot8inch = 5,
+    UIDeviceSizeScreen6Dot1inch = 6,
+    UIDeviceSizeScreen6Dot5inch = 7
 };
 
 @interface UIDevice (Helper)
