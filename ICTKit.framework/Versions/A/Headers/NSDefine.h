@@ -2,7 +2,7 @@
  @header    NSDefine.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   9.0
+ @version   12.0
  */
 
 #if __has_feature(objc_arc)
@@ -39,9 +39,6 @@ NS_INLINE NSLength NSMakeLength(NSUInteger minimum, NSUInteger maximum) {
 
 #define USER_DEFAULTS [NSUserDefaults standardUserDefaults]
 #define LOAD_NIB(nibName) [[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil] objectAtIndex:0]
-
-
-
 
 
 

@@ -2,7 +2,7 @@
  @header    UITextView+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   9.0
+ @version   12.0
  */
 
 #import <UIKit/UIKit.h>

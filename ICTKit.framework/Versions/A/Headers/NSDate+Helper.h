@@ -2,7 +2,7 @@
  @header    NSDate+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   9.0
+ @version   12.0
  */
 
 #import <Foundation/Foundation.h>
@@ -10,21 +10,86 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+static NSTimeInterval TimeIntervalMinute   = 60;
+static NSTimeInterval TimeIntervalHour     = 3600;
+static NSTimeInterval TimeIntervalDay      = 86400;
+static NSTimeInterval TimeIntervalWeek     = 604800;
+static NSTimeInterval TimeIntervalYear     = 31556926;
+
+BOOL NSDateEqualToDateIgnoringTime(NSDate *date1, NSDate *date2);
+
 @interface NSDate (DateCompare)
-
-+ (NSDate *)normalizedDateWithDate:(NSDate *) date NS_AVAILABLE_IOS(4_0);
-
-// Compare with TODAY
-+ (BOOL)isEqualToDateIgnoringTime:(NSDate *) date NS_AVAILABLE_IOS(4_0);
-
-+ (BOOL)isEarlierThanDate:(NSDate *) date NS_AVAILABLE_IOS(4_0);
-
-+ (BOOL)isLaterThanDate:(NSDate *) date NS_AVAILABLE_IOS(4_0);
 
 + (NSString *)getDayOfTheWeek:(NSDate *)date  NS_AVAILABLE_IOS(4_0);
 
-// Compare with other DAY and Ignoring time
-+ (BOOL)isEqualToDateIgnoringTime:(NSDate *) dateFist andDateSecond:(NSDate *)dateSecond NS_AVAILABLE_IOS(4_0);
+// Relative dates from the current date
++ (NSDate *) dateTomorrow;
++ (NSDate *) dateYesterday;
++ (NSDate *) dateWithDaysFromNow:(NSInteger) days;
++ (NSDate *) dateWithDaysBeforeNow:(NSInteger) days;
++ (NSDate *) dateWithHoursFromNow:(NSInteger) dHours;
++ (NSDate *) dateWithHoursBeforeNow:(NSInteger) dHours;
++ (NSDate *) dateWithMinutesFromNow:(NSInteger) dMinutes;
++ (NSDate *) dateWithMinutesBeforeNow:(NSInteger) dMinutes;
+
+// Comparing dates
+- (BOOL) isEqualToDateIgnoringTime:(NSDate *) aDate;
+- (BOOL) isToday;
+- (BOOL) isTomorrow;
+- (BOOL) isYesterday;
+- (BOOL) isSameWeekAsDate:(NSDate *) aDate;
+- (BOOL) isThisWeek;
+- (BOOL) isNextWeek;
+- (BOOL) isLastWeek;
+- (BOOL) isSameMonthAsDate:(NSDate *) aDate;
+- (BOOL) isThisMonth;
+- (BOOL) isSameYearAsDate:(NSDate *) aDate;
+- (BOOL) isThisYear;
+- (BOOL) isNextYear;
+- (BOOL) isLastYear;
+- (BOOL) isEarlierThanDate:(NSDate *) aDate;
+- (BOOL) isLaterThanDate:(NSDate *) aDate;
+- (BOOL) isInFuture;
+- (BOOL) isInPast;
+
+// Date roles
+- (BOOL) isTypicallyWorkday;
+- (BOOL) isTypicallyWeekend;
+
+// Adjusting dates
+- (NSDate *) toYourVibeTime;
+- (NSDate *) toLocalTime;
+- (NSDate *) toGlobalTime;
+- (NSDate *) normalizedDateWithDate;
+- (NSDate *) dateByAddingDays: (NSInteger) dDays;
+- (NSDate *) dateBySubtractingDays: (NSInteger) dDays;
+- (NSDate *) dateByAddingHours: (NSInteger) dHours;
+- (NSDate *) dateBySubtractingHours: (NSInteger) dHours;
+- (NSDate *) dateByAddingMinutes: (NSInteger) dMinutes;
+- (NSDate *) dateBySubtractingMinutes: (NSInteger) dMinutes;
+- (NSDate *) dateAtStartOfDay;
+
+// Retrieving intervals
+- (NSInteger) minutesAfterDate: (NSDate *) aDate;
+- (NSInteger) minutesBeforeDate: (NSDate *) aDate;
+- (NSInteger) hoursAfterDate: (NSDate *) aDate;
+- (NSInteger) hoursBeforeDate: (NSDate *) aDate;
+- (NSInteger) daysAfterDate: (NSDate *) aDate;
+- (NSInteger) daysBeforeDate: (NSDate *) aDate;
+- (NSInteger) distanceInDaysToDate:(NSDate *)anotherDate;
+
+// Decomposing dates
+@property (readonly) NSInteger nearestHour;
+@property (readonly) NSInteger hour;
+@property (readonly) NSInteger minute;
+@property (readonly) NSInteger seconds;
+@property (readonly) NSInteger day;
+@property (readonly) NSInteger month;
+@property (readonly) NSInteger weekOfYear;
+@property (readonly) NSInteger weekOfMonth;
+@property (readonly) NSInteger weekday;
+@property (readonly) NSInteger nthWeekday; // e.g. 2nd Tuesday of the month == 2
+@property (readonly) NSInteger year;
 
 @end
 
@@ -75,7 +140,6 @@ NS_ASSUME_NONNULL_BEGIN
  Returns the time formatted as Time Ago (in the style of Facebook's mobile date formatting)
  */
 - (NSString *) formattedAsTimeAgo NS_DEPRECATED_IOS(2_0, 7_1, "formattedAsTimeAgo has been replaced by timeAgoFromDate:");
-
 - (NSString *) timeAgoFromDate:(NSDate * _Nullable)date NS_AVAILABLE_IOS(7_0);
 
 @end
@@ -103,7 +167,6 @@ NS_ASSUME_NONNULL_BEGIN
  If the receiver is within 1 week prior to today, it'll return the day of the week (Monday, Tuesday, etc)
  Otherwise, it returns the date printed according to the locale settings.
  */
-
 -(NSString *)niceDescription NS_AVAILABLE_IOS(4_0);
 /// Returns the same thing as -niceDescription but includes the time.
 -(NSString *)niceDescriptionWithTime NS_AVAILABLE_IOS(4_0);
@@ -116,11 +179,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Returns an NSDate which is inDays (+/-) days different from sender.
 -(NSDate *)dateByAddingDays:(NSInteger)inDays NS_AVAILABLE_IOS(4_0);
 /// Returns YES if inDate is the same date as the receiver.
--(BOOL)sameDayAsDate:(NSDate *)inDate NS_AVAILABLE_IOS(4_0);
-/// Returns YES if otherDate is later in time than the receiver.
--(BOOL)isLaterThanDate:(NSDate *)otherDate NS_AVAILABLE_IOS(4_0);
-/// Returns YES if otherDate is earlier in time than the receiver.
--(BOOL)isEarlierThanDate:(NSDate *)otherDate NS_AVAILABLE_IOS(4_0);
+-(BOOL)isSameDayAsDate:(NSDate *)inDate NS_AVAILABLE_IOS(4_0);
 
 @end
 
@@ -151,6 +210,16 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSDate *)dateLocalReturnFromSystem:(NSDate *)date NS_DEPRECATED_IOS(2_0, 6_1);
 
 + (NSDate *)dateNowSystem NS_DEPRECATED_IOS(2_0, 6_1);
+
++ (BOOL)isEarlierThanDate:(NSDate *) date NS_DEPRECATED_IOS(2_0, 10_0, "+isEarlierThanDate: has been replaced by -isEarlierThanDate");
+
++ (BOOL)isLaterThanDate:(NSDate *) date NS_DEPRECATED_IOS(2_0, 10_0, "+isLaterThanDate: has been replaced by -isLaterThanDate");
+
++ (BOOL)isEqualToDateIgnoringTime:(NSDate *) date NS_DEPRECATED_IOS(2_0, 10_0, "+isEqualToDateIgnoringTime: has been replaced by -isEqualToDateIgnoringTime");
+
++ (NSDate *)normalizedDateWithDate:(NSDate *) date NS_DEPRECATED_IOS(2_0, 10_0, "+normalizedDateWithDate: has been replaced by -normalizedDateWithDate");
+
++ (BOOL)isEqualToDateIgnoringTime:(NSDate *) dateFist andDateSecond:(NSDate *)dateSecond NS_DEPRECATED_IOS(2_0, 10_0, "Use NSDateEqualToDateIgnoringTime() instead.");
 
 @end
 

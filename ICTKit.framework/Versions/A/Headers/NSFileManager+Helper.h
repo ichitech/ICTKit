@@ -2,7 +2,7 @@
  @header    UINavigationController+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   9.0
+ @version   12.0
  */
 
 #import <Foundation/Foundation.h>
@@ -125,7 +125,7 @@ NSString *NSFileManagerDocumentsPath() API_AVAILABLE(ios(2.0));
  * @param folder It's a kind of NSString. It's name of folder. It must not contain any of the following character special.
  * @param agree It's bool value. If YES, the folder will be replaced.
  */
-+ (void) createFolder:(NSString *)folder agreeToReplaceIfExist:(BOOL)agree completion:(nullable void(^)(BOOL success))block NS_DEPRECATED_IOS(2_0, 9_0,"createFolder:agreeToReplaceIfExist:completion has been replaced by createFolderAtPath:completion:");
++ (void) createFolder:(NSString *)folder agreeToReplaceIfExist:(BOOL)agree completion:(nullable void(^)(BOOL success))block NS_DEPRECATED_IOS(2_0, 9_0,"Use -createFolderAtPath:completion: instead.");
 
 /*!
  * @abstract Delete file.
@@ -133,21 +133,21 @@ NSString *NSFileManagerDocumentsPath() API_AVAILABLE(ios(2.0));
  * @param file It's a kind of NSString. It's name of file.
  * @param folder It's a kind of NSString. It's name of folder.
  */
-+ (void) deleteFile:(NSString *)file inFolder:(NSString *)folder completion:(nullable void(^)(BOOL success))block  NS_DEPRECATED_IOS(2_0, 9_0,"deleteFile:inFolder:completion: has been replaced by deleteFile:inFolderPath:");
++ (void) deleteFile:(NSString *)file inFolder:(NSString *)folder completion:(nullable void(^)(BOOL success))block  NS_DEPRECATED_IOS(2_0, 9_0,"Use -deleteFile:inFolderPath: instead.");
 
 /*!
  * @abstract Delete folder.
  *
  * @param folder It's a kind of NSString. It's name of folder.
  */
-+ (void) deleteFolder:(NSString *)folder completion:(nullable void(^)(BOOL success))block NS_DEPRECATED_IOS(2_0, 9_0,"deleteFolder:completion: has been replaced by deleteFolderAtPath:completion:");
++ (void) deleteFolder:(NSString *)folder completion:(nullable void(^)(BOOL success))block NS_DEPRECATED_IOS(2_0, 9_0,"Use -deleteFolderAtPath:completion: instead.");
 
 /*!
  * @abstract Empty folder.
  *
  * @param folder It's a kind of NSString. It's name of folder.
  */
-+ (void) deleteAllFileInFolder:(NSString *)folder completion:(nullable void(^)(BOOL success))block  NS_DEPRECATED_IOS(2_0, 9_0,"deleteAllFileInFolder:completion: has been replaced by deleteAllFilesAtFolderPath:completion:");
++ (void) deleteAllFileInFolder:(NSString *)folder completion:(nullable void(^)(BOOL success))block  NS_DEPRECATED_IOS(2_0, 9_0,"Use -deleteAllFileInFolder:completion: instead.");
 
 /*!
  * @abstract add new file to folder.
@@ -156,14 +156,14 @@ NSString *NSFileManagerDocumentsPath() API_AVAILABLE(ios(2.0));
  * @param file It's a kind of NSString. It's name of file.
  * @param folder It's a kind of NSString. It's name of folder.
  */
-+ (void) addFile:(NSData *)data fileName:(NSString *)file intoFolder:(NSString *)folder completion:(nullable void(^)(BOOL success))block NS_DEPRECATED_IOS(2_0, 9_0,"addFile:fileName:intoFolder:completion has been replaced by createFileAtPath:contents:completion:");
++ (void) addFile:(NSData *)data fileName:(NSString *)file intoFolder:(NSString *)folder completion:(nullable void(^)(BOOL success))block NS_DEPRECATED_IOS(2_0, 9_0,"Use -createFileAtPath:contents:completion: instead.");
 
 /*!
  * @abstract Check exist folder.
  *
  * @param folder It's a kind of NSString. It's name of folder.
  */
-+ (BOOL) isExistFolder:(NSString *)folder NS_DEPRECATED_IOS(2_0, 9_0,"isExistFolder: has been replaced by isExistFolderAtPath:");
++ (BOOL) isExistFolder:(NSString *)folder NS_DEPRECATED_IOS(2_0, 9_0,"Use -isExistFolderAtPath: instead.");
 
 /*!
  * @abstract Check exist file.
@@ -171,21 +171,21 @@ NSString *NSFileManagerDocumentsPath() API_AVAILABLE(ios(2.0));
  * @param file It's a kind of NSString. It's name of file.
  * @param folder It's a kind of NSString. It's name of folder.
  */
-+ (BOOL) isExistFile:(NSString *)file inFolder:(NSString *)folder NS_DEPRECATED_IOS(2_0, 9_0,"isExistFile:inFolder: has been replaced by isExistFileWithName:inFolderPath:");
++ (BOOL) isExistFile:(NSString *)file inFolder:(NSString *)folder NS_DEPRECATED_IOS(2_0, 9_0,"Use -isExistFileWithName:inFolderPath: instead.");
 
 /*!
  * @abstract Get size of folder.
  *
  * @param folder It's a kind of NSString. It's name of folder.
  */
-+ (unsigned long long int) getSizeOfFolder:(NSString *)folder NS_DEPRECATED_IOS(2_0, 9_0,"getSizeOfFolder: has been replaced by sizeOfFolder:");
++ (unsigned long long int) getSizeOfFolder:(NSString *)folder NS_DEPRECATED_IOS(2_0, 9_0,"Use -getSizeOfFolder: instead.");
 
 /*!
  * @abstract Get all folders that have been created by user.
  *
  * @return Array folders.
  */
-+ (NSArray *) allFolder NS_DEPRECATED_IOS(2_0, 9_0,"createFolder:agreeToReplaceIfExist:completion has been replaced by createFolderAtPath:completion:");
++ (NSArray *) allFolder NS_DEPRECATED_IOS(2_0, 9_0,"Use -createFolderAtPath:completion: instead.");
 
 /*!
  * @abstract Get data from "Documents" with name file.
@@ -195,7 +195,7 @@ NSString *NSFileManagerDocumentsPath() API_AVAILABLE(ios(2.0));
  *
  * @return Data of file.
  */
-+ (NSData *) getFileWithName:(NSString *)file inFolder:(NSString *)folder NS_DEPRECATED_IOS(2_0, 9_0,"getFileWithName:inFolder: has been replaced by fileWithName:inFolderPath:");
++ (NSData *) getFileWithName:(NSString *)file inFolder:(NSString *)folder NS_DEPRECATED_IOS(2_0, 9_0,"Use -fileWithName:inFolderPath: instead.");
 
 /*!
  * @abstract Get URL from "Documents" with name file.
@@ -205,9 +205,9 @@ NSString *NSFileManagerDocumentsPath() API_AVAILABLE(ios(2.0));
  *
  * @return URL of file.
  */
-+ (NSURL *) URLWithFileName:(NSString *)fileName inFolder:(NSString *)folder  NS_DEPRECATED_IOS(2_0, 9_0,"URLWithFileName:inFolder: has been replaced by URLForFile:inFolderPath:");
++ (NSURL *) URLWithFileName:(NSString *)fileName inFolder:(NSString *)folder  NS_DEPRECATED_IOS(2_0, 9_0,"Use -URLForFile:inFolderPath: instead.");
 
-+ (NSURL *) URLOfFolder:(NSString *)foldername  NS_DEPRECATED_IOS(2_0, 9_0,"URLOfFolder: has been replaced by URLForFolder:");
++ (NSURL *) URLOfFolder:(NSString *)foldername  NS_DEPRECATED_IOS(2_0, 9_0,"Use -URLForFolder: instead.");
 
 @end
 
