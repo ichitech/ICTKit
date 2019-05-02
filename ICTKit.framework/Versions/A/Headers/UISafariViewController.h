@@ -2,7 +2,7 @@
  @header    UISafariViewController.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.0
+ @version   12.1
  */
 
 #import <UIKit/UIKit.h>
@@ -40,7 +40,6 @@ typedef void(^UISafariViewControllerCompletion)(UISafariViewController *safariVi
 @property (nonatomic, strong, readonly, nonnull)  UINavigationBar        *currentNavigationBar  NS_AVAILABLE_IOS(7_0);
 @property (nonatomic, strong, readonly, nullable) WKWebView              *wkWebView  NS_AVAILABLE_IOS(8_0);
 @property (nonatomic, strong, readonly, nullable) UIWebView              *webView  NS_DEPRECATED_IOS(6_0, 8_1, "Use @property -wkWebView instead.");
-
 
 - (instancetype) new NS_UNAVAILABLE;
 - (instancetype) initWithRootViewController:(UIViewController *)rootViewController NS_UNAVAILABLE ;

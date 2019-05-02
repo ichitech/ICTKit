@@ -2,7 +2,7 @@
  @header    NSDefine.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.0
+ @version   12.1
  */
 
 #if __has_feature(objc_arc)

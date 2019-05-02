@@ -2,22 +2,14 @@
  @header    NSArray+NewCategory.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.0
+ @version   12.1
  */
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSArray (Random)
-
-/*!
- * @abstract Return new array with random objects.
- *
- * @param array It's kind of NSArray. It will be use to create new array.
- * @param count It's knid of NSInteger. Count of new array will be return. It must be less
- * than count of older array.
- */
-+ (nonnull NSArray *) arrayRandomFromArray:(NSArray * _Nonnull)array limit:(NSInteger)count  NS_DEPRECATED_IOS(2_0, 6_1, "Use -arrayByRandomCount: instead.");
-
 
 /**
  * @abstract Return new array with random objects.
@@ -39,3 +31,30 @@
 - (nullable NSString *) forcedUTF8String NS_AVAILABLE_IOS(7_0);
 
 @end
+
+@interface NSArray (DEPRECATED)
+
+/*!
+ * @abstract Return new array with random objects.
+ *
+ * @param array It's kind of NSArray. It will be use to create new array.
+ * @param count It's knid of NSInteger. Count of new array will be return. It must be less
+ * than count of older array.
+ */
++ (nonnull NSArray *) arrayRandomFromArray:(NSArray * _Nonnull)array limit:(NSInteger)count  NS_DEPRECATED_IOS(2_0, 6_1, "Use -arrayByRandomCount: instead.");
+    
+@end
+
+@interface NSMutableArray (Swifter)
+
+/**
+ * [2, 3, 4, 5].prepend(1) -> [1, 2, 3, 4, 5]
+ * ["e", "l", "l", "o"].prepend:("h") -> ["h", "e", "l", "l", "o"]
+ *
+ * - Parameter object: object to insert.
+ */
+- (void) prepend:(nonnull id)object;
+
+@end
+
+NS_ASSUME_NONNULL_END

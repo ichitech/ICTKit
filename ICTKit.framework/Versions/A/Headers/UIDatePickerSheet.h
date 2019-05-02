@@ -2,7 +2,7 @@
  @header    UIDatePickerSheet.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 Global CyberSoft. All rights reserved.
- @version   12.0
+ @version   12.1
  */
 
 #import <Foundation/Foundation.h>

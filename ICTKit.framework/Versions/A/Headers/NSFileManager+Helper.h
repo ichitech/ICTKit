@@ -1,22 +1,16 @@
 /*!
- @header    UINavigationController+Helper.h
+ @header    NSFileManager+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.0
+ @version   12.1
  */
 
 #import <Foundation/Foundation.h>
-
-typedef NS_ENUM(NSInteger, NSFileManagerFileType) {
-    NSFileManagerFileTypeOther,
-    NSFileManagerFileTypePlist NS_ENUM_AVAILABLE_IOS(2_0),//only allow data type NSArray or NSDictionary
-    NSFileManagerFileTypeJSON  NS_ENUM_AVAILABLE_IOS(2_0),//allow data type NSData, NSArray or NSDictionary
-    NSFileManagerFileTypeXML NS_ENUM_AVAILABLE_IOS(8_0),//allow data type NSData, NSArray or NSDictionary
-};
-
-typedef void(^NSFileManagerCompletion)(BOOL success) API_AVAILABLE(ios(2.0));
+#import "NSFileManager+Creation.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+typedef void(^NSFileManagerCompletion)(BOOL success) NS_DEPRECATED_IOS(2_0, 13_0,"Use NSFileManagerResult instead.");
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wstrict-prototypes"
@@ -34,13 +28,11 @@ void NSFileManagerSaveData(id object,
                             NSFileManagerCompletion __nullable completion_t
                             ) API_AVAILABLE(ios(7.1));
 
-NSString *NSFileManagerDocumentsPath() API_AVAILABLE(ios(2.0));
-
 #pragma clang diagnostic pop
 
 #pragma mark - NSFileManager (Helper)
 
-@interface NSFileManager (Helper)
+@interface NSFileManager (HELPER_DEPRECATED)
 
 /*!
  * @abstract Create a new folder & file.
@@ -48,7 +40,7 @@ NSString *NSFileManagerDocumentsPath() API_AVAILABLE(ios(2.0));
  * @param folderPath It's a kind of NSString. ie: "a/b/c/c","/a/b/c","/a/b/c/d","a","/a","a/"
  * @param completion_t The completion block will be returned
  */
-- (void) createFolderAtPath:(NSString *)folderPath completion:(nullable NSFileManagerCompletion)completion_t NS_AVAILABLE_IOS(7_1);
+- (void) createFolderAtPath:(NSString *)folderPath completion:(nullable NSFileManagerCompletion)completion_t NS_DEPRECATED_IOS(2_0, 13_0,"Use -createFolder:overwite:completion instead.");
 
 /*!
  * @abstract Create a new folder & file.
@@ -58,7 +50,7 @@ NSString *NSFileManagerDocumentsPath() API_AVAILABLE(ios(2.0));
  * @param fileName It's a kind of NSString. ie: "a.json", "b.txt",...
  * @param completion_t The completion block will be returned
  */
-- (void) createFile:(NSString *)fileName inFolderPath:(nullable NSString *)folderPath contents:(NSData *)data completion:(nullable NSFileManagerCompletion)completion_t NS_AVAILABLE_IOS(7_1);
+- (void) createFile:(NSString *)fileName inFolderPath:(nullable NSString *)folderPath contents:(NSData *)data completion:(nullable NSFileManagerCompletion)completion_t NS_DEPRECATED_IOS(2_0, 13_0,"Use -createFile:content:overwite:completion instead.");
 
 /*!
  * @abstract Create a new folder & file.
@@ -67,7 +59,7 @@ NSString *NSFileManagerDocumentsPath() API_AVAILABLE(ios(2.0));
  * @param data It's a kind of NSData. The data will be saved.
  * @param completion_t The completion block will be returned
  */
-- (void) createFileAtPath:(NSString *)filePath contents:(NSData *)data completion:(nullable NSFileManagerCompletion)completion_t NS_AVAILABLE_IOS(7_1);
+- (void) createFileAtPath:(NSString *)filePath contents:(NSData *)data completion:(nullable NSFileManagerCompletion)completion_t NS_DEPRECATED_IOS(2_0, 13_0,"Use -createFile:content:overwite:completion instead.");
 
 /*!
  * @abstract Delete folder & file.
@@ -75,34 +67,28 @@ NSString *NSFileManagerDocumentsPath() API_AVAILABLE(ios(2.0));
  * @param filePath It's a kind of NSString. ie: "a/b/c/c/b.txt","/a/b/c/b.txt","/a/b/c/d/b.txt","a","/a/b.txt","a/b.txt"
  * @param completion_t The completion block will be returned
  */
-- (void) deleteFileAtPath:(NSString *)filePath completion:(nullable NSFileManagerCompletion)completion_t NS_AVAILABLE_IOS(7_1);
-
-/*!
- * @abstract Delete folder & file.
- *
- * @param path It's a kind of NSString. ie: "a/b/c/c","/a/b/c","/a/b/c/d","a","/a","a/"
- * @param completion_t The completion block will be returned
- */
-- (void) deleteFolderAtPath:(NSString *)path completion:(nullable NSFileManagerCompletion)completion_t NS_AVAILABLE_IOS(7_1);
-- (void) deleteFile:(NSString *)fileName inFolderPath:(nullable NSString *)folderPath completion:(nullable NSFileManagerCompletion)completion_t NS_AVAILABLE_IOS(7_1);
+- (void) deleteFileAtPath:(NSString *)filePath completion:(nullable NSFileManagerCompletion)completion_t NS_DEPRECATED_IOS(2_0, 13_0,"Use -deleteItem:completion instead.");
+- (void) deleteFolderAtPath:(NSString *)path completion:(nullable NSFileManagerCompletion)completion_t NS_DEPRECATED_IOS(2_0, 13_0,"Use -deleteItem:completion instead.");
+- (void) deleteFile:(NSString *)fileName inFolderPath:(nullable NSString *)folderPath completion:(nullable NSFileManagerCompletion)completion_t NS_DEPRECATED_IOS(2_0, 13_0,"Use -deleteItem:completion instead.");
+- (void) deleteAllFilesAtFolderPath:(NSString *)folderPath completion:(nullable NSFileManagerCompletion)completion_t NS_DEPRECATED_IOS(2_0, 13_0,"Use -deleteItem:completion instead.");
 
 /*!
  * @abstract URL full path of file & folder
  */
-- (NSURL *) URLForFolder:(NSString *)folderPath NS_AVAILABLE_IOS(7_1);
+- (NSURL *) URLForFolder:(NSString *)folderPath  NS_DEPRECATED_IOS(2_0, 13_0,"Use @property -homeDirectoryURL instead.");
 
-- (NSURL *) URLForFile:(NSString *)fileName inFolderPath:(NSString *)folderPath NS_AVAILABLE_IOS(7_1);
+- (NSURL *) URLForFile:(NSString *)fileName inFolderPath:(NSString *)folderPath NS_DEPRECATED_IOS(2_0, 13_0,"Use @property -homeDirectoryURL instead.");
 
-- (NSURL *) URLForFileAtPath:(NSString *)filePath NS_AVAILABLE_IOS(7_1);
+- (NSURL *) URLForFileAtPath:(NSString *)filePath NS_DEPRECATED_IOS(2_0, 13_0,"Use @property -homeDirectoryURL instead.");
 
 /*!
  * @abstract Check the existence of folder & file
  */
-- (BOOL) isExistFileWithName:(NSString *)fileName inFolderPath:(NSString *)folderPath NS_AVAILABLE_IOS(7_1);
+- (BOOL) isExistFileWithName:(NSString *)fileName inFolderPath:(NSString *)folderPath NS_DEPRECATED_IOS(2_0, 13_0,"Use -isExistInHomeDirectory instead.");
 
-- (BOOL) isExistFolderAtPath:(NSString *)folderAtPath NS_AVAILABLE_IOS(7_1);
+- (BOOL) isExistFolderAtPath:(NSString *)folderAtPath NS_DEPRECATED_IOS(2_0, 13_0,"Use -isExistInHomeDirectory instead.");
 
-- (BOOL) isExistFileAtPath:(NSString *)filePath NS_AVAILABLE_IOS(7_1);
+- (BOOL) isExistFileAtPath:(NSString *)filePath NS_DEPRECATED_IOS(2_0, 13_0,"Use -isExistInHomeDirectory instead.");
 
 /*!
  * @abstract Data of file
@@ -111,13 +97,12 @@ NSString *NSFileManagerDocumentsPath() API_AVAILABLE(ios(2.0));
 
 - (nullable NSData *) fileAtPath:(NSString *)filePath NS_AVAILABLE_IOS(7_1);
 
-- (unsigned long long int) sizeOfFolder:(NSString *)folderPath NS_AVAILABLE_IOS(7_1);
+- (unsigned long long int) sizeOfFolder:(NSString *)folderPath NS_DEPRECATED_IOS(2_0, 13_0,"Use @property -size instead.");
 
-- (void) deleteAllFilesAtFolderPath:(NSString *)folderPath completion:(nullable NSFileManagerCompletion)completion_t NS_AVAILABLE_IOS(7_1);
 @end
 
-#pragma mark - NSFileManager (BasicManager)
-@interface NSFileManager (BasicManager)
+#pragma mark - NSFileManager (DEPRECATED)
+@interface NSFileManager (DEPRECATED)
 
 /*!
  * @abstract Create new folder.

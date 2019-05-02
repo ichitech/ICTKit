@@ -2,7 +2,7 @@
  @header    Kit.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.0
+ @version   12.1
  */
 
 // UKit
@@ -34,6 +34,7 @@
 #import <ICTKit/NSData+Helper.h>
 #import <ICTKit/NSArray+NewCategory.h>
 #import <ICTKit/NSFileManager+Helper.h>
+#import <ICTKit/NSFileManager+Creation.h>
 #import <ICTKit/NSDictionary+Helper.h>
 #import <ICTKit/NSString+Helper.h>
 #import <ICTKit/NSDate+Helper.h>
@@ -78,6 +79,5 @@
 #endif
 
 #if __has_include(<Firebase/Firebase.h>)
-#import <ICTKit/ICTFirebaseAnalytics.h>
 #import <Firebase/Firebase.h>
 #endif
