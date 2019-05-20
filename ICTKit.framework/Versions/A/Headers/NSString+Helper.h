@@ -2,7 +2,7 @@
  @header    NSString+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.1
+ @version   12.2
  */
 
 #import <Foundation/Foundation.h>
@@ -10,6 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 FOUNDATION_EXPORT NSString  *__nonnull NSStringFromObject(id __nonnull object) NS_AVAILABLE_IOS(7_0);
+
+FOUNDATION_EXPORT NSString  *__nonnull NSStringDescriptionOfObject(id __nonnull obj, NSUInteger indent)  NS_AVAILABLE_IOS(10_0);
 
 @interface NSString (Helper)
 
@@ -62,32 +64,32 @@ FOUNDATION_EXPORT NSString  *__nonnull NSStringFromObject(id __nonnull object) N
  *
  * @example expamle@mail.com
  */
-- (BOOL)isEmail  NS_AVAILABLE_IOS(7_0);
+- (BOOL) isEmail  NS_AVAILABLE_IOS(7_0);
 
 /*!
  * @abstract Return YES if string contain at least 1 character (MUST BE NOT SPACE CHARACTER).
  *
  */
-- (BOOL)isset NS_AVAILABLE_IOS(7_0);
+- (BOOL) isset NS_AVAILABLE_IOS(7_0);
 
 /*!
  * @abstract Validate URL.
  *
  * @example http://example.com or https://expamle.com .
  */
-- (BOOL)isURL NS_AVAILABLE_IOS(7_0);
+- (BOOL) isURL NS_AVAILABLE_IOS(7_0);
 
 /*!
  * @abstract Validate Numric.
  *
  */
-- (BOOL)isNumric NS_AVAILABLE_IOS(7_0);
+- (BOOL) isNumric NS_AVAILABLE_IOS(7_0);
 
 /*!
  * @abstract Validate Special Character.
  *
  */
-- (BOOL)isContainSpecialCharacter  NS_DEPRECATED_IOS(2_0, 8_0, "Use -containAnySpecialCharacterWithExceptions: instead.") ;
+- (BOOL) isContainSpecialCharacter  NS_DEPRECATED_IOS(2_0, 8_0, "Use -containAnySpecialCharacterWithExceptions: instead.") ;
 
 /*!
  * @abstract Validate Special Character.

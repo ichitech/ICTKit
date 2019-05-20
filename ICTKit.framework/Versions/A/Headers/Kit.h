@@ -2,7 +2,7 @@
  @header    Kit.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.1
+ @version   12.2
  */
 
 // UKit
@@ -18,15 +18,17 @@
 #import <ICTKit/UIImage+ImageWithUIView.h>
 #import <ICTKit/UITextField+Helper.h>
 #import <ICTKit/UITextViewCustom.h>
-#import <ICTKit/UIView+Helpers.h>
 #import <ICTKit/UINavigationItem+Additions.h>
-#import <ICTKit/UITableView+Helper.h>
 #import <ICTKit/UIDevice+Helper.h>
-#import <ICTKit/UIViewController+Helper.h>
 #import <ICTKit/UIWindow+Helper.h>
 #import <ICTKit/UIAlertController+Helper.h>
 #import <ICTKit/UITextView+Helper.h>
 #import <ICTKit/UIImageView+Helper.h>
+#import <ICTKit/UIViewController+Helper.h>
+#import <ICTKit/UIView+Helpers.h>
+#import <ICTKit/UIView+TouchHelper.h>
+#import <ICTKit/UITableView+Helper.h>
+#import <ICTKit/UICollectionView+Helper.h>
 
 //Foundation
 #import <ICTKit/NSJSONSerialization+XMLConverter.h>
@@ -47,7 +49,7 @@
 //IBInspectableClass
 #import <ICTKit/ICTIBInspectableClass.h>
 
-//custom
+//Custom
 #import <ICTKit/NSDebug.h>
 #import <ICTKit/NSGeneralTest.h>
 #import <ICTKit/NSLocalizedStringCustom.h>
@@ -57,9 +59,14 @@
 #import <ICTKit/UIValidate.h>
 #import <ICTKit/UICountryPickerViewController.h>
 #import <ICTKit/UISafariViewController.h>
+#import <ICTKit/ICTTouchViewControl.h>
 
 #if __has_include(<UIView+TouchHighlighting/MTCompoundButton.h>)
 #import <UIView+TouchHighlighting/MTCompoundButton.h>
+#else
+#if __has_include(<UIView_TouchHighlighting/MTCompoundButton.h>)
+#import <UIView_TouchHighlighting/MTCompoundButton.h>
+#endif
 #endif
 
 #if __has_include(<KLCPopup/KLCPopup.h>)

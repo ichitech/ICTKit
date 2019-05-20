@@ -2,7 +2,7 @@
  @header    NSArray+NewCategory.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.1
+ @version   12.2
  */
 
 #import <Foundation/Foundation.h>
@@ -32,6 +32,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface NSMutableArray (Swifter)
+
+/**
+ * [2, 3, 4, 5].prepend(1) -> [1, 2, 3, 4, 5]
+ * ["e", "l", "l", "o"].prepend:("h") -> ["h", "e", "l", "l", "o"]
+ *
+ * - Parameter object: object to insert.
+ */
+- (void) prepend:(nonnull id)object;
+
+@end
+
+@interface NSArray (NSLog)
+
+- (nullable NSString *) descriptionWithIndent:(NSUInteger)level  NS_AVAILABLE_IOS(10_0);
+
+@end
+
 @interface NSArray (DEPRECATED)
 
 /*!
@@ -42,18 +60,6 @@ NS_ASSUME_NONNULL_BEGIN
  * than count of older array.
  */
 + (nonnull NSArray *) arrayRandomFromArray:(NSArray * _Nonnull)array limit:(NSInteger)count  NS_DEPRECATED_IOS(2_0, 6_1, "Use -arrayByRandomCount: instead.");
-    
-@end
-
-@interface NSMutableArray (Swifter)
-
-/**
- * [2, 3, 4, 5].prepend(1) -> [1, 2, 3, 4, 5]
- * ["e", "l", "l", "o"].prepend:("h") -> ["h", "e", "l", "l", "o"]
- *
- * - Parameter object: object to insert.
- */
-- (void) prepend:(nonnull id)object;
 
 @end
 

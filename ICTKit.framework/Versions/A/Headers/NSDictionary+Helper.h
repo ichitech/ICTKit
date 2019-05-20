@@ -2,7 +2,7 @@
  @header    NSDate+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.1
+ @version   12.2
  */
 
 
@@ -68,6 +68,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSDictionary (ForcedUTF8)
 
 - (nullable NSString *) forcedUTF8String NS_AVAILABLE_IOS(7_0);
+
+@end
+
+@interface NSDictionary (NSLog)
+
+- (NSString *)descriptionWithIndent:(NSUInteger)level NS_AVAILABLE_IOS(10_0);
 
 @end
 

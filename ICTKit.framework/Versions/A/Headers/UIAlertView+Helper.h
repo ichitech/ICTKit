@@ -2,7 +2,7 @@
  @header    UIAlertView+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.1
+ @version   12.2
  @deprecated Stop supporting on iOS 8.3 or upper.
  */
 

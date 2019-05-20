@@ -2,7 +2,7 @@
  @header    NSObject+Validate.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.1
+ @version   12.2
  */
 
 #import <Foundation/Foundation.h>
@@ -14,25 +14,23 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  * @abstract Validate Object
  */
-- (void) validateWithClass:(Class)cls
-                completion:(nullable dispatch_block_t)block
-                   failure:(nullable dispatch_block_t)failure NS_AVAILABLE_IOS(6_0);
+- (void) validateWithClass:(Class)cls completion:(nullable dispatch_block_t)block failure:(nullable dispatch_block_t)failure NS_DEPRECATED_IOS(2_0, 12_0,"Stop supporting on iOS 12.0 or upper.");;
 
 /*!
  * @abstract Check object is NULL
  */
-- (BOOL) isNull;
+- (BOOL) isNull API_AVAILABLE(ios(6.0));
 
 /*!
  * @abstract Check object is NULL or NIL
  */
-- (BOOL) isset;
+- (BOOL) isset API_AVAILABLE(ios(6.0));
 
 @end
 
 @interface NSObject (SenderData)
 
-@property (nonatomic, strong, nullable) id senderObject NS_AVAILABLE_IOS(6_0);
+@property (nonatomic, strong, nullable) id senderObject API_AVAILABLE(ios(6.0));
 
 @end
 
