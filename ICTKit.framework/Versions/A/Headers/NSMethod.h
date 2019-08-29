@@ -26,3 +26,5 @@ typedef NS_ENUM(NSUInteger, CFNetworManagerReachabilityType)
 };
 
 typedef void(^NetworkReachabilityCompletion)(BOOL isConnected, CFNetworManagerReachabilityType reachabilityType);
+
+BOOL NetworkReachableManager(NetworkReachabilityCompletion completion_t);
