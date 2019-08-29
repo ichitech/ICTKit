@@ -2,7 +2,7 @@
  @header    UICountryPickerViewController.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.3
+ @version   12.4
  */
 
 #import <UIKit/UIKit.h>
@@ -16,6 +16,7 @@ typedef void(^CountryPickerViewControllerComposer)(UICountryPickerViewController
 //compose
 typedef void(^CountryPickerViewControllerCompletion)(BOOL success,  UICountryPickerViewController * _Nonnull picker, NSCountryItem * _Nullable info);
 
+NS_SWIFT_NAME(CountryPickerViewControllerDelegate)
 @protocol UICountryPickerViewControllerDelegate<NSObject>
 @optional
 // The picker does not dismiss itself; the client dismisses it in these callbacks.
@@ -26,6 +27,7 @@ typedef void(^CountryPickerViewControllerCompletion)(BOOL success,  UICountryPic
 
 @end
 
+NS_SWIFT_NAME(CountryPickerViewController)
 @interface UICountryPickerViewController : UINavigationController
 {
     
@@ -42,14 +44,20 @@ typedef void(^CountryPickerViewControllerCompletion)(BOOL success,  UICountryPic
 @property (nonatomic, strong, readonly)         UIBarButtonItem *leftBarButtonItem;
 @property (nonatomic, strong, readonly)         UIViewController *viewController;
 
-- (void) setBarTitle:(nullable NSString *)title;
+- (void) setBarTitle:(nullable NSString *)title NS_SWIFT_NAME(setBarTitle(_:)) API_AVAILABLE(ios(9.0));
 
-+ (void) showCountryPickerFromViewController:(id)viewController
++ (void) showCountryPickerFromViewController:(__kindof UIViewController *)viewController
                                     composer:(nullable CountryPickerViewControllerComposer)composer
-                           completionHandler:(nullable CountryPickerViewControllerCompletion)completion;
+                           completionHandler:(nullable CountryPickerViewControllerCompletion)completion NS_SWIFT_NAME(showPickerFrom(viewController:composer:_:)) API_AVAILABLE(ios(9.0));
+
++ (void) showPickerFromViewController:(__kindof UIViewController *)viewController
+                    completionHandler:(nullable CountryPickerViewControllerCompletion)completion NS_SWIFT_NAME(showPickerFrom(viewController:_:)) API_AVAILABLE(ios(9.0));
+
++ (void) showPickerFromViewController:(__kindof UIViewController *)viewController NS_SWIFT_NAME(showPickerFrom(viewController:)) API_AVAILABLE(ios(9.0));
 
 @end
 
+NS_SWIFT_NAME(CountryItem)
 @interface NSCountryItem : NSObject
 
 - (instancetype) init NS_UNAVAILABLE;

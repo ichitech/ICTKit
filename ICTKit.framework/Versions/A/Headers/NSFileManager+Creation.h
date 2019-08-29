@@ -2,7 +2,7 @@
  @header    NSFileManager+Creation.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.3
+ @version   12.4
  */
 
 #import <Foundation/Foundation.h>
@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger, NSFileManagerFileType) {
     NSFileManagerFileTypeGIF,
     NSFileManagerFileTypeTXT,
     NSFileManagerFileTypePDF,
-};
+}  NS_SWIFT_NAME(FileManagerType);
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -30,15 +30,16 @@ typedef void(^NSFileManagerFileResult)(BOOL success, FilePathSeparation *file, N
 typedef void(^NSFileManagerFolderResult)(BOOL success, FolderPathSeparation *folder, NSError  * _Nullable error) API_AVAILABLE(ios(2.0));
 typedef void(^NSFileManagerItemResult)(BOOL success, ItemPathSeparation *item, NSError  * _Nullable error) API_AVAILABLE(ios(2.0));
 
-NSArray <NSString *>* NSFileUnsupportedCharacters(void) API_AVAILABLE(ios(2.0));
+NSArray <NSString *>* NSFileUnsupportedCharacters(void) NS_SWIFT_NAME(FileUnsupportedCharacters()) API_AVAILABLE(ios(2.0));
 
-NSString *NSFileExtensionOfType(NSFileManagerFileType type) API_AVAILABLE(ios(2.0));
+NSString *NSFileExtensionOfType(NSFileManagerFileType type) NS_SWIFT_NAME(FileExtension(ofType:)) API_AVAILABLE(ios(2.0));
 
-NSFileManagerFileType NSFileManagerFileTypeOf(NSString *fileName);
+NSFileManagerFileType NSFileManagerFileTypeOf(NSString *fileName) NS_SWIFT_NAME(FileManage(ofType:)) API_AVAILABLE(ios(2.0));
 
-NSString *NSFileManagerDocumentsPath(void) API_AVAILABLE(ios(2.0));
+NSString *NSFileManagerDocumentsPath(void) NS_SWIFT_NAME(FileManagerDocumentsPath()) API_AVAILABLE(ios(2.0));
 
 #pragma mark - NSFilePathSeparation
+NS_SWIFT_NAME(SPItemPath)
 @interface ItemPathSeparation: NSObject
 
 /**
@@ -79,12 +80,14 @@ NSString *NSFileManagerDocumentsPath(void) API_AVAILABLE(ios(2.0));
 
 @end
 
+NS_SWIFT_NAME(SPFolderPath)
 @interface FolderPathSeparation: ItemPathSeparation
 
 @property (nonatomic, assign, readonly) unsigned long long int size;
 
 @end
 
+NS_SWIFT_NAME(SPFilePath)
 @interface FilePathSeparation: ItemPathSeparation
 
 /**
@@ -136,63 +139,63 @@ NSString *NSFileManagerDocumentsPath(void) API_AVAILABLE(ios(2.0));
 
 #pragma mark - Create Directory
 - (void) createFolder:(FolderPathSeparation *)folderSeparation
-           completion:(nullable NSFileManagerFolderResult)completion_t API_AVAILABLE(ios(10.0));
-- (void) createFolder:(FolderPathSeparation *)folderSeparation API_AVAILABLE(ios(10.0));
+           completion:(nullable NSFileManagerFolderResult)completion_t NS_SWIFT_NAME(create(folder:_:)) API_AVAILABLE(ios(10.0)) ;
+- (void) createFolder:(FolderPathSeparation *)folderSeparation NS_SWIFT_NAME(create(folder:)) API_AVAILABLE(ios(10.0));
 - (void) createFolder:(FolderPathSeparation *)folderSeparation
-             overwite:(BOOL)overwite API_AVAILABLE(ios(10.0));
+             overwite:(BOOL)overwite NS_SWIFT_NAME(create(folder:overwite:)) API_AVAILABLE(ios(10.0));
 - (void) createFolder:(FolderPathSeparation *)folderSeparation
              overwite:(BOOL)overwite
-           completion:(nullable NSFileManagerFolderResult)completion_t API_AVAILABLE(ios(10.0));
+           completion:(nullable NSFileManagerFolderResult)completion_t NS_SWIFT_NAME(create(folder:overwite:_:)) API_AVAILABLE(ios(10.0));
 
 #pragma mark - Create File
 - (void) createFile:(FilePathSeparation *)fileSeparation
             content:(NSObject *)object
-         completion:(nullable NSFileManagerFileResult)completion_t API_AVAILABLE(ios(10.0));
-- (void) createFile:(FilePathSeparation *)fileSeparation content:(NSObject *)object API_AVAILABLE(ios(10.0));
+         completion:(nullable NSFileManagerFileResult)completion_t NS_SWIFT_NAME(create(file:content:_:)) API_AVAILABLE(ios(10.0));
+- (void) createFile:(FilePathSeparation *)fileSeparation content:(NSObject *)object NS_SWIFT_NAME(create(file:content:)) API_AVAILABLE(ios(10.0));
 - (void) createFile:(FilePathSeparation *)fileSeparation
             content:(NSObject *)object
            overwite:(BOOL)overwite
-         completion:(nullable NSFileManagerFileResult)completion_t API_AVAILABLE(ios(10.0));
+         completion:(nullable NSFileManagerFileResult)completion_t NS_SWIFT_NAME(create(file:content:overwite:_:)) API_AVAILABLE(ios(10.0));
 - (void) createFile:(FilePathSeparation *)fileSeparation
             content:(NSObject *)object
-           overwite:(BOOL)overwite API_AVAILABLE(ios(10.0));
+           overwite:(BOOL)overwite  NS_SWIFT_NAME(create(file:content:overwite:)) API_AVAILABLE(ios(10.0));
 
 #pragma mark - Delete Item
 - (void) deleteItem:(ItemPathSeparation *)itemSeparation
-         completion:(nullable NSFileManagerItemResult)completion_t API_AVAILABLE(ios(10.0));
-- (void) deleteItem:(ItemPathSeparation *)itemSeparation API_AVAILABLE(ios(10.0));
+         completion:(nullable NSFileManagerItemResult)completion_t NS_SWIFT_NAME(delete(item:_:)) API_AVAILABLE(ios(10.0));
+- (void) deleteItem:(ItemPathSeparation *)itemSeparation NS_SWIFT_NAME(delete(item:)) API_AVAILABLE(ios(10.0));
 
 #pragma mark - Truncate Directory
 - (void) truncateFolder:(FolderPathSeparation *)folderSeparation
-             completion:(nullable NSFileManagerFolderResult)completion_t API_AVAILABLE(ios(10.0));
-- (void) truncateFolder:(FolderPathSeparation *)folderSeparation API_AVAILABLE(ios(10.0));
+             completion:(nullable NSFileManagerFolderResult)completion_t NS_SWIFT_NAME(truncate(folder:_:)) API_AVAILABLE(ios(10.0));
+- (void) truncateFolder:(FolderPathSeparation *)folderSeparation NS_SWIFT_NAME(truncate(folder:)) API_AVAILABLE(ios(10.0));
 
 #pragma mark - Move Item
 - (void) moveItem:(ItemPathSeparation *)itemSeparation
-               to:(FolderPathSeparation *)toItemSeparation API_AVAILABLE(ios(10.0));
+               to:(FolderPathSeparation *)toItemSeparation NS_SWIFT_NAME(move(item:to:)) API_AVAILABLE(ios(10.0));
 - (void) moveItem:(ItemPathSeparation *)itemSeparation
                to:(FolderPathSeparation *)toItemSeparation
-         overwite:(BOOL)overwite API_AVAILABLE(ios(10.0));
+         overwite:(BOOL)overwite  NS_SWIFT_NAME(move(item:to:overwite:)) API_AVAILABLE(ios(10.0));
 
 - (void) moveItem:(ItemPathSeparation *)itemSeparation
                to:(FolderPathSeparation *)toItemSeparation
-       completion:(nullable NSFileManagerItemResult)completion_t API_AVAILABLE(ios(10.0));
+       completion:(nullable NSFileManagerItemResult)completion_t NS_SWIFT_NAME(move(item:to:_:)) API_AVAILABLE(ios(10.0));
 - (void) moveItem:(ItemPathSeparation *)itemSeparation
                to:(FolderPathSeparation *)toItemSeparation
          overwite:(BOOL)overwite
-       completion:(nullable NSFileManagerItemResult)completion_t API_AVAILABLE(ios(10.0));
+       completion:(nullable NSFileManagerItemResult)completion_t NS_SWIFT_NAME(move(item:to:overwite:_:)) API_AVAILABLE(ios(10.0));
 @end
 
 @interface NSFileManager (Reader)
 
-- (NSDictionary *) dictionaryWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation API_AVAILABLE(ios(10.0));
-- (NSArray *) arrayWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation API_AVAILABLE(ios(10.0));
-- (NSString *) stringWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation API_AVAILABLE(ios(10.0));
-- (nullable NSData *) dataWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation API_AVAILABLE(ios(10.0));
-- (nullable UIImage *) imageWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation API_AVAILABLE(ios(10.0));
-- (nullable UIImageView *) imageViewWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation API_AVAILABLE(ios(10.0));
-- (nullable NSJSONSerialization *) jsonWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation API_AVAILABLE(ios(10.0));
-- (nullable NSObject *) objectWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation API_AVAILABLE(ios(10.0));
+- (NSDictionary *) dictionaryWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation  NS_SWIFT_NAME(dictionary(inContentOf:))  API_AVAILABLE(ios(10.0));
+- (NSArray *) arrayWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation  NS_SWIFT_NAME(array(inContentOf:)) API_AVAILABLE(ios(10.0));
+- (NSString *) stringWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation  NS_SWIFT_NAME(string(inContentOf:)) API_AVAILABLE(ios(10.0));
+- (nullable NSData *) dataWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation  NS_SWIFT_NAME(data(inContentOf:)) API_AVAILABLE(ios(10.0));
+- (nullable UIImage *) imageWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation  NS_SWIFT_NAME(image(inContentOf:)) API_AVAILABLE(ios(10.0));
+- (nullable UIImageView *) imageViewWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation  NS_SWIFT_NAME(imageView(inContentOf:)) API_AVAILABLE(ios(10.0));
+- (nullable NSJSONSerialization *) jsonWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation  NS_SWIFT_NAME(json(inContentOf:)) API_AVAILABLE(ios(10.0));
+- (nullable NSObject *) objectWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation  NS_SWIFT_NAME(object(inContentOf:)) API_AVAILABLE(ios(10.0));
 
 @end
 

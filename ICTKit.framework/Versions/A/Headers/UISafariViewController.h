@@ -2,7 +2,7 @@
  @header    UISafariViewController.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.3
+ @version   12.4
  */
 
 #import <UIKit/UIKit.h>
@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, UISafariViewComposeResult) {
     UISafariViewComposeResultSuccessfullyOpened NS_ENUM_DEPRECATED_IOS(2_0, 8_0, "Use UISafariViewComposeResultOpened instead.") = UISafariViewComposeResultOpened ,
     UISafariViewComposeResultInProcessOpening NS_ENUM_DEPRECATED_IOS(2_0, 8_0, "Use UISafariViewComposeResultPreparing instead.")  = UISafariViewComposeResultPreparing,
     UISafariViewComposeResultSuccessfullyLoaded NS_ENUM_DEPRECATED_IOS(2_0, 8_0, "Use UISafariViewComposeResultLoaded instead.") = UISafariViewComposeResultLoaded
-} API_AVAILABLE(ios(7.0));
+} NS_SWIFT_NAME(SafariComposeResult) API_AVAILABLE(ios(7.0));
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -27,8 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^UISafariViewControllerCompletion)(UISafariViewController *safariViewController,
                                                 UISafariViewComposeResult result,
-                                                NSError  * _Nullable error) NS_AVAILABLE_IOS(7_0);
+                                                NSError  * _Nullable error) NS_SWIFT_NAME(SafariViewControllerCompletion) NS_AVAILABLE_IOS(7_0);
 
+NS_SWIFT_NAME(SafariViewController)
 @interface UISafariViewController : UINavigationController
 
 @property (nonatomic, assign, readwrite)          BOOL                   hidesToolBar NS_AVAILABLE_IOS(7_0);
@@ -59,10 +60,10 @@ typedef void(^UISafariViewControllerCompletion)(UISafariViewController *safariVi
  *  @param URL          URL need to be loaded.
  *  @param completion_t Completion block.
  */
-- (void) showWithURL:(NSURL *)URL completion:(UISafariViewControllerCompletion)completion_t NS_AVAILABLE_IOS(8_0);
-+ (void) openWithURL:(NSURL *)URL completion:(UISafariViewControllerCompletion)completion_t  NS_DEPRECATED_IOS(6_0, 9_0, "Use -showWithURL:completion: instead.");
+- (void) showWithURL:(NSURL *)URL completion:(UISafariViewControllerCompletion)completion_t NS_SWIFT_NAME(show(url:_:)) NS_AVAILABLE_IOS(8_0);
+- (void) showWithHTML:(NSString *)html completion:(UISafariViewControllerCompletion)completion_t NS_SWIFT_NAME(show(html:_:)) NS_AVAILABLE_IOS(8_0);
 
-- (void) showWithHTML:(NSString *)html completion:(UISafariViewControllerCompletion)completion_t NS_AVAILABLE_IOS(8_0);
++ (void) openWithURL:(NSURL *)URL completion:(UISafariViewControllerCompletion)completion_t  NS_DEPRECATED_IOS(6_0, 9_0, "Use -showWithURL:completion: instead.");
 
 @end
 

@@ -2,7 +2,7 @@
  @header    NSFileManager+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.3
+ @version   12.4
  */
 
 #import <Foundation/Foundation.h>
@@ -26,7 +26,7 @@ void NSFileManagerSaveData(id object,
                             NSString *filePath,
                             NSFileManagerFileType fileType,
                             NSFileManagerCompletion __nullable completion_t
-                            ) API_AVAILABLE(ios(7.1));
+                           ) NS_SWIFT_NAME(FileManagerSave(_:atPath:type:_:)) API_AVAILABLE(ios(7.1));
 
 #pragma clang diagnostic pop
 
