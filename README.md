@@ -10,7 +10,7 @@ ICTKit
   <img src="https://github.com/ngocbinh02/ICTKit/blob/master/demo.jpeg?raw=true" alt="ICTKit" title="ICTKit">
 </p>
 
-###Purpose
+### Purpose
 
 The Foundation framework defines a base layer of Objective-C classes. In addition to providing a set of useful primitive object classes, it introduces several paradigms that define functionality not covered by the Objective-C language. The Foundation framework is designed with these goals in mind:
 
@@ -22,43 +22,45 @@ The Foundation framework includes the root object class, classes representing ba
 
 The Foundation framework introduces several paradigms to avoid confusion in common situations, and to introduce a level of consistency across class hierarchies. This consistency is done with some standard policies, such as that for object ownership (that is, who is responsible for disposing of objects), and with abstract classes like NSEnumerator. These new paradigms reduce the number of special and exceptional cases in an API and allow you to code more efficiently by reusing the same mechanisms with various kinds of objects.
 
-Author: [Harry Tran](https://github.com/ngocbinh02/).
+### Author: [Harry Tran](https://github.com/ichitech/).
 
-_Remark: This is my first iOS plugin project on github, please accept my apologize if any bad coding._
+## Adding ICTKitto Your Project
 
-###Requirements
-* ARC
-* iOS 5.0+
+### CocoaPods
 
-###Installations
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like ICTKit in your projects.
 
-####Manual
+```ruby
+platform :ios, '8.0'
+pod "ICTKit"
+```
 
-1. Download or clone ICTKit, add source files into your project.
-2. `#import <ICTKit/Kit.h>` whereever you need it.
+### Source Files
 
-####CocoaPods
+Alternatively you can directly add the *ICTKit.framework* folder to your project.
 
-(Unfamiliar with [CocoaPods](http://cocoapods.org/) yet? It's a dependency management tool for iOS and Mac, check it out!)
+## Usage
 
-1. Add `pod 'ICTKit'` to your podfiles
+### Import to your project
 
-####Carthage
-Another dependency manager is [Carthage](http://github.com/Carthage/Carthage), which does not have a centralized repository.
+#### Objective-C
+```objective-c
 
-###Easy Example
- 
-###More Examples
+#import <ICTKit/Kit.h>
+```
 
-Please check the demo project I provided, with well explained example code inside.
- 
-###License
-This code is distributed under the terms and conditions of the [MIT license](LICENSE). 
+#### Swift
+##### Please import to the Swift Bridging Header file. Folow [some steps](https://mycodetips.com/ios/manually-adding-swift-bridging-header-1290.html) to create this file.
+```swift
 
+#import <ICTKit/Kit.h>
+```
 
-### What's coming up next?
+## Contact
+Have a question or an issue about ICTKit? Create an [issue](https://github.com/ichitech/ICTKit/issues/new)!
 
-1. ~~Submit to CocaPods~~
-2. ~~Better performance.~~
-3. __Your suggestions!:D__
+## License
+ICTKit is available under the MIT license. See the LICENSE file for more info.
 
+## Remark
+This is my first iOS plugin project on github, please accept my apologize if any bad coding.
