@@ -2,7 +2,7 @@
  @header    UIColor+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.4
+ @version   12.5
  */
 
 #import <UIKit/UIKit.h>
@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @param color It's a Color object. If color is nil, return NIL.
  */
-+ (NSString *) hexValuesFromUIColor:(UIColor *)color NS_AVAILABLE_IOS(4_0);
++ (NSString *) hexValuesFromUIColor:(UIColor *)color NS_DEPRECATED_IOS(2_0, 11_0, "Use -hexValue instead.");
 - (nullable NSString *) hexValue NS_AVAILABLE_IOS(4_0);
 
 @end

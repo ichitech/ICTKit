@@ -2,7 +2,7 @@
  @header    UIWindow+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.4
+ @version   12.5
  */
 
 #import <UIKit/UIKit.h>
@@ -18,9 +18,7 @@ UIWindow *Window()  NS_DEPRECATED_IOS(4_0, 11_0, "Use +currentWindow instead.");
 
 @interface UIWindow (Helper)
 
-+ (instancetype) currentWindow NS_DEPRECATED_IOS(6_0, 8_1, "Use +current instead.");;
-
-+ (instancetype) current API_AVAILABLE(ios(9.0));
++ (instancetype) currentWindow API_AVAILABLE(ios(9.0));
 
 @end
 

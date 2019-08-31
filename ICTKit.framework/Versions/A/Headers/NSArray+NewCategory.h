@@ -2,7 +2,7 @@
  @header    NSArray+NewCategory.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.4
+ @version   12.5
  */
 
 #import <Foundation/Foundation.h>
@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @abstract Get a random object from array.
  * @return Random Object.
  */
-- (nullable id) randomObject NS_AVAILABLE_IOS(7_0);
+- (nullable id) randomObject NS_SWIFT_NAME(random()) NS_AVAILABLE_IOS(7_0);
 
 @end
 
@@ -35,12 +35,78 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSMutableArray (Swifter)
 
 /**
+ * @note
  * [2, 3, 4, 5].prepend(1) -> [1, 2, 3, 4, 5]
  * ["e", "l", "l", "o"].prepend:("h") -> ["h", "e", "l", "l", "o"]
  *
- * - Parameter object: object to insert.
+ * @param object object to insert.
  */
 - (void) prepend:(nonnull id)object;
+
+
+@end
+
+@interface NSArray (Swifter)
+
+/**
+ * @return NSArray reverted
+ */
+- (nonnull NSArray*) reverse;
+
+/**
+ * @abstract NSArray with only the elements that pass the truth test
+ *
+ */
+- (nullable NSArray*) filter:(BOOL (^)(_Nonnull id object))condition NS_SWIFT_NAME(filter(where:)) API_AVAILABLE(ios(9.0));
+
+/**
+ * @return id first object that passes the truth test or `nil` if any
+ *
+ */
+- (nullable id) firstWhere:(BOOL (^)(_Nonnull id object))condition NS_SWIFT_NAME(first(where:)) API_AVAILABLE(ios(9.0));
+
+/**
+ * @return Int first index of object that passes the truth test or `nil` if any
+ *
+ */
+- (NSInteger) firstIndexWhere:(BOOL (^)(_Nonnull id object))condition NS_SWIFT_NAME(firstIndex(where:)) API_AVAILABLE(ios(9.0));
+
+/**
+ * @return id last object that passes the truth test or `nil` if any
+ *
+ */
+- (nullable id) lastWhere:(BOOL (^)(_Nonnull id object))condition NS_SWIFT_NAME(last(where:)) API_AVAILABLE(ios(9.0));
+
+/**
+ * @return Int first index of object that passes the truth test or `nil` if any
+ *
+ */
+- (NSInteger) lastIndexWhere:(BOOL (^)(_Nonnull id object))condition NS_SWIFT_NAME(lastIndex(where:)) API_AVAILABLE(ios(9.0));
+
+/**
+ * performs the operation to each element
+ */
+- (void) each:(void(^)(_Nonnull id object))operation API_AVAILABLE(ios(9.0));
+
+/**
+ * performs the operation to each element
+ */
+- (void) eachWithIndex:(void(^)(_Nonnull id object, int index, BOOL *stop))operation NS_SWIFT_NAME(each(index:)) API_AVAILABLE(ios(9.0));
+
+/**
+ * @return new NSArray from the result of the block performed to each element
+ */
+- (NSArray*) map:(id (^)(_Nonnull id obj, NSUInteger index))block API_AVAILABLE(ios(9.0));
+
+/**
+ * @return new NSArray by flatting it and performing a map to each element
+ */
+- (NSArray*) flatMap:(id (^)(_Nonnull id obj, NSUInteger index))block API_AVAILABLE(ios(9.0));
+
+/**
+ * @return BOOL if any object passes the truth test
+ */
+- (BOOL) containsWhere:(BOOL (^)(_Nonnull id object))checker NS_SWIFT_NAME(contains(where:)) API_AVAILABLE(ios(9.0));
 
 @end
 

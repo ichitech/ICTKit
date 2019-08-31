@@ -2,7 +2,7 @@
  @header    UISafariViewController.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.4
+ @version   12.5
  */
 
 #import <UIKit/UIKit.h>
@@ -52,7 +52,7 @@ NS_SWIFT_NAME(SafariViewController)
  *
  *  @return UISafariViewController
  */
-+ (instancetype) shareInstance NS_AVAILABLE_IOS(8_0);
++ (instancetype) shareInstance NS_SWIFT_NAME(shared()) NS_AVAILABLE_IOS(8_0);
 
 /**
  *  Show the viewcontroler with the URL and the completion handler.

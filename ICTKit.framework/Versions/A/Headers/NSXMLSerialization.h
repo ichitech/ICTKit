@@ -2,7 +2,7 @@
  @header    NSXMLSerialization.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.4
+ @version   12.5
  */
 
 #import <Foundation/Foundation.h>
