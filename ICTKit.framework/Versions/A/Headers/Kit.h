@@ -59,7 +59,7 @@
 #import <ICTKit/UIValidate.h>
 #import <ICTKit/UICountryPickerViewController.h>
 #import <ICTKit/UISafariViewController.h>
-#import <ICTKit/ICTTouchViewControl.h>
+#import <ICTKit/UITouchViewControl.h>
 
 #if __has_include(<UIView+TouchHighlighting/MTCompoundButton.h>)
 #import <UIView+TouchHighlighting/MTCompoundButton.h>
