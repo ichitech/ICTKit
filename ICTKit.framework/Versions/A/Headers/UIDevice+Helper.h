@@ -82,6 +82,18 @@ typedef NS_ENUM(NSInteger, UIDeviceVersion){
     UIDeviceVersionIPhone7Plus,
     UIDeviceVersionIPhoneSE,
     
+    UIDeviceVersionIPhone8,
+    UIDeviceVersionIPhone8Plus,
+    UIDeviceVersionIPhoneX,
+    
+    UIDeviceVersionIPhoneXR,
+    UIDeviceVersionIPhoneXS,
+    UIDeviceVersionIPhoneXSMax,
+    
+    UIDeviceVersionIPhone11,
+    UIDeviceVersionIPhone11Pro,
+    UIDeviceVersionIPhone11ProMax,
+    
     UIDeviceVersionIPadMini,
     UIDeviceVersionIPadMini2,
     UIDeviceVersionIPadMini3,
@@ -109,21 +121,11 @@ typedef NS_ENUM(NSInteger, UIDeviceVersion){
     
     UIDeviceVersionIPadPro9Dot7Inch,
     UIDeviceVersionIPadPro10Dot5Inch,
+    UIDeviceVersionIPadPro11Inch,
     UIDeviceVersionIPadPro12Dot9Inch,
     UIDeviceVersionIPadPro12Dot9InchGen2,
+    UIDeviceVersionIPadPro12Dot9InchGen3,
 
-    UIDeviceVersionIPhone8,
-    UIDeviceVersionIPhone8Plus,
-    UIDeviceVersionIPhoneX,
-    
-    UIDeviceVersionIPhoneXR,
-    UIDeviceVersionIPhoneXS,
-    UIDeviceVersionIPhoneXSMax,
-
-    UIDeviceVersionIPhone11,
-    UIDeviceVersionIPhone11Pro,
-    UIDeviceVersionIPhone11ProMax,
-    
     UIDeviceVersionAppleTV2G,
     UIDeviceVersionAppleTV3,
 };
@@ -186,6 +188,8 @@ typedef NS_ENUM(NSInteger, UIDeviceSize){
  @example iPhone4 iPhone5S iPhone6
  */
 + (NSString *) modelNameForPlatform:(NSString *)platform NS_AVAILABLE_IOS(7_0);
+
+- (UIDeviceVersion) deviceVersionFromPlatform:(NSString *)platform NS_AVAILABLE_IOS(8_0);
 
 @end
 
