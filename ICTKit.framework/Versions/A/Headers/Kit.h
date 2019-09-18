@@ -88,3 +88,7 @@
 #if __has_include(<Firebase/Firebase.h>)
 #import <Firebase/Firebase.h>
 #endif
+
+#if __has_include(<Translation/Translation.h>)
+#import <Translation/Translation.h>
+#endif

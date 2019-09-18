@@ -36,7 +36,6 @@ NS_INLINE NSLength NSMakeLength(NSUInteger minimum, NSUInteger maximum) {
 
 
 #pragma mark - Define
-
 #define USER_DEFAULTS [NSUserDefaults standardUserDefaults]
 #define LOAD_NIB(nibName) [[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil] objectAtIndex:0]
 

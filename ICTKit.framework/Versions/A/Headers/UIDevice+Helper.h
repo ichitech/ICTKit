@@ -20,6 +20,7 @@
 #define iOS_10 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0)
 #define iOS_11 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11.0)
 #define iOS_12 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 12.0)
+#define iOS_13 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 13.0)
 #define iPHONE_DEVICE ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
 #define iPAD_DEVICE ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 
@@ -39,23 +40,26 @@ BOOL UIDeviceSystemVersionIsLessThan(CGFloat version) NS_AVAILABLE_IOS(6_0);
 BOOL UIDeviceSystemVersionIsLessThanOrEqualTo(CGFloat version) NS_AVAILABLE_IOS(6_0);
 
 // Check iphone system
-BOOL UIDeviceModelIsIphone4() NS_AVAILABLE_IOS(6_0);
-BOOL UIDeviceModelIsIphone4S() NS_AVAILABLE_IOS(6_0);
-BOOL UIDeviceModelIsIphone5() NS_AVAILABLE_IOS(6_0);
-BOOL UIDeviceModelIsIphone5C() NS_AVAILABLE_IOS(6_0);
-BOOL UIDeviceModelIsIphone5S() NS_AVAILABLE_IOS(6_0);
-BOOL UIDeviceModelIsIphone6() NS_AVAILABLE_IOS(6_0);
-BOOL UIDeviceModelIsIphone6Plus() NS_AVAILABLE_IOS(6_0);
-BOOL UIDeviceModelIsIphone6S() NS_AVAILABLE_IOS(7_0);
-BOOL UIDeviceModelIsIphone6SPlus() NS_AVAILABLE_IOS(7_0);
-BOOL UIDeviceModelIsIphone7() NS_AVAILABLE_IOS(8_0);
-BOOL UIDeviceModelIsIphone7Plus() NS_AVAILABLE_IOS(8_0);
-BOOL UIDeviceModelIsIphone8() NS_AVAILABLE_IOS(8_0);
-BOOL UIDeviceModelIsIphone8Plus() NS_AVAILABLE_IOS(8_0);
-BOOL UIDeviceModelIsIphoneX() NS_AVAILABLE_IOS(8_0);
-BOOL UIDeviceModelIsIphoneXR() NS_AVAILABLE_IOS(8_0);
-BOOL UIDeviceModelIsIphoneXS() NS_AVAILABLE_IOS(8_0);
-BOOL UIDeviceModelIsIphoneXSMax() NS_AVAILABLE_IOS(8_0);
+BOOL UIDeviceModelIsIphone4();
+BOOL UIDeviceModelIsIphone4S();
+BOOL UIDeviceModelIsIphone5();
+BOOL UIDeviceModelIsIphone5C();
+BOOL UIDeviceModelIsIphone5S();
+BOOL UIDeviceModelIsIphone6();
+BOOL UIDeviceModelIsIphone6Plus();
+BOOL UIDeviceModelIsIphone6S();
+BOOL UIDeviceModelIsIphone6SPlus();
+BOOL UIDeviceModelIsIphone7();
+BOOL UIDeviceModelIsIphone7Plus();
+BOOL UIDeviceModelIsIphone8();
+BOOL UIDeviceModelIsIphone8Plus();
+BOOL UIDeviceModelIsIphoneX();
+BOOL UIDeviceModelIsIphoneXR();
+BOOL UIDeviceModelIsIphoneXS();
+BOOL UIDeviceModelIsIphoneXSMax();
+BOOL UIDeviceModelIsIphone11();
+BOOL UIDeviceModelIsIphone11Pro();
+BOOL UIDeviceModelIsIphone11ProMax();
 
 // Check InterfaceIdiom
 BOOL UIDeviceInterfaceIdiomIphone() NS_AVAILABLE_IOS(4_0);
@@ -64,56 +68,64 @@ BOOL UIDeviceInterfaceIdiomIpad() NS_AVAILABLE_IOS(4_0);
 #pragma clang diagnostic pop
 
 typedef NS_ENUM(NSInteger, UIDeviceVersion){
-    UIDeviceVersionIPhone4           = 3,
-    UIDeviceVersionIPhone4S          = 4,
-    UIDeviceVersionIPhone5           = 5,
-    UIDeviceVersionIPhone5C          = 6,
-    UIDeviceVersionIPhone5S          = 7,
-    UIDeviceVersionIPhone6           = 8,
-    UIDeviceVersionIPhone6Plus       = 9,
-    UIDeviceVersionIPhone6S          = 10,
-    UIDeviceVersionIPhone6SPlus      = 11,
-    UIDeviceVersionIPhone7           = 12,
-    UIDeviceVersionIPhone7Plus       = 13,
-    UIDeviceVersionIPhoneSE          = 14,
+    UIDeviceVersionSimulator =  0,
+    UIDeviceVersionIPhone4,
+    UIDeviceVersionIPhone4S,
+    UIDeviceVersionIPhone5,
+    UIDeviceVersionIPhone5C,
+    UIDeviceVersionIPhone5S,
+    UIDeviceVersionIPhone6,
+    UIDeviceVersionIPhone6Plus,
+    UIDeviceVersionIPhone6S,
+    UIDeviceVersionIPhone6SPlus,
+    UIDeviceVersionIPhone7,
+    UIDeviceVersionIPhone7Plus,
+    UIDeviceVersionIPhoneSE,
     
-    UIDeviceVersionIPad1             = 15,
-    UIDeviceVersionIPad2             = 16,
-    UIDeviceVersionIPadMini          = 17,
-    UIDeviceVersionIPad3             = 18,
-    UIDeviceVersionIPad4             = 19,
-    UIDeviceVersionIPadAir           = 20,
-    UIDeviceVersionIPadMini2         = 21,
-    UIDeviceVersionIPadAir2          = 22,
-    UIDeviceVersionIPadMini3         = 23,
-    UIDeviceVersionIPadMini4         = 24,
-    UIDeviceVersionIPadPro12Dot9Inch = 25,
-    UIDeviceVersionIPadPro9Dot7Inch  = 26,
-    
-    UIDeviceVersionIPodTouch1Gen     = 27,
-    UIDeviceVersionIPodTouch2Gen     = 28,
-    UIDeviceVersionIPodTouch3Gen     = 29,
-    UIDeviceVersionIPodTouch4Gen     = 30,
-    UIDeviceVersionIPodTouch5Gen     = 31,
-    UIDeviceVersionIPodTouch6Gen     = 32,
-    
-    UIDeviceVersionSimulator         =  0,
-    
-    UIDeviceVersionIPhone8           = 40,
-    UIDeviceVersionIPhone8Plus       = 41,
-    UIDeviceVersionIPhoneX           = 42,
-    
-    UIDeviceVersionIPhoneXR          = 43,
-    UIDeviceVersionIPhoneXS          = 44,
-    UIDeviceVersionIPhoneXSMax       = 45,
+    UIDeviceVersionIPadMini,
+    UIDeviceVersionIPadMini2,
+    UIDeviceVersionIPadMini3,
+    UIDeviceVersionIPadMini4,
+    UIDeviceVersionIPadMini5,
 
+    UIDeviceVersionIPad1,
+    UIDeviceVersionIPad2,
+    UIDeviceVersionIPad3,
+    UIDeviceVersionIPad4,
+    UIDeviceVersionIPad5,
+    UIDeviceVersionIPad6,
+    UIDeviceVersionIPad7,
+
+    UIDeviceVersionIPadAir,
+    UIDeviceVersionIPadAir2,
+    UIDeviceVersionIPadAir3,
     
-    UIDeviceVersionIPad5             = 33,
-    UIDeviceVersionIPadPro12Dot9InchGen2 = 34,
-    UIDeviceVersionIPadPro10Dot5Inch  = 35,
+    UIDeviceVersionIPodTouch1Gen,
+    UIDeviceVersionIPodTouch2Gen,
+    UIDeviceVersionIPodTouch3Gen,
+    UIDeviceVersionIPodTouch4Gen,
+    UIDeviceVersionIPodTouch5Gen,
+    UIDeviceVersionIPodTouch6Gen,
     
-    UIDeviceVersionAppleTV2G         = 36,
-    UIDeviceVersionAppleTV3          = 37,
+    UIDeviceVersionIPadPro9Dot7Inch,
+    UIDeviceVersionIPadPro10Dot5Inch,
+    UIDeviceVersionIPadPro12Dot9Inch,
+    UIDeviceVersionIPadPro12Dot9InchGen2,
+
+    UIDeviceVersionIPhone8,
+    UIDeviceVersionIPhone8Plus,
+    UIDeviceVersionIPhoneX,
+    
+    UIDeviceVersionIPhoneXR,
+    UIDeviceVersionIPhoneXS,
+    UIDeviceVersionIPhoneXSMax,
+
+    UIDeviceVersionIPhone11,
+    UIDeviceVersionIPhone11Pro,
+    UIDeviceVersionIPhone11ProMax,
+    
+    UIDeviceVersionAppleTV2G,
+    UIDeviceVersionAppleTV3,
 };
 
 typedef NS_ENUM(NSInteger, UIDeviceSize){
