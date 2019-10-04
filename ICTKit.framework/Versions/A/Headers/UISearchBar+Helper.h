@@ -21,10 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) setSearchField:(UITextField *)textField NS_DEPRECATED_IOS(2_0, 6_0, "Use @property -currentTextField instead.");
 
 // Get the current textField
-@property (nonatomic, strong, readonly, nonnull) UITextField *currentTextField  NS_AVAILABLE_IOS(7_1);
+@property (nonatomic, strong, readonly) UITextField *currentTextField  NS_DEPRECATED_IOS(2_0, 13_0, "Use @property -searchTextField instead.");
 
 // Current cancel button item
-@property (nonatomic, strong, readonly, nonnull) UIBarButtonItem *currentCancelBarButtonItem NS_DEPRECATED_IOS(7_0, 9_0);
+@property (nonatomic, strong, readonly, nullable) UIBarButtonItem *currentCancelBarButtonItem NS_DEPRECATED_IOS(7_0, 9_0);
 
 @end
 

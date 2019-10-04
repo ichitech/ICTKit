@@ -2,16 +2,13 @@
  @header    Kit.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   12.5
+ @version   13.2
  */
 
 // UKit
 #import <ICTKit/UIApplication+Helper.h>
 #import <ICTKit/UIColor+Helper.h>
-#import <ICTKit/UITabBarController+Helper.h>
-#import <ICTKit/UIAlertView+Helper.h>
 #import <ICTKit/UIActionSheet+Helpers.h>
-#import <ICTKit/UIActionButtonItem.h>
 #import <ICTKit/UINavigationController+Helper.h>
 #import <ICTKit/UISearchBar+Helper.h>
 #import <ICTKit/UISideBarViewController.h>
@@ -54,9 +51,6 @@
 #import <ICTKit/NSGeneralTest.h>
 #import <ICTKit/NSLocalizedStringCustom.h>
 #import <ICTKit/NSMethod.h>
-#import <ICTKit/UIPickerSheet.h>
-#import <ICTKit/UIDatePickerSheet.h>
-#import <ICTKit/UIValidate.h>
 #import <ICTKit/UICountryPickerViewController.h>
 #import <ICTKit/UISafariViewController.h>
 #import <ICTKit/UITouchViewControl.h>
@@ -67,10 +61,6 @@
 #if __has_include(<UIView_TouchHighlighting/MTCompoundButton.h>)
 #import <UIView_TouchHighlighting/MTCompoundButton.h>
 #endif
-#endif
-
-#if __has_include(<KLCPopup/KLCPopup.h>)
-#import <KLCPopup/KLCPopup.h>
 #endif
 
 #if __has_include(<SDWebImage/UIImageView+WebCache.h>)
