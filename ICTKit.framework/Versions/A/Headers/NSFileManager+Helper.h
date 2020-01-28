@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^NSFileManagerCompletion)(BOOL success) NS_DEPRECATED_IOS(2_0, 13_0,"Use NSFileManagerResult instead.");
+typedef void(^NSFileManagerCompletion)(BOOL success) NS_DEPRECATED_IOS(2_0, 10_0,"Use NSFileManagerResult instead.");
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wstrict-prototypes"
@@ -26,7 +26,7 @@ void NSFileManagerSaveData(id object,
                             NSString *filePath,
                             NSFileManagerFileType fileType,
                             NSFileManagerCompletion __nullable completion_t
-                           ) NS_SWIFT_NAME(FileManagerSave(_:atPath:type:_:)) API_AVAILABLE(ios(7.1));
+                           ) NS_SWIFT_NAME(FileManagerSave(_:atPath:type:_:)) NS_DEPRECATED_IOS(2_0, 10_0,"Use FileManagerCreateFile() instead.");
 
 #pragma clang diagnostic pop
 

@@ -97,7 +97,6 @@ FOUNDATION_EXPORT NSString  *__nonnull NSStringDescriptionOfObject(id __nonnull 
  * @param symAllows your symbols you want to allow
  */
 - (BOOL)isContainSpecialCharacterWithAllowSymbols:(nullable NSArray<NSString *> *)symAllows NS_DEPRECATED_IOS(2_0, 8_4, "Use containSpecialCharacterWithExceptions: instead.");
-
 - (BOOL)hasSpecialCharacterWithExceptionOfArray:(nullable NSArray<NSString *> *)exceptions NS_DEPRECATED_IOS(2_0, 8_4, "Use containSpecialCharacterWithExceptions: instead.");
 - (BOOL)containAnySpecialCharacterWithExceptions:(nullable NSArray<NSString *> *)exceptions API_AVAILABLE(ios(8.4));
 

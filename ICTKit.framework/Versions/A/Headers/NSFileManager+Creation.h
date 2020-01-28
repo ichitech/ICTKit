@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger, NSFileManagerFileType) {
     NSFileManagerFileTypeGIF,
     NSFileManagerFileTypeTXT,
     NSFileManagerFileTypePDF,
+    NSFileManagerFileTypeZip,
 }  NS_SWIFT_NAME(FileManagerType);
 
 NS_ASSUME_NONNULL_BEGIN
@@ -37,6 +38,8 @@ NSString *NSFileExtensionOfType(NSFileManagerFileType type) NS_SWIFT_NAME(FileEx
 NSFileManagerFileType NSFileManagerFileTypeOf(NSString *fileName) NS_SWIFT_NAME(FileManage(ofType:)) API_AVAILABLE(ios(2.0));
 
 NSString *NSFileManagerDocumentsPath(void) NS_SWIFT_NAME(FileManagerDocumentsPath()) API_AVAILABLE(ios(2.0));
+
+void NSFileManagerCreateFile(NSString *filePath, id object , NSFileManagerFileResult __nullable completion_t) NS_SWIFT_NAME(FileManagerCreate(atPath:data:_:)) API_AVAILABLE(ios(9.1));
 
 #pragma mark - NSFilePathSeparation
 NS_SWIFT_NAME(SPItemPath)

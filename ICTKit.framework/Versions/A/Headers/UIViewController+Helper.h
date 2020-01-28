@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^UIViewControllerSegueBlock) (UIStoryboardSegue *segue, id _Nullable sender) API_AVAILABLE(ios(6.0));
+typedef void (^UIViewControllerSegueResult) (UIStoryboardSegue *segue) API_AVAILABLE(ios(10.0));
 
 @interface UIViewController (BlockSegue)
 
@@ -25,7 +26,7 @@ typedef void (^UIViewControllerSegueBlock) (UIStoryboardSegue *segue, id _Nullab
  @note  if you override -prepareForSegue:sender: method, BlockSegue won't be performed in these UIViewController.
  */
 - (void)performSegueWithIdentifier:(NSString *)identifier sender:(nullable id)sender completion:(nullable UIViewControllerSegueBlock)completion_t API_AVAILABLE(ios(8.0));
-- (void)performSegueWithIdentifier:(NSString *)identifier completion:(nullable UIViewControllerSegueBlock)completion_t NS_SWIFT_NAME(performSegue(identifier:_:)) API_AVAILABLE(ios(9.0));
+- (void)performSegueWithIdentifier:(NSString *)identifier completion:(nullable UIViewControllerSegueResult)completion_t NS_SWIFT_NAME(performSegue(identifier:_:)) API_AVAILABLE(ios(9.0));
 
 - (void)performSegueWithIdentifier:(NSString *)identifier sender:(id _Nullable)sender withBlock:(UIViewControllerSegueBlock _Nullable)block NS_SWIFT_NAME(performSegue(withIdentifier:senderData:block:)) NS_DEPRECATED_IOS(6_0, 10_0, "Use -performSegueWithIdentifier:sender:completion: instead.");
 

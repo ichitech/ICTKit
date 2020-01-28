@@ -33,11 +33,11 @@ CGSize UIDeviceDifferenceSizeBetweenIphone4AndIphone6Plus() NS_DEPRECATED_IOS(4_
 CGSize UIDeviceDifferenceSizeBetweenCurrentDeviceAndIphone4() NS_DEPRECATED_IOS(4_0, 11_0, "Stop supporting on iOS 11.0 or upper.");
 
 // Compare ios version
-BOOL UIDeviceSystemVersionIsEqualTo(CGFloat version) NS_AVAILABLE_IOS(6_0);
-BOOL UIDeviceSystemVersionIsGreaterThan(CGFloat version) NS_AVAILABLE_IOS(6_0);
-BOOL UIDeviceSystemVersionIsGreaterThanOrEqualTo(CGFloat version) NS_AVAILABLE_IOS(6_0);
-BOOL UIDeviceSystemVersionIsLessThan(CGFloat version) NS_AVAILABLE_IOS(6_0);
-BOOL UIDeviceSystemVersionIsLessThanOrEqualTo(CGFloat version) NS_AVAILABLE_IOS(6_0);
+BOOL UIDeviceSystemVersionIsEqualTo(CGFloat version) NS_SWIFT_NAME(UIDeviceVersion(isEqualTo:)) API_AVAILABLE(ios(6.0));
+BOOL UIDeviceSystemVersionIsGreaterThan(CGFloat version) NS_SWIFT_NAME(UIDeviceVersion(isGreaterThan:)) API_AVAILABLE(ios(6.0));
+BOOL UIDeviceSystemVersionIsGreaterThanOrEqualTo(CGFloat version) NS_SWIFT_NAME(UIDeviceVersion(isGreaterThanOrEqualTo:)) API_AVAILABLE(ios(6.0));
+BOOL UIDeviceSystemVersionIsLessThan(CGFloat version) NS_SWIFT_NAME(UIDeviceVersion(isLessThan:)) API_AVAILABLE(ios(6.0));
+BOOL UIDeviceSystemVersionIsLessThanOrEqualTo(CGFloat version) NS_SWIFT_NAME(UIDeviceVersion(isLessThanOrEqualTo:)) API_AVAILABLE(ios(6.0));
 
 // Check iphone system
 BOOL UIDeviceModelIsIphone4();
@@ -62,8 +62,8 @@ BOOL UIDeviceModelIsIphone11Pro();
 BOOL UIDeviceModelIsIphone11ProMax();
 
 // Check InterfaceIdiom
-BOOL UIDeviceInterfaceIdiomIphone() NS_AVAILABLE_IOS(4_0);
-BOOL UIDeviceInterfaceIdiomIpad() NS_AVAILABLE_IOS(4_0);
+BOOL UIDeviceInterfaceIdiomIphone(void) NS_SWIFT_NAME(isIphoneDevice()) API_AVAILABLE(ios(4.0));
+BOOL UIDeviceInterfaceIdiomIpad(void)  NS_SWIFT_NAME(isIpadDevice()) API_AVAILABLE(ios(4.0));
 
 #pragma clang diagnostic pop
 
@@ -168,19 +168,19 @@ typedef NS_ENUM(NSInteger, UIDeviceSize){
  Get the version of device.
  @return UIDeviceVersion
  */
-- (UIDeviceVersion)deviceVersion NS_AVAILABLE_IOS(8_0);
+- (UIDeviceVersion) deviceVersion NS_AVAILABLE_IOS(8_0);
 
 /**
  Get the resolution size.
  @return UIDeviceSize
  */
-- (UIDeviceSize)resolutionSize NS_AVAILABLE_IOS(8_0);
+- (UIDeviceSize) resolutionSize NS_AVAILABLE_IOS(8_0);
 
 /**
  Get the device size.
  @return UIDeviceSize
  */
-- (UIDeviceSize)deviceSize NS_AVAILABLE_IOS(8_0);
+- (UIDeviceSize) deviceSize NS_AVAILABLE_IOS(8_0);
 
 /**
  Get the device model of device.
