@@ -2,7 +2,7 @@
  @header    NSFileManager+Creation.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   13.2
+ @version   13.3.2
  */
 
 #import <Foundation/Foundation.h>
@@ -40,6 +40,8 @@ NSFileManagerFileType NSFileManagerFileTypeOf(NSString *fileName) NS_SWIFT_NAME(
 NSString *NSFileManagerDocumentsPath(void) NS_SWIFT_NAME(FileManagerDocumentsPath()) API_AVAILABLE(ios(2.0));
 
 void NSFileManagerCreateFile(NSString *filePath, id object , NSFileManagerFileResult __nullable completion_t) NS_SWIFT_NAME(FileManagerCreate(atPath:data:_:)) API_AVAILABLE(ios(9.1));
+
+void NSFileManagerOverwriteFile(NSString *filePath, id object , NSFileManagerFileResult __nullable completion_t) NS_SWIFT_NAME(FileManagerOverwrite(atPath:data:_:)) API_AVAILABLE(ios(9.1));
 
 #pragma mark - NSFilePathSeparation
 NS_SWIFT_NAME(SPItemPath)
@@ -198,7 +200,7 @@ NS_SWIFT_NAME(SPFilePath)
 - (nullable UIImage *) imageWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation  NS_SWIFT_NAME(image(inContentOf:)) API_AVAILABLE(ios(10.0));
 - (nullable UIImageView *) imageViewWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation  NS_SWIFT_NAME(imageView(inContentOf:)) API_AVAILABLE(ios(10.0));
 - (nullable NSJSONSerialization *) jsonWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation  NS_SWIFT_NAME(json(inContentOf:)) API_AVAILABLE(ios(10.0));
-- (nullable NSObject *) objectWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation  NS_SWIFT_NAME(object(inContentOf:)) API_AVAILABLE(ios(10.0));
+- (nullable id) objectWithContentsOfFileSeparation:(FilePathSeparation *)fileSeparation  NS_SWIFT_NAME(object(inContentOf:)) API_AVAILABLE(ios(10.0));
 
 @end
 
