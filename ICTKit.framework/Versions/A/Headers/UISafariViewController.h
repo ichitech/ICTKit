@@ -2,7 +2,7 @@
  @header    UISafariViewController.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   13.3.2
+ @version   13.4.0
  */
 
 #import <UIKit/UIKit.h>
@@ -40,7 +40,6 @@ NS_SWIFT_NAME(SafariViewController)
 @property (nonatomic, strong, readonly, nonnull)  UIActivityIndicatorView*activityIndicator  NS_AVAILABLE_IOS(7_0);
 @property (nonatomic, strong, readonly, nonnull)  UINavigationBar        *currentNavigationBar  NS_AVAILABLE_IOS(7_0);
 @property (nonatomic, strong, readonly, nullable) WKWebView              *wkWebView  NS_AVAILABLE_IOS(8_0);
-@property (nonatomic, strong, readonly, nullable) UIWebView              *webView  NS_DEPRECATED_IOS(6_0, 8_1, "Use @property -wkWebView instead.");
 
 - (instancetype) new NS_UNAVAILABLE;
 - (instancetype) initWithRootViewController:(UIViewController *)rootViewController NS_UNAVAILABLE ;
@@ -62,7 +61,6 @@ NS_SWIFT_NAME(SafariViewController)
  */
 - (void) showWithURL:(NSURL *)URL completion:(UISafariViewControllerCompletion)completion_t NS_SWIFT_NAME(show(url:_:)) NS_AVAILABLE_IOS(8_0);
 - (void) showWithHTML:(NSString *)html completion:(UISafariViewControllerCompletion)completion_t NS_SWIFT_NAME(show(html:_:)) NS_AVAILABLE_IOS(8_0);
-
 + (void) openWithURL:(NSURL *)URL completion:(UISafariViewControllerCompletion)completion_t  NS_DEPRECATED_IOS(6_0, 9_0, "Use -showWithURL:completion: instead.");
 
 @end

@@ -2,7 +2,7 @@
  @header    UIAlertViewButtonItem.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   13.3.2
+ @version   13.4.0
  @deprecated Stop supporting on iOS 8.3 or upper.
  */
 

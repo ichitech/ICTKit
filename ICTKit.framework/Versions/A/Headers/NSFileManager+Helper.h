@@ -2,7 +2,7 @@
  @header    NSFileManager+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   13.3.2
+ @version   13.4.0
  */
 
 #import <Foundation/Foundation.h>
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^NSFileManagerCompletion)(BOOL success) NS_DEPRECATED_IOS(2_0, 10_0,"Use NSFileManagerResult instead.");
+typedef void(^NSFileManagerCompletion)(BOOL success) NS_DEPRECATED_IOS(2_0, 13_0,"Use NSFileManagerResult instead.");
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wstrict-prototypes"

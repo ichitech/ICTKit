@@ -2,7 +2,7 @@
  @header    UIImage+ImageWithUIView.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   13.3.2
+ @version   13.4.0
  */
 
 #import <UIKit/UIKit.h>
@@ -10,9 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-FOUNDATION_EXPORT UIImage *UIImageExportFromView(UIView * view, CGFloat scale) API_AVAILABLE(ios(7.0));
-FOUNDATION_EXPORT UIImage *UIImageWithColor(UIColor * color, CGSize size) API_AVAILABLE(ios(7.0));
-FOUNDATION_EXPORT UIImage *UIImageWithNamed(NSString * name, UIColor * _Nullable color) API_AVAILABLE(ios(7.0));
+FOUNDATION_EXPORT UIImage *UIImageExportFromView(UIView * view, CGFloat scale) NS_SWIFT_NAME(Image(view:scale:)) API_AVAILABLE(ios(7.0));
+FOUNDATION_EXPORT UIImage *UIImageWithColor(UIColor * color, CGSize size) NS_SWIFT_NAME(Image(color:size:)) API_AVAILABLE(ios(7.0));
+FOUNDATION_EXPORT UIImage *UIImageWithNamed(NSString * name, UIColor * _Nullable color) NS_SWIFT_NAME(Image(name:color:)) API_AVAILABLE(ios(7.0));
 
 @interface UIImage (ImageWithUIView)
 
@@ -21,7 +21,7 @@ FOUNDATION_EXPORT UIImage *UIImageWithNamed(NSString * name, UIColor * _Nullable
  * @param view View will be taken screenshot.
  * @param scale The scale of new image. Default is 1.
  */
-+ (UIImage *)imageFromUIView:(UIView *)view scale:(CGFloat)scale API_AVAILABLE(ios(7.0));
++ (UIImage *)imageFromUIView:(UIView *)view scale:(CGFloat)scale  NS_SWIFT_NAME(from(view:scale:))  API_AVAILABLE(ios(7.0));
 + (UIImage *)imageWithUIView:(UIView *)view NS_DEPRECATED_IOS(2_0, 7_1, "Use +imageFromUIView:scale: instead.");
 
 /*!
@@ -37,7 +37,7 @@ FOUNDATION_EXPORT UIImage *UIImageWithNamed(NSString * name, UIColor * _Nullable
  *@param color The background color of new image.
  *@param size The size of new image.
  */
-+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size API_AVAILABLE(ios(7.0));
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size NS_SWIFT_NAME(image(color:size:)) API_AVAILABLE(ios(7.0)) ;
 
 @end
 
@@ -47,8 +47,9 @@ FOUNDATION_EXPORT UIImage *UIImageWithNamed(NSString * name, UIColor * _Nullable
  * @abstract Change overlay of image.
  * @param color New color of image.
  */
-- (UIImage *)copyImageWithTintColor:(nonnull UIColor *)color API_AVAILABLE(ios(7.0));
+- (UIImage *)copyImageWithTintColor:(nonnull UIColor *)color NS_DEPRECATED_IOS(9_0, 14_0, "Use -makeACopyWithTintColor: instead.");
 - (UIImage *)imageWithColor:(nonnull UIColor *)color NS_DEPRECATED_IOS(2_0, 9_0, "Use -copyImageWithTintColor: instead.");
+- (UIImage *)makeACopyWithTintColor:(nonnull UIColor *)color NS_SWIFT_NAME(makeACopy(tintColor:))  API_AVAILABLE(ios(9.0));
 
 /**
  Load an image from main bundle with custom overlay color.
