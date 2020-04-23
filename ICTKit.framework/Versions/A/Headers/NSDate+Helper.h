@@ -2,7 +2,7 @@
  @header    NSDate+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   13.4.2
+ @version   13.4.3
  */
 
 #import <Foundation/Foundation.h>
@@ -61,7 +61,6 @@ BOOL NSDateEqualToDateIgnoringTime(NSDate *date1, NSDate *date2);
 - (NSDate *) toLocalTime;
 - (NSDate *) toGlobalTime;
 - (NSDate *) normalizedDateWithDate;
-- (NSDate *) dateByAddingDays: (NSInteger) dDays;
 - (NSDate *) dateBySubtractingDays: (NSInteger) dDays;
 - (NSDate *) dateByAddingHours: (NSInteger) dHours;
 - (NSDate *) dateBySubtractingHours: (NSInteger) dHours;

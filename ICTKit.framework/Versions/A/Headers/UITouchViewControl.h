@@ -2,7 +2,7 @@
  @header    UITouchViewControl.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   13.4.2
+ @version   13.4.3
  */
 
 #import <UIKit/UIKit.h>
