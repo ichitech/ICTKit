@@ -2,7 +2,7 @@
  @header    UIDevice+Helper.h
  @abstract  ICTKit iOS SDK Source
  @copyright Copyright 2013 IchiTech. All rights reserved.
- @version   13.4.3
+ @version   14.0.1
  */
 
 
@@ -21,6 +21,7 @@
 #define iOS_11 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11.0)
 #define iOS_12 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 12.0)
 #define iOS_13 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 13.0)
+#define iOS_14 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 14.0)
 #define iPHONE_DEVICE ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
 #define iPAD_DEVICE ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 
@@ -81,7 +82,8 @@ typedef NS_ENUM(NSInteger, UIDeviceVersion){
     UIDeviceVersionIPhone7,
     UIDeviceVersionIPhone7Plus,
     UIDeviceVersionIPhoneSE,
-    
+    UIDeviceVersionIPhoneSE2,
+
     UIDeviceVersionIPhone8,
     UIDeviceVersionIPhone8Plus,
     UIDeviceVersionIPhoneX,
@@ -93,6 +95,11 @@ typedef NS_ENUM(NSInteger, UIDeviceVersion){
     UIDeviceVersionIPhone11,
     UIDeviceVersionIPhone11Pro,
     UIDeviceVersionIPhone11ProMax,
+    
+    UIDeviceVersionIPhone12,
+    UIDeviceVersionIPhone12Pro,
+    UIDeviceVersionIPhone12Mini,
+    UIDeviceVersionIPhone12ProMax,
     
     UIDeviceVersionIPadMini,
     UIDeviceVersionIPadMini2,
@@ -107,11 +114,13 @@ typedef NS_ENUM(NSInteger, UIDeviceVersion){
     UIDeviceVersionIPad5,
     UIDeviceVersionIPad6,
     UIDeviceVersionIPad7,
+    UIDeviceVersionIPad8,
 
     UIDeviceVersionIPadAir,
     UIDeviceVersionIPadAir2,
     UIDeviceVersionIPadAir3,
-    
+    UIDeviceVersionIPadAir4,
+
     UIDeviceVersionIPodTouch1Gen,
     UIDeviceVersionIPodTouch2Gen,
     UIDeviceVersionIPodTouch3Gen,
@@ -122,9 +131,11 @@ typedef NS_ENUM(NSInteger, UIDeviceVersion){
     UIDeviceVersionIPadPro9Dot7Inch,
     UIDeviceVersionIPadPro10Dot5Inch,
     UIDeviceVersionIPadPro11Inch,
+    UIDeviceVersionIPadPro11InchGen2,
     UIDeviceVersionIPadPro12Dot9Inch,
     UIDeviceVersionIPadPro12Dot9InchGen2,
     UIDeviceVersionIPadPro12Dot9InchGen3,
+    UIDeviceVersionIPadPro12Dot9InchGen4,
 
     UIDeviceVersionAppleTV2G,
     UIDeviceVersionAppleTV3,
